@@ -1,0 +1,255 @@
+/* Základní styly stránky */
+.contactPage {
+    background-color: #f9f9fa;
+  }
+  
+  /* Hero sekce */
+  .hero {
+    background-color: #84d3d1;
+    background-image: linear-gradient(135deg, #84d3d1, #3a7d7b);
+    padding: 8rem 0 4rem;
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .heroContent {
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .heroTitle {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+  }
+  
+  .heroSubtitle {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+  
+  /* Obsah stránky */
+  .pageContent {
+    padding: 4rem 0;
+  }
+  
+  /* Sekce s kontaktními informacemi a mapou */
+  .contactSection {
+    margin-bottom: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  
+  .sectionTitle {
+    color: #3a7d7b;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 0.75rem;
+  }
+  
+  .sectionTitle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: #84d3d1;
+  }
+  
+  .infoCards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .infoCard {
+    display: flex;
+    align-items: flex-start;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .infoCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  }
+  
+  .infoIcon {
+    background-color: rgba(132, 211, 209, 0.15);
+    color: #3a7d7b;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    margin-right: 1.25rem;
+    flex-shrink: 0;
+  }
+  
+  .infoContent {
+    flex: 1;
+  }
+  
+  .infoContent h3 {
+    color: #3a7d7b;
+    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
+  }
+  
+  .infoContent p {
+    margin: 0.2rem 0;
+    color: #444;
+    line-height: 1.5;
+  }
+  
+  .infoContent a {
+    color: #3a7d7b;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .infoContent a:hover {
+    color: #84d3d1;
+  }
+  
+  .moreLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+    color: #3a7d7b;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+  }
+  
+  .moreLink:hover {
+    color: #84d3d1;
+    gap: 0.75rem;
+  }
+  
+  .ctaBox {
+    margin-top: 2rem;
+    background: linear-gradient(135deg, #84d3d1, #3a7d7b);
+    padding: 2rem;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 5px 20px rgba(132, 211, 209, 0.3);
+  }
+  
+  .ctaBox h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .ctaBox p {
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+  }
+  
+  .ctaButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: white;
+    color: #3a7d7b;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .ctaButton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mapContainer {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    height: 100%;
+    min-height: 450px;
+  }
+  
+  .map {
+    height: 100%;
+    width: 100%;
+  }
+  
+  /* Sekce s týmem */
+  .teamSection {
+    margin-bottom: 5rem;
+  }
+  
+  .teamSubtitle {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-bottom: 3rem;
+  }
+  
+  .teamGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+  
+  .nursesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  /* Responzivní styly */
+  @media (max-width: 1024px) {
+    .contactSection {
+      grid-template-columns: 1fr;
+    }
+    
+    .teamGrid {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero {
+      padding: 7rem 0 3rem;
+    }
+    
+    .heroTitle {
+      font-size: 2.2rem;
+    }
+    
+    .heroSubtitle {
+      font-size: 1.1rem;
+    }
+    
+    .sectionTitle {
+      font-size: 1.75rem;
+    }
+    
+    .teamGrid, .nursesGrid {
+      grid-template-columns: 1fr;
+    }
+  }

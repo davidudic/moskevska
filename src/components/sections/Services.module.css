@@ -1,0 +1,270 @@
+.services {
+    padding: 5rem 0;
+    background-color: #f8f9fa;
+    position: relative;
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text);
+  }
+  
+  .subtitle {
+    text-align: center;
+    color: var(--text-light);
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  /* Kategorie služeb */
+  .categoriesContainer {
+    margin-bottom: 3rem;
+  }
+  
+  .categories {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .category {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1.25rem;
+    background-color: white;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-weight: 500;
+    color: var(--text);
+  }
+  
+  .category:hover {
+    border-color: var(--primary-light);
+    background-color: #f8f9fa;
+    transform: translateY(-2px);
+  }
+  
+  .activeCategory {
+    background-color: var(--primary-transparent);
+    border-color: var(--primary);
+    color: var(--primary-dark);
+    box-shadow: 0 4px 12px rgba(132, 211, 209, 0.15);
+  }
+  
+  .categoryIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    font-size: 1.25rem;
+  }
+  
+  /* Karty služeb */
+  .servicesContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+  
+  .serviceCard {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .serviceCard:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+  }
+  
+  .serviceMain {
+    padding: 1.5rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .serviceHeader {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .serviceIcon {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-transparent);
+    color: var(--primary);
+    border-radius: 8px;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+  }
+  
+  .serviceTitle {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--text);
+  }
+  
+  .serviceDescription {
+    margin-bottom: 1rem;
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  .servicePrice {
+    font-weight: 600;
+    color: var(--primary-dark);
+    font-size: 1rem;
+  }
+  
+  .serviceArrow {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-light);
+    transition: all 0.3s ease;
+    opacity: 0.5;
+  }
+  
+  .serviceCard:hover .serviceArrow,
+  .activeService .serviceArrow {
+    color: var(--primary);
+    opacity: 1;
+    transform: translateX(3px);
+  }
+  
+  .serviceDetails {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background-color: #f8f9fa;
+    border-top: 1px solid transparent;
+  }
+  
+  .activeService .serviceDetails {
+    padding: 1.5rem;
+    max-height: 200px;
+    border-top-color: #eaeaea;
+  }
+  
+  .serviceDetails p {
+    margin: 0 0 1.25rem;
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  
+  .serviceActions {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .serviceButton {
+    padding: 0.6rem 1.25rem;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-align: center;
+    transition: all 0.2s ease;
+  }
+  
+  .serviceButton:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+  }
+  
+  .serviceLink {
+    padding: 0.6rem 1.25rem;
+    background-color: transparent;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-align: center;
+    transition: all 0.2s ease;
+  }
+  
+  .serviceLink:hover {
+    background-color: var(--primary-transparent);
+    transform: translateY(-2px);
+  }
+  
+  .servicesFooter {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .allServicesButton {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(132, 211, 209, 0.3);
+  }
+  
+  .allServicesButton:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(132, 211, 209, 0.4);
+  }
+  
+  /* Responzivní design */
+  @media (max-width: 768px) {
+    .servicesContainer {
+      grid-template-columns: 1fr;
+    }
+    
+    .serviceCard {
+      max-width: 100%;
+    }
+    
+    .activeService .serviceDetails {
+      max-height: 250px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .categories {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    
+    .category {
+      justify-content: center;
+    }
+    
+    .serviceActions {
+      flex-direction: column;
+    }
+  }

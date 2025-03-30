@@ -1,0 +1,89 @@
+.laserSection {
+  margin-bottom: 4rem;
+}
+
+.sectionTitle {
+  color: #3a7d7b;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: #84d3d1;
+}
+
+.priceListContainer {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+}
+
+.priceGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.priceItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem;
+  border-radius: 6px;
+  background-color: rgba(132, 211, 209, 0.05);
+  transition: all 0.2s ease;
+}
+
+.priceItem:hover {
+  background-color: rgba(132, 211, 209, 0.1);
+}
+
+.areaName {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.areaPrice {
+  font-weight: 600;
+  color: #3a7d7b;
+  white-space: nowrap;
+}
+
+.priceNotes {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px dashed #e0e0e0;
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.priceNotes p {
+  margin-bottom: 0.75rem;
+}
+
+.priceNotes p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .priceListContainer {
+    padding: 1.5rem;
+  }
+  
+  .priceGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .priceItem {
+    padding: 0.5rem 0.75rem;
+  }
+}

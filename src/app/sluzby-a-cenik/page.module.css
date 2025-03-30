@@ -1,0 +1,32 @@
+.pageContainer {
+    padding: 2rem 0 5rem;
+    background-color: #f9f9fa;
+  }
+  
+  .pageHeader {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .pageTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #3a7d7b;
+    margin-bottom: 1rem;
+  }
+  
+  .pageSubtitle {
+    font-size: 1.1rem;
+    color: #666;
+    font-style: italic;
+  }
+  
+  @media (max-width: 768px) {
+    .pageContainer {
+      padding: 1.5rem 0 3rem;
+    }
+    
+    .pageTitle {
+      font-size: 2rem;
+    }
+  }

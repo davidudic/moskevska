@@ -1,0 +1,129 @@
+.officeHours {
+    background-color: var(--primary-transparent);
+  }
+  
+  .title {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+  }
+  
+  .hours {
+    background-color: white;
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .day {
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-md) 0;
+    border-bottom: 1px solid var(--background-light);
+  }
+  
+  .day:last-child {
+    border-bottom: none;
+  }
+  
+  .dayInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .dayName {
+    font-weight: 600;
+    color: var(--text);
+  }
+  
+  .dayHours {
+    font-weight: 500;
+    color: var(--text);
+  }
+  
+  .dayNote {
+    margin-top: 0.2rem;
+    color: var(--text-light);
+    font-size: 0.85rem;
+    text-align: right;
+  }
+  
+  .doctors {
+    background-color: white;
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  
+  .doctor {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md) 0;
+    border-bottom: 1px solid var(--background-light);
+  }
+  
+  .doctor:last-child {
+    border-bottom: none;
+  }
+  
+  .doctorImage {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid var(--primary);
+    flex-shrink: 0;
+  }
+  
+  .doctorInfo h3 {
+    margin-bottom: var(--spacing-xs);
+    font-size: 1rem;
+  }
+  
+  .doctorInfo p {
+    margin-bottom: 0;
+    color: var(--text-light);
+    font-size: 0.9rem;
+  }
+  
+  .button {
+    text-align: center;
+    margin-top: var(--spacing-xl);
+  }
+  
+  @media (max-width: 768px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .doctors {
+      max-height: none;
+      overflow-y: visible;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .day {
+      padding: var(--spacing-sm) 0;
+    }
+    
+    .dayInfo {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.2rem;
+    }
+    
+    .dayNote {
+      text-align: left;
+    }
+  }

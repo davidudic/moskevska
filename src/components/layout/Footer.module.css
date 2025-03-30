@@ -1,0 +1,144 @@
+.footer {
+    background-color: #f5f5f5;
+    color: var(--text);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  
+  .footerContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+  }
+  
+  .footerColumns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    justify-content: center;
+  }
+  
+  .footerColumn h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+    color: var(--primary-dark);
+  }
+  
+  .footerColumn h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 40px;
+    height: 2px;
+    background-color: var(--primary);
+  }
+  
+  .contactItem {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    color: var(--text);
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+  
+  .contactItem:hover {
+    color: var(--primary);
+  }
+  
+  .icon {
+    margin-right: 0.8rem;
+    margin-top: 3px;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    color: var(--primary);
+  }
+  
+  .addressWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .addressWrapper span {
+    margin-bottom: 0.2rem;
+  }
+  
+  .hoursWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  
+  .hourRow {
+    display: flex;
+    align-items: center;
+  }
+  
+  .dayLabel {
+    width: 60px;
+    font-weight: 500;
+  }
+  
+  .socialLinks {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 1.2rem;
+  }
+  
+  .socialIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    color: white;
+  }
+  
+  .socialIcon:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-3px);
+  }
+  
+  .footerBottom {
+    background-color: #e9e9e9;
+    padding: 1.2rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  
+  .copyright {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    color: var(--text-light);
+  }
+  
+  @media (max-width: 768px) {
+    .footerContent {
+      padding: 2.5rem 1rem;
+    }
+    
+    .footerColumns {
+      gap: 2rem;
+    }
+    
+    .socialLinks {
+      margin-top: 1rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .footerContent {
+      padding: 2rem 1rem;
+    }
+    
+    .footerColumn h3 {
+      margin-bottom: 1.2rem;
+    }
+  }
