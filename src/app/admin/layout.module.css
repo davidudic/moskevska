@@ -1,0 +1,123 @@
+.adminLayout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f9f9fa;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Boční panel */
+.sidebar {
+  width: 280px;
+  background-color: #2b2b2b;
+  color: white;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  overflow-y: auto;
+}
+
+.sidebarHeader {
+  padding: 0 1.5rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.sidebarTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  color: #84d3d1;
+}
+
+/* Navigace */
+.navigation {
+  flex-grow: 1;
+  padding: 0 1.5rem;
+}
+
+.navLink {
+  display: block;
+  padding: 0.8rem 0;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navLink:hover {
+  color: #84d3d1;
+}
+
+/* Informace o uživateli */
+.userInfo {
+  margin-top: auto;
+  padding: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.userName {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 1rem;
+}
+
+.userName span {
+  color: white;
+  font-weight: 500;
+}
+
+.signOutButton {
+  display: block;
+  padding: 0.8rem 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.signOutButton:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Hlavní obsah */
+.mainContent {
+  flex-grow: 1;
+  padding: 2rem;
+  margin-left: 280px; /* Odpovídá šířce bočního panelu */
+  width: calc(100% - 280px);
+}
+
+/* Responzivní design */
+@media (max-width: 768px) {
+  .adminLayout {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100%;
+    position: relative;
+    padding: 1rem 0;
+  }
+  
+  .mainContent {
+    margin-left: 0;
+    width: 100%;
+    padding: 1.5rem;
+  }
+} 

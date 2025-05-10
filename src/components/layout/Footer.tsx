@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import styles from './Footer.module.css';
 import { FaPhone, FaMapMarkerAlt, FaClock, FaFacebook, FaInstagram } from 'react-icons/fa';
 
@@ -73,6 +74,7 @@ const Footer = () => {
       <div className={styles.footerBottom}>
         <div className={styles.copyright}>
           &copy; {currentYear} Chirurgická ambulance Moskevská. Všechna práva vyhrazena.
+          <Link href="/admin/login" className={styles.adminLink}>·</Link>
         </div>
       </div>
     </footer>

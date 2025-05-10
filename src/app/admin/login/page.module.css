@@ -1,0 +1,114 @@
+.loginContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f9f9fa;
+  padding: 1rem;
+}
+
+.loginBox {
+  width: 100%;
+  max-width: 450px;
+  background-color: white;
+  border-radius: 12px;
+  padding: 3rem 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+.logoLink {
+  display: block;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-decoration: none;
+}
+
+.logo {
+  color: #3a7d7b;
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.title {
+  font-size: 1.75rem;
+  text-align: center;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.errorMessage {
+  background-color: rgba(255, 0, 0, 0.1);
+  color: #d63031;
+  padding: 1rem;
+  border-radius: 6px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.loginForm {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+.input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 2px solid #e8e8e8;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #84d3d1;
+}
+
+.loginButton {
+  width: 100%;
+  padding: 1rem;
+  background-color: #3a7d7b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.loginButton:hover {
+  background-color: #2d6261;
+}
+
+.loginButton:disabled {
+  background-color: #a0a0a0;
+  cursor: not-allowed;
+}
+
+.backLink {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.backLink a {
+  color: #666;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+ 

@@ -6,8 +6,8 @@ import Link from 'next/link';
 import { FaClock, FaExclamationCircle, FaChevronRight, FaCalendarAlt } from 'react-icons/fa';
 
 export const metadata = {
-  title: 'Laserová epilace | Chirurgická ambulance',
-  description: 'Laserová epilace s použitím nejmodernějších technologií. Bezpečné a efektivní odstranění nežádoucích chloupků ve všech oblastech těla.',
+  title: 'Epilační laser | Chirurgická ambulance',
+  description: 'Epilační laserové ošetření s použitím nejmodernějších technologií. Bezpečné a efektivní odstranění nežádoucích chloupků ve všech oblastech těla.',
 };
 
 export default function LaserEpilacePage() {
@@ -53,7 +53,7 @@ export default function LaserEpilacePage() {
         <div className={styles.hero}>
           <div className="container">
             <div className={styles.heroContent}>
-              <h1 className={styles.heroTitle}>Laserová epilace DOMINO 755 nm</h1>
+              <h1 className={styles.heroTitle}>Epilační laser DOMINO 755 nm</h1>
               <p className={styles.heroSubtitle}>
                 Moderní a bezpečné odstranění nežádoucích chloupků s dlouhotrvajícím efektem
               </p>
@@ -66,9 +66,9 @@ export default function LaserEpilacePage() {
           {/* Hlavní popis */}
           <section className={styles.infoSection}>
             <div className={styles.infoContent}>
-              <h2 className={styles.sectionTitle}>O laserové epilaci</h2>
+              <h2 className={styles.sectionTitle}>O epilačním laseru</h2>
               <p>
-                Laserová epilace je moderní, bezpečná a efektivní metoda dlouhodobého odstranění nežádoucího ochlupení. 
+                Epilační laser je moderní, bezpečná a efektivní metoda dlouhodobého odstranění nežádoucího ochlupení. 
                 Využíváme špičkový laser DOMINO 755 nm, který je vhodný pro všechny typy pleti a poskytuje vynikající 
                 výsledky s minimálním rizikem vedlejších účinků.
               </p>
@@ -78,7 +78,7 @@ export default function LaserEpilacePage() {
               </p>
 
               <div className={styles.benefitsList}>
-                <h3>Výhody laserové epilace:</h3>
+                <h3>Výhody epilačního laseru:</h3>
                 <ul>
                   <li>Dlouhodobé až trvalé odstranění chloupků</li>
                   <li>Rychlé a bezbolestné ošetření</li>
@@ -92,7 +92,7 @@ export default function LaserEpilacePage() {
             <div className={styles.infoImage}>
               <Image 
                 src="/images/laser.jpg" 
-                alt="Laserová epilace" 
+                alt="Epilační laser" 
                 width={500} 
                 height={400} 
                 className={styles.sectionImage}

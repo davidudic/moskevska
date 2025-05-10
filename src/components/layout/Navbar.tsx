@@ -1,15 +1,17 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import styles from './Navbar.module.css';
-import { FaPhone, FaCalendarAlt, FaBars, FaTimes } from 'react-icons/fa';
+import { FaPhone, FaCalendarAlt, FaBars, FaTimes, FaChevronDown } from 'react-icons/fa';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -31,16 +33,38 @@ const Navbar = () => {
     document.body.style.overflow = '';
   };
 
-  const isActive = (path: string) => pathname === path;
+  const handleDropdownMouseEnter = () => {
+    if (dropdownTimeoutRef.current) {
+      clearTimeout(dropdownTimeoutRef.current);
+      dropdownTimeoutRef.current = null;
+    }
+    setIsDropdownOpen(true);
+  };
 
-  // Odstraněn věrnostní program z navbaru
+  const handleDropdownMouseLeave = () => {
+    dropdownTimeoutRef.current = setTimeout(() => {
+      setIsDropdownOpen(false);
+    }, 2000); // 2 second delay
+  };
+
+  const isActive = (path: string) => pathname === path;
+  const isDropdownActive = () => 
+    pathname === '/laserova-epilace' || 
+    pathname === '/operacni-laser';
+
+  // Navbarové odkazy
   const navLinks = [
     { href: '/', label: 'Úvod' },
-    { href: '/o-nas', label: 'O nás' },
     { href: '/sluzby-a-cenik', label: 'Služby a ceník' },
     { href: '/ordinacni-doba', label: 'Ordinační doba' },
-    { href: '/laserova-epilace', label: 'Laserová epilace' },
+    // Laser dropdown will be added separately
     { href: '/kontakt', label: 'Kontakt' }
+  ];
+
+  // Dropdown odkazy
+  const laserLinks = [
+    { href: '/laserova-epilace', label: 'Epilační laser' },
+    { href: '/operacni-laser', label: 'Operační laser' }
   ];
 
   return (
@@ -67,6 +91,29 @@ const Navbar = () => {
               {link.label}
             </Link>
           ))}
+          
+          {/* Laser dropdown */}
+          <div 
+            className={`${styles.dropdown} ${isDropdownActive() ? styles.active : ''}`}
+            onMouseEnter={handleDropdownMouseEnter}
+            onMouseLeave={handleDropdownMouseLeave}
+          >
+            <button className={styles.dropdownButton}>
+              Laser <FaChevronDown className={styles.dropdownIcon} />
+            </button>
+            <div className={`${styles.dropdownContent} ${isDropdownOpen ? styles.dropdownOpen : ''}`}>
+              {laserLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`${styles.dropdownLink} ${isActive(link.href) ? styles.active : ''}`}
+                  onClick={() => setIsDropdownOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
         </nav>
 
         <div className={styles.contactInfo}>
@@ -102,6 +149,24 @@ const Navbar = () => {
             key={link.href}
             href={link.href}
             className={styles.mobileNavLink}
+            onClick={closeMobileMenu}
+          >
+            {link.label}
+          </Link>
+        ))}
+        
+        {/* Flat laser links in mobile menu */}
+        <Link
+          href="#"
+          className={`${styles.mobileNavLink} ${styles.mobileLaserHeader}`}
+        >
+          Laser
+        </Link>
+        {laserLinks.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href}
+            className={`${styles.mobileNavLink} ${styles.mobileLaserLink}`}
             onClick={closeMobileMenu}
           >
             {link.label}

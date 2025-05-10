@@ -1,0 +1,380 @@
+/* Základní styly stránky */
+.laserPage {
+  padding-top: 0;
+  background-color: #f9f9fa;
+}
+
+/* Hero sekce */
+.hero {
+  background-color: #84d3d1;
+  background-image: linear-gradient(135deg, #84d3d1, #3a7d7b);
+  padding: 8rem 0 4rem;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroContent {
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.heroTitle {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.heroSubtitle {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Hlavní informační sekce */
+.infoSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  padding: 4rem 0;
+}
+
+.infoContent {
+  padding-right: 2rem;
+}
+
+.sectionTitle {
+  color: #3a7d7b;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: #84d3d1;
+}
+
+.infoContent p {
+  margin-bottom: 1.25rem;
+  color: #444;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.benefitsList {
+  margin-top: 2rem;
+  background-color: rgba(132, 211, 209, 0.1);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #84d3d1;
+}
+
+.benefitsList h3 {
+  font-size: 1.2rem;
+  color: #3a7d7b;
+  margin-bottom: 1rem;
+}
+
+.benefitsList ul {
+  padding-left: 1.5rem;
+}
+
+.benefitsList li {
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 0.5rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+.infoImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sectionImage {
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Proces sekce */
+.processSection {
+  padding: 4rem 0;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  margin: 0 0 4rem;
+  padding: 3rem;
+}
+
+.processSteps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.processStep {
+  position: relative;
+  padding: 1.5rem;
+  background-color: #f9f9fa;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.processStep:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.processNumber {
+  width: 40px;
+  height: 40px;
+  background-color: #84d3d1;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.processStep h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+  color: #3a7d7b;
+}
+
+.processStep p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.noteBox {
+  display: flex;
+  background-color: rgba(132, 211, 209, 0.1);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #84d3d1;
+  margin-top: 2rem;
+}
+
+.noteIcon {
+  color: #3a7d7b;
+  font-size: 1.75rem;
+  margin-right: 1.5rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.noteText h4 {
+  color: #3a7d7b;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.noteText p {
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Použití sekce */
+.useCasesSection {
+  padding: 4rem 0;
+}
+
+.useCasesList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.useCaseItem {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.useCaseItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.useCaseIcon {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(132, 211, 209, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  color: #3a7d7b;
+  font-size: 1.75rem;
+}
+
+.useCaseItem h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+  color: #3a7d7b;
+}
+
+.useCaseItem p {
+  color: #555;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* CTA sekce */
+.ctaSection {
+  margin: 2rem 0 4rem;
+}
+
+.ctaCard {
+  background-color: #3a7d7b;
+  background-image: linear-gradient(135deg, #3a7d7b, #84d3d1);
+  border-radius: 12px;
+  padding: 3rem;
+  color: white;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(132, 211, 209, 0.3);
+}
+
+.ctaTitle {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.ctaText {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.primaryButton, .secondaryButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.primaryButton {
+  background-color: white;
+  color: #3a7d7b;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+.primaryButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+}
+
+.secondaryButton {
+  background-color: transparent;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.secondaryButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+}
+
+.buttonIcon {
+  font-size: 1.1rem;
+}
+
+/* Responzivní styly */
+@media (max-width: 992px) {
+  .infoSection {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .infoContent {
+    padding-right: 0;
+  }
+
+  .infoImage {
+    order: -1;
+  }
+
+  .processSteps {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 7rem 0 3rem;
+  }
+
+  .heroTitle {
+    font-size: 2.2rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.1rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.7rem;
+  }
+
+  .ctaCard {
+    padding: 2rem 1.5rem;
+  }
+
+  .ctaTitle {
+    font-size: 1.7rem;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+  }
+
+  .processSteps {
+    grid-template-columns: 1fr;
+  }
+} 
