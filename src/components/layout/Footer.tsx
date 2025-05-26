@@ -16,10 +16,10 @@ const Footer = () => {
               <span>+420 703 611 411</span>
             </a>
             <div className={styles.socialLinks}>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
+              <a href="https://www.facebook.com/p/Chirurgie-Moskevsk%C3%A1-61554879399726/" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
                 <FaFacebook />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
+              <a href="https://www.instagram.com/chirurgie.moskevska/" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
                 <FaInstagram />
               </a>
             </div>
@@ -49,7 +49,7 @@ const Footer = () => {
               <FaClock className={styles.icon} />
               <div className={styles.hoursWrapper}>
                 <div className={styles.hourRow}>
-                  <span className={styles.dayLabel}>Po+Čt:</span>
+                  <span className={styles.dayLabel}>Po:</span>
                   <span>8:00 - 18:00</span>
                 </div>
                 <div className={styles.hourRow}>
@@ -58,6 +58,10 @@ const Footer = () => {
                 </div>
                 <div className={styles.hourRow}>
                   <span className={styles.dayLabel}>St:</span>
+                  <span>8:00 - 18:00</span>
+                </div>
+                <div className={styles.hourRow}>
+                  <span className={styles.dayLabel}>Čt:</span>
                   <span>8:00 - 18:00</span>
                 </div>
                 <div className={styles.hourRow}>

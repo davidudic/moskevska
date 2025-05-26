@@ -1,8 +1,8 @@
 .hero {
-    height: 650px; /* Zvětšili jsme výšku, aby byla vidět i s fixním navbarem */
+    height: 750px; /* Zvětšili jsme výšku, aby byla vidět i s fixním navbarem */
     position: relative;
     overflow: hidden;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
     background-size: cover;
     background-position: center;
     color: white;

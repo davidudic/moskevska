@@ -32,6 +32,12 @@
   gap: 0.75rem;
 }
 
+/* Wrapper pro služby s možností rozbalení */
+.serviceItemWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .serviceItem {
   display: flex;
   align-items: center;
@@ -41,12 +47,26 @@
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
   transition: all 0.2s ease;
+  text-decoration: none;
+  color: inherit;
 }
 
 .serviceItem:hover {
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   background-color: rgba(132, 211, 209, 0.05);
+}
+
+/* Rozbalitelné služby */
+.expandableService {
+  cursor: pointer;
+  position: relative;
+}
+
+.expandableService.expanded {
+  background-color: rgba(132, 211, 209, 0.08);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .serviceIcon {
@@ -65,8 +85,156 @@
   font-size: 0.95rem;
   font-weight: 500;
   color: #333;
+  flex-grow: 1;
 }
 
+.expandIcon {
+  color: #84d3d1;
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.expandableService.expanded .expandIcon {
+  transform: rotate(180deg);
+}
+
+/* Detail kartička */
+.serviceDetails {
+  background-color: white;
+  border: 1px solid rgba(132, 211, 209, 0.2);
+  border-top: none;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  animation: slideDown 0.3s ease-out;
+  margin-bottom: 0.75rem;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    max-height: 1000px;
+    transform: translateY(0);
+  }
+}
+
+.detailsContent {
+  padding: 2rem;
+}
+
+.detailSection {
+  margin-bottom: 1.5rem;
+}
+
+.detailSection:last-child {
+  margin-bottom: 0;
+}
+
+.categoryBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(132, 211, 209, 0.15);
+  color: #3a7d7b;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.categoryIcon {
+  font-size: 0.8rem;
+}
+
+.detailTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #3a7d7b;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(132, 211, 209, 0.2);
+}
+
+.detailIcon {
+  color: #84d3d1;
+  font-size: 1rem;
+}
+
+.detailText {
+  color: #555;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* FAQ sekce */
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faqItem {
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  padding: 1rem;
+  border-left: 3px solid #84d3d1;
+}
+
+.faqQuestion {
+  color: #3a7d7b;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.faqAnswer {
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Cenová sekce */
+.priceSection {
+  background-color: rgba(132, 211, 209, 0.1);
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.priceTag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.priceLabel {
+  color: #555;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.priceValue {
+  color: #3a7d7b;
+  font-size: 1.2rem;
+  font-weight: 700;
+  background-color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Ceník */
 .priceListContainer {
   padding: 1.5rem;
   background-color: white;
@@ -123,6 +291,7 @@
   white-space: nowrap;
 }
 
+/* Responzivní design */
 @media (max-width: 992px) {
   .servicesContainer {
     grid-template-columns: 1fr;
@@ -131,6 +300,21 @@
   
   .priceListContainer {
     order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .detailsContent {
+    padding: 1.5rem;
+  }
+  
+  .detailTitle {
+    font-size: 1rem;
+  }
+  
+  .priceTag {
+    flex-direction: column;
+    gap: 0.5rem;
   }
 }
 
@@ -152,5 +336,13 @@
   .serviceCell, .priceCell {
     padding: 0.75rem;
     font-size: 0.9rem;
+  }
+  
+  .detailsContent {
+    padding: 1rem;
+  }
+  
+  .faqItem {
+    padding: 0.75rem;
   }
 }

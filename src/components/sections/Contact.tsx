@@ -51,9 +51,10 @@ const Contact = () => {
               </div>
               <div className={styles.contactText}>
                 <h4>Ordinační hodiny</h4>
-                <p>Po+Čt: 8:00 - 18:00</p>
+                <p>Po: 8:00 - 18:00</p>
                 <p>Út: 8:00 - 17:00</p>
                 <p>St: 8:00 - 18:00</p>
+                <p>Čt: 8:00 - 18:00</p>
                 <p>Pá: 8:00 - 12:00</p>
               </div>
             </div>
