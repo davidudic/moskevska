@@ -23,6 +23,212 @@ const servicesDetails = {
     notes: 'Doporučujeme mít připraveny všechny dosavadní lékařské zprávy.',
     price: 'od 500 Kč',
     icon: 'user-md'
+  },
+  2: {
+    title: 'Odstranění kožních a podkožních útvarů',
+    category: 'Chirurgie / Dermatologie',
+    description: 'Chirurgické nebo dermatologické odstranění kožních výrůstků, cyst, fibromů a dalších benigních útvarů.',
+    indications: 'Nezhoubné kožní útvary, které způsobují estetické nebo funkční potíže.',
+    preparation: 'Pacient by měl být informován o průběhu zákroku, případně podstoupit předoperační vyšetření.',
+    procedure: 'Zákrok probíhá většinou ambulantně, pod lokální anestezií, odstranění útvaru pomocí skalpelu, laseru nebo jiných metod.',
+    aftercare: 'Rána je ošetřována, doporučuje se klidový režim, hygienická opatření a kontrola hojení.',
+    risks: 'Infekce, krvácení, jizvení nebo recidiva útvaru.',
+    faq: [
+      { question: 'Bude zákrok bolestivý?', answer: 'Zákrok se provádí v lokální anestezii, takže nebudete cítit bolest během výkonu.' },
+      { question: 'Jak dlouho trvá hojení?', answer: 'Hojení obvykle trvá 1-2 týdny, závisi na velikosti a umístění útvaru.' },
+      { question: 'Zůstane jizva?', answer: 'Snažíme se minimalizovat vznik jizev, jejich velikost závisí na typu a velikosti útvaru.' }
+    ],
+    notes: 'Vždy je nutné histologické vyšetření odstraněného materiálu.',
+    price: 'od 1500 Kč',
+    icon: 'cut'
+  },
+  3: {
+    title: 'Odstranění exostózy a plastika nehtového lůžka palce nohy',
+    category: 'Ortopedie / Chirurgie',
+    description: 'Chirurgické odstranění kostního výrůstku (exostózy) na palci nohy a úprava nehtového lůžka pro zmírnění bolesti a zlepšení funkce.',
+    indications: 'Bolestivé exostózy, deformity nehtového lůžka, chronické záněty nehtu.',
+    preparation: 'Předoperační vyšetření, informace o medikaci, abstinence od jídla/pití dle anestézie.',
+    procedure: 'Zákrok prováděný v lokální nebo celkové anestézii, odstranění kostního výrůstku, úprava nehtu a lůžka.',
+    aftercare: 'Doporučen odpočinek, pravidelná péče o ránu, kontrolní vyšetření.',
+    risks: 'Infekce, bolest, omezená hybnost, recidiva.',
+    faq: [
+      { question: 'Jak dlouho budu mimo práci?', answer: 'Obvykle 1-2 týdny, závisí na typu práce a rozsahu zákroku.' },
+      { question: 'Může dojít k návratu problému?', answer: 'Při správném provedení je recidiva vzácná, ale možná.' },
+      { question: 'Jak pečovat o nohu po operaci?', answer: 'Dodržujte pokyny k péči o ránu, noste vhodnou obuv a choditte na kontroly.' }
+    ],
+    notes: 'Rehabilitace a správná obuv jsou klíčové pro úspěšný návrat k běžným aktivitám.',
+    price: 'od 8000 Kč',
+    icon: 'shoe-prints'
+  },
+  4: {
+    title: 'Ošetření úrazů',
+    category: 'Chirurgie / Traumatologie',
+    description: 'Ošetření poranění měkkých tkání, pohmožděnin, tržných ran či zlomenin.',
+    indications: 'Akutní úraz, otevřené nebo uzavřené poranění.',
+    preparation: 'Není nutná, akutní výkony.',
+    procedure: 'Vyšetření, ošetření rány, fixace, případně RTG nebo sutura.',
+    aftercare: 'Dle typu úrazu – převazy, klidový režim, kontrola.',
+    risks: 'Infekce, krvácení, komplikované hojení.',
+    faq: [
+      { question: 'Kdy se můžu vrátit do práce/sportu?', answer: 'Závisí na typu a rozsahu úrazu, obvykle od několika dní do několika týdnů.' },
+      { question: 'Musím na kontrolu?', answer: 'Ano, kontrola je důležitá pro sledování hojení a předcházení komplikacím.' }
+    ],
+    notes: 'Vhodné přijít co nejdříve po úrazu.',
+    price: 'dle rozsahu',
+    icon: 'first-aid'
+  },
+  5: {
+    title: 'Léčení kožních defektů dolních končetin',
+    category: 'Dermatologie / Chirurgie',
+    description: 'Léčba chronických ran, bércových vředů a jiných defektů kůže.',
+    indications: 'Špatně se hojící rány, kožní defekty u diabetiků, bércové vředy.',
+    preparation: 'Základní vyšetření, někdy doppler, mikrobiologický stěr.',
+    procedure: 'Pravidelné převazy, aplikace léčebných krytí, kontrola hojení.',
+    aftercare: 'Zlepšení stavu dle pravidelné péče a celkové léčby.',
+    risks: 'Chronické nehojení, infekce.',
+    faq: [
+      { question: 'Jak často musím chodit?', answer: 'Obvykle 1-2x týdně, závisí na stavu rány a typu léčby.' },
+      { question: 'Dá se to úplně vyléčit?', answer: 'Při správné léčbě a spolupráci pacienta ano, ale může to trvat dlouho.' }
+    ],
+    notes: 'Důležitá spolupráce pacienta na celkové terapii.',
+    price: 'od 300 Kč',
+    icon: 'bandage'
+  },
+  6: {
+    title: 'Laserové ošetření',
+    category: 'Dermatologie / Estetická medicína',
+    description: 'Odstranění kožních útvarů, cévek, pigmentací či rejuvenace pleti pomocí laseru.',
+    indications: 'Pigmentace, žilky, jizvy, znaménka, estetické důvody.',
+    preparation: 'Vyšetření kožního problému, zákaz opalování.',
+    procedure: 'Rychlý ambulantní zákrok s laserovým paprskem.',
+    aftercare: 'Citlivost v místě ošetření, dočasné zarudnutí, ochrana před sluncem.',
+    risks: 'Podráždění kůže, pigmentové změny, vzácně jizva.',
+    faq: [
+      { question: 'Bolí to?', answer: 'Můžete cítit mírné štípání, ale výkon je dobře snášen.' },
+      { question: 'Kolik ošetření je potřeba?', answer: 'Obvykle 1-3 ošetření podle typu problému.' }
+    ],
+    notes: 'Některé výkony nejsou hrazeny pojišťovnou.',
+    price: 'od 2500 Kč',
+    icon: 'bolt'
+  },
+  7: {
+    title: 'Diagnostika a konzultace závažných onemocnění',
+    category: 'Interní medicína / Diagnostika',
+    description: 'Komplexní zhodnocení zdravotního stavu při podezření na vážné onemocnění.',
+    indications: 'Chronické příznaky, úbytek na váze, podezřelé nálezy, výsledky z jiného pracoviště.',
+    preparation: 'Vyšetření, laboratorní a zobrazovací testy.',
+    procedure: 'Důkladná konzultace, analýza nálezů, návrh další péče.',
+    aftercare: 'Následuje další vyšetření nebo léčba dle výsledků.',
+    risks: 'Rizika se týkají pouze navržené další léčby.',
+    faq: [
+      { question: 'Můžete mi potvrdit diagnózu z jiné kliniky?', answer: 'Ano, můžeme posoudit nálezy a poskytnout druhý názor.' },
+      { question: 'Co když to bude vážné?', answer: 'Zajistíme vám odpovídající péči a předáme do specializovaného centra.' }
+    ],
+    notes: 'Možnost mezioborové konzultace.',
+    price: 'od 800 Kč',
+    icon: 'stethoscope'
+  },
+  8: {
+    title: 'Předoperační konzultace',
+    category: 'Předoperační příprava',
+    description: 'Posouzení zdravotního stavu a příprava na plánovaný chirurgický zákrok.',
+    indications: 'Pacienti s plánovaným výkonem pod anestezií.',
+    preparation: 'Zdravotní dokumentace, seznam léků, laboratorní vyšetření.',
+    procedure: 'Vyšetření lékařem, posouzení rizik, vydání předoperačního stanoviska.',
+    aftercare: 'Nevyžaduje rekonvalescenci.',
+    risks: 'Není riziková.',
+    faq: [
+      { question: 'Mohu brát své léky před operací?', answer: 'Některé léky je nutné vysadit, jiné pokračovat - řekneme vám přesně co.' },
+      { question: 'Co když mám horečku?', answer: 'Operace se obvykle odkládá do vyléčení akutního onemocnění.' }
+    ],
+    notes: 'Nutné absolvovat nejpozději 7 dní před výkonem.',
+    price: 'od 800 Kč',
+    icon: 'clipboard-check'
+  },
+  9: {
+    title: 'Konzultace pooperačních stavů a řešení pooperačních komplikací',
+    category: 'Pooperační péče',
+    description: 'Vyhodnocení hojení a řešení případných komplikací po chirurgickém výkonu.',
+    indications: 'Nejasnosti po operaci, zhoršené hojení, bolest, výtok.',
+    preparation: 'Není nutná.',
+    procedure: 'Kontrola rány, pohovor, případně doplňující vyšetření.',
+    aftercare: 'Doporučení pro další léčbu, převazy.',
+    risks: 'Závažné komplikace je nutné řešit ihned.',
+    faq: [
+      { question: 'Je toto hojení normální?', answer: 'Posoudíme stav rány a vysvětlíme, zda hojení probíhá správně.' },
+      { question: 'Musím na další zákrok?', answer: 'Závisí na typu komplikace, některé se řeší konzervativně.' }
+    ],
+    notes: 'Kontroly neodkládejte.',
+    price: 'od 500 Kč',
+    icon: 'comments'
+  },
+  10: {
+    title: 'Kontroly a převazy po operacích',
+    category: 'Pooperační péče',
+    description: 'Pravidelné sledování hojení operační rány a převazování dle potřeby.',
+    indications: 'Každý pacient po chirurgickém výkonu.',
+    preparation: 'Není nutná.',
+    procedure: 'Odstranění krytí, kontrola rány, dezinfekce a nový obvaz.',
+    aftercare: 'Dle stavu rány, často více návštěv.',
+    risks: 'Infekce, rozpad rány, opožděné hojení.',
+    faq: [
+      { question: 'Jak často mám chodit?', answer: 'Obvykle každé 2-3 dny na začátku, pak dle potřeby.' },
+      { question: 'Kdy mi vytáhnete stehy?', answer: 'Obvykle za 7-14 dní, závisí na místě a typu operace.' }
+    ],
+    notes: 'Důslednost v kontrole je klíčová.',
+    price: 'od 350 Kč',
+    icon: 'band-aid'
+  },
+  11: {
+    title: 'Stomická poradna',
+    category: 'Specializovaná péče',
+    description: 'Individuální poradenství pro pacienty se stomií (vývodem).',
+    indications: 'Péče o novou či dlouhodobou stomii, problémy s těsněním, podrážděním kůže.',
+    preparation: 'Doporučuje se přinést používané pomůcky.',
+    procedure: 'Vyšetření, edukace, návrh vhodných pomůcek a technik ošetření.',
+    aftercare: 'Pravidelné kontroly dle potřeby.',
+    risks: 'Podráždění, záněty, špatné hojení okolo stomie.',
+    faq: [
+      { question: 'Jak často měnit pomůcky?', answer: 'Závisí na typu stomie, obvykle každé 3-7 dní.' },
+      { question: 'Co dělat při podráždění?', answer: 'Kontaktujte nás okamžitě, poradíme s řešením.' }
+    ],
+    notes: 'Poradna pomáhá zvýšit kvalitu života se stomií.',
+    price: 'dle dohody',
+    icon: 'chart-pie'
+  },
+  12: {
+    title: 'Laserová epilace',
+    category: 'Estetická dermatologie',
+    description: 'Trvalá redukce chloupků pomocí cíleného laserového paprsku.',
+    indications: 'Nežádoucí ochlupení, folikulitida, podráždění po holení.',
+    preparation: 'Oholení oblasti, bez opalování 4 týdny před výkonem.',
+    procedure: 'Ambulantní ošetření, lehké štípání, bez nutnosti anestezie.',
+    aftercare: 'Mírné zarudnutí, nutná ochrana před sluncem.',
+    risks: 'Pigmentové změny, podráždění.',
+    faq: [
+      { question: 'Kolik sezení je potřeba?', answer: 'Obvykle 6-8 sezení s odstupem 4-6 týdnů.' },
+      { question: 'Bolí to?', answer: 'Cítíte lehké štípání, ale výkon je dobře snášen.' }
+    ],
+    notes: 'Nejlepší efekt při světlé kůži a tmavých chloupcích.',
+    price: 'od 700 Kč',
+    icon: 'bolt'
+  },
+  13: {
+    title: 'Kosmetické výkony',
+    category: 'Estetická medicína',
+    description: 'Zákroky zaměřené na zlepšení vzhledu kůže, redukci vrásek a omlazení.',
+    indications: 'Stárnutí kůže, vrásky, pigmentace, akné, jizvy.',
+    preparation: 'Konzultace, vyšetření stavu pleti.',
+    procedure: 'Individuálně dle výkonu – chemický peeling, aplikace výplní, mezoterapie aj.',
+    aftercare: 'Krátkodobé zarudnutí, doporučená ochrana pokožky.',
+    risks: 'Podráždění, otoky, modřiny, velmi vzácně alergická reakce.',
+    faq: [
+      { question: 'Jak rychle uvidím výsledky?', answer: 'Závisí na typu výkonu, obvykle během několika dní až týdnů.' },
+      { question: 'Musím něco dodržovat po výkonu?', answer: 'Ano, dostanete přesné pokyny pro domácí péči.' }
+    ],
+    notes: 'Výkony nejsou hrazeny pojišťovnou.',
+    price: 'od 600 Kč',
+    icon: 'magic'
   }
 };
 
@@ -39,84 +245,84 @@ const medicalServices = [
     title: 'Odstranění kožních a podkožních útvarů',
     icon: 'cut',
     link: '/sluzby/kozni-utvary',
-    hasDetails: false
+    hasDetails: true
   },
   {
     id: 3,
     title: 'Odstranění exostózy a plastika nehtového lůžka palce nohy',
     icon: 'shoe-prints',
     link: '/sluzby/nehtove-luzko',
-    hasDetails: false
+    hasDetails: true
   },
   {
     id: 4,
     title: 'Ošetření úrazů',
     icon: 'first-aid',
     link: '/sluzby/urazy',
-    hasDetails: false
+    hasDetails: true
   },
   {
     id: 5,
     title: 'Léčení kožních defektů dolních končetin',
     icon: 'bandage',
     link: '/sluzby/kozni-defekty',
-    hasDetails: false
+    hasDetails: true
   },
   {
     id: 6,
     title: 'Laserové ošetření',
     icon: 'bolt',
     link: '/sluzby/laserove-osetreni',
-    hasDetails: false
+    hasDetails: true
   },
   {
     id: 7,
     title: 'Diagnostika a konzultace závažných onemocnění',
     icon: 'stethoscope',
     link: '/sluzby/diagnostika',
-    hasDetails: false
+    hasDetails: true
   },
   {
     id: 8,
     title: 'Předoperační konzultace',
     icon: 'clipboard-check',
     link: '/sluzby/predoperacni',
-    hasDetails: false
+    hasDetails: true
   },
   {
     id: 9,
     title: 'Konzultace pooperačních stavů a řešení pooperačních komplikací',
     icon: 'comments',
     link: '/sluzby/pooperacni',
-    hasDetails: false
+    hasDetails: true
   },
   {
     id: 10,
     title: 'Kontroly a převazy po operacích',
     icon: 'band-aid',
     link: '/sluzby/prevazy',
-    hasDetails: false
+    hasDetails: true
   },
   {
     id: 11,
     title: 'Stomická poradna',
     icon: 'chart-pie',
     link: '/sluzby/stomicka-poradna',
-    hasDetails: false
+    hasDetails: true
   },
   {
     id: 12,
     title: 'Laserová epilace',
     icon: 'bolt',
     link: '/sluzby/laserova-epilace',
-    hasDetails: false
+    hasDetails: true
   },
   {
     id: 13,
     title: 'Kosmetické výkony',
     icon: 'magic',
     link: '/sluzby/kosmeticke-vykony',
-    hasDetails: false
+    hasDetails: true
   }
 ];
 
