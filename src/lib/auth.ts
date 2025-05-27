@@ -3,6 +3,14 @@ import crypto from 'crypto';
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'defaultpassword';
 const SECRET_KEY = process.env.AUTH_SECRET || 'fallback-secret-key';
 
+// Debug pro produkci
+console.log('Auth initialized:', {
+  hasAdminPassword: !!process.env.ADMIN_PASSWORD,
+  hasAuthSecret: !!process.env.AUTH_SECRET,
+  passwordLength: ADMIN_PASSWORD.length,
+  secretLength: SECRET_KEY.length
+});
+
 // Vytvoří hash z hesla a času pro lepší bezpečnost
 export function createAuthToken(): string {
   const timestamp = Date.now();
