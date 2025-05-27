@@ -43,7 +43,9 @@ export default function AdminOrdinace() {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const response = await fetch('/api/auth/check');
+        const response = await fetch('/api/auth/check', {
+          cache: 'no-store' // Disable cache pro debug
+        });
         const result = await response.json();
         
         if (!result.authenticated) {
@@ -70,7 +72,9 @@ export default function AdminOrdinace() {
 
   const loadData = async () => {
     try {
-      const response = await fetch('/api/ordinace');
+      const response = await fetch('/api/ordinace', {
+        cache: 'no-store' // Disable cache pro debug
+      });
       const result = await response.json();
       
       if (result.success) {
@@ -98,6 +102,7 @@ export default function AdminOrdinace() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(data),
+        cache: 'no-store', // Disable cache pro debug
       });
 
       const result = await response.json();
