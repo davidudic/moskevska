@@ -1,70 +1,119 @@
-import React from 'react';
+'use client';
+
+import React, { useState, useEffect } from 'react';
 import Layout from '@/components/layout/Layout';
 import styles from './page.module.css';
 import Link from 'next/link';
 import {FaCalendarAlt, FaInfoCircle, FaMapMarkerAlt, FaPhone, FaChevronRight } from 'react-icons/fa';
 
-export const metadata = {
-  title: 'Ordinační doba | Chirurgická ambulance',
-  description: 'Detailní informace o ordinační době a rozvrhu lékařů. Zjistěte, kdy můžete navštívit naši chirurgickou ambulanci v Liberci.',
-};
+interface OrdinaceHour {
+  id: number;
+  day: string;
+  morning: string;
+  afternoon: string;
+  note: string;
+  active: boolean;
+}
 
-// Data ordinačních hodin - podrobněji než na homepage
-const officeHours = [
-  { 
-    id: 1, 
-    day: 'Pondělí', 
-    morning: '8:00 - 12:00', 
-    afternoon: '13:00 - 18:00', 
-    note: 'Odpoledne pouze pro objednané pacienty'
-  },
-  { 
-    id: 2, 
-    day: 'Úterý', 
-    morning: '8:00 - 12:00', 
-    afternoon: '13:00 - 17:00', 
-    note: 'Odpoledne stomická poradna (nutné objednání)'
-  },
-  { 
-    id: 3, 
-    day: 'Středa', 
-    morning: '8:00 - 12:00', 
-    afternoon: '13:00 - 18:00', 
-    note: 'Odpoledne pouze pro objednané pacienty'
-  },
-  { 
-    id: 4, 
-    day: 'Čtvrtek', 
-    morning: '8:00 - 12:00', 
-    afternoon: '13:00 - 18:00', 
-    note: 'Odpoledne pouze pro objednané pacienty'
-  },
-  { 
-    id: 5, 
-    day: 'Pátek', 
-    morning: '8:00 - 12:00', 
-    afternoon: 'Zavřeno', 
-    note: 'Odpoledne není ordinační doba'
-  },
-  { 
-    id: 6, 
-    day: 'Sobota', 
-    morning: 'Zavřeno', 
-    afternoon: 'Zavřeno', 
-    note: ''
-  },
-  { 
-    id: 7, 
-    day: 'Neděle', 
-    morning: 'Zavřeno', 
-    afternoon: 'Zavřeno', 
-    note: ''
-  },
+interface OrdinaceData {
+  ordinacniHodiny: OrdinaceHour[];
+  lastUpdated: string;
+  updatedBy: string;
+}
+
+// Fallback data pro případ selhání API
+const fallbackHours: OrdinaceHour[] = [
+  { id: 1, day: 'Pondělí', morning: '8:00 - 12:00', afternoon: '13:00 - 18:00', note: 'Odpoledne pouze pro objednané pacienty', active: true },
+  { id: 2, day: 'Úterý', morning: '8:00 - 12:00', afternoon: '13:00 - 17:00', note: 'Odpoledne stomická poradna (nutné objednání)', active: true },
+  { id: 3, day: 'Středa', morning: '8:00 - 12:00', afternoon: '13:00 - 18:00', note: 'Odpoledne pouze pro objednané pacienty', active: true },
+  { id: 4, day: 'Čtvrtek', morning: '8:00 - 12:00', afternoon: '13:00 - 18:00', note: 'Odpoledne pouze pro objednané pacienty', active: true },
+  { id: 5, day: 'Pátek', morning: '8:00 - 12:00', afternoon: 'Zavřeno', note: 'Odpoledne není ordinační doba', active: true },
+  { id: 6, day: 'Sobota', morning: 'Zavřeno', afternoon: 'Zavřeno', note: '', active: false },
+  { id: 7, day: 'Neděle', morning: 'Zavřeno', afternoon: 'Zavřeno', note: '', active: false },
 ];
 
-// Removed doctors' schedule data as requested
-
 export default function OfficeHoursPage() {
+  const [ordinaceData, setOrdinaceData] = useState<OrdinaceData | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchOrdinaceData = async () => {
+      try {
+        const response = await fetch('/api/ordinace');
+        const result = await response.json();
+        
+        if (result.success) {
+          setOrdinaceData(result.data);
+        } else {
+          throw new Error(result.error || 'Nepodařilo se načíst data');
+        }
+      } catch (err) {
+        console.error('Chyba při načítání ordinační doby:', err);
+        setError('Nepodařilo se načíst aktuální ordinační dobu');
+        
+        // Použij fallback data
+        setOrdinaceData({
+          ordinacniHodiny: fallbackHours,
+          lastUpdated: new Date().toISOString(),
+          updatedBy: 'fallback'
+        });
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchOrdinaceData();
+  }, []);
+
+  if (loading) {
+    return (
+      <Layout>
+        <div className={styles.officeHoursPage}>
+          <div className={styles.hero}>
+            <div className="container">
+              <div className={styles.heroContent}>
+                <h1 className={styles.heroTitle}>Ordinační doba</h1>
+                <p className={styles.heroSubtitle}>
+                  Kompletní informace o ordinační době a dostupnosti našich lékařů
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="container">
+            <div style={{ textAlign: 'center', padding: '4rem 0' }}>
+              <p>Načítám ordinační dobu...</p>
+            </div>
+          </div>
+        </div>
+      </Layout>
+    );
+  }
+
+  if (!ordinaceData) {
+    return (
+      <Layout>
+        <div className={styles.officeHoursPage}>
+          <div className={styles.hero}>
+            <div className="container">
+              <div className={styles.heroContent}>
+                <h1 className={styles.heroTitle}>Ordinační doba</h1>
+                <p className={styles.heroSubtitle}>
+                  Kompletní informace o ordinační době a dostupnosti našich lékařů
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="container">
+            <div style={{ textAlign: 'center', padding: '4rem 0' }}>
+              <p>Nepodařilo se načíst ordinační dobu</p>
+            </div>
+          </div>
+        </div>
+      </Layout>
+    );
+  }
+
   return (
     <Layout>
       <div className={styles.officeHoursPage}>
@@ -96,11 +145,11 @@ export default function OfficeHoursPage() {
                     <div style={{color: "#ffffff", fontWeight: 600}}>Poznámka</div>
                   </div>
                   
-                  {officeHours.map((item) => (
+                  {ordinaceData.ordinacniHodiny.map((item) => (
                     <div 
                       key={item.id} 
                       className={`${styles.hoursRow} ${
-                        item.day === 'Sobota' || item.day === 'Neděle' 
+                        !item.active || item.morning === 'Zavřeno'
                           ? styles.inactiveRow 
                           : ''
                       }`}
@@ -109,7 +158,6 @@ export default function OfficeHoursPage() {
                       <div className={styles.timeColumn} style={{color: item.morning === 'Zavřeno' ? '#999' : ''}}>{item.morning}</div>
                       <div className={styles.timeColumn} style={{color: item.afternoon === 'Zavřeno' ? '#999' : ''}}>{item.afternoon}</div>
                       <div className={styles.noteColumn}>{item.note}</div>
-                      {item.note && <div className={styles.noteColumn}>{item.note}</div>}
                     </div>
                   ))}
                 </div>
@@ -137,9 +185,25 @@ export default function OfficeHoursPage() {
                   </ul>
                 </div>
               </div>
-            </section>
 
-            {/* Doctors' schedule section removed as requested */}
+              {error && (
+                <div style={{ 
+                  fontSize: '0.9rem', 
+                  color: '#666', 
+                  textAlign: 'center', 
+                  marginTop: '1rem',
+                  padding: '1rem',
+                  background: '#fff3cd',
+                  border: '1px solid #ffeaa7',
+                  borderRadius: '6px'
+                }}>
+                  <FaInfoCircle style={{ marginRight: '0.5rem', color: '#856404' }} />
+                  {error} - zobrazují se záložní údaje. 
+                  <br />
+                  <small>Posledně aktualizováno: {new Date(ordinaceData.lastUpdated).toLocaleString('cs-CZ')}</small>
+                </div>
+              )}
+            </section>
 
             {/* Jak se objednat */}
             <section className={styles.bookingSection}>

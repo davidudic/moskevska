@@ -1,0 +1,438 @@
+.adminContainer {
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+.adminHeader {
+  background: linear-gradient(135deg, #84d3d1, #3a7d7b);
+  color: white;
+  padding: 1.5rem 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.headerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.headerIcon {
+  font-size: 2.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.75rem;
+  border-radius: 12px;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.subtitle {
+  opacity: 0.9;
+  font-size: 0.9rem;
+}
+
+.headerActions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.previewButton,
+.homeButton,
+.logoutButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.previewButton:hover,
+.homeButton:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.logoutButton:hover {
+  background: rgba(255, 0, 0, 0.3);
+}
+
+.adminMain {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.message.success {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.message.error {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.editorContainer {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+.editorHeader {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.editorHeader h2 {
+  color: #3a7d7b;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.editorHeader p {
+  color: #666;
+}
+
+.hoursGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.hourCard {
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  transition: all 0.2s ease;
+}
+
+.hourCard:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.dayHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.dayHeader h3 {
+  color: #3a7d7b;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.activeToggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.activeToggle input {
+  display: none;
+}
+
+.toggleSlider {
+  width: 40px;
+  height: 20px;
+  background: #ccc;
+  border-radius: 20px;
+  position: relative;
+  transition: background 0.3s ease;
+}
+
+.toggleSlider::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.activeToggle input:checked + .toggleSlider {
+  background: #84d3d1;
+}
+
+.activeToggle input:checked + .toggleSlider::after {
+  transform: translateX(20px);
+}
+
+.timeInputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.inputGroup label {
+  font-weight: 500;
+  color: #495057;
+  font-size: 0.9rem;
+}
+
+.inputGroup input,
+.inputGroup textarea {
+  padding: 0.75rem;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus {
+  outline: none;
+  border-color: #84d3d1;
+  box-shadow: 0 0 0 3px rgba(132, 211, 209, 0.1);
+}
+
+.inputGroup input:disabled,
+.inputGroup textarea:disabled {
+  background: #e9ecef;
+  color: #6c757d;
+  cursor: not-allowed;
+}
+
+.saveSection {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid #dee2e6;
+}
+
+.saveButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #84d3d1, #3a7d7b);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.saveButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(132, 211, 209, 0.4);
+}
+
+.saveButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.previewContainer {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.previewContainer h3 {
+  color: #3a7d7b;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.previewTable {
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.previewHeader {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 2fr;
+  background: #84d3d1;
+  color: white;
+  font-weight: 600;
+}
+
+.previewHeader div {
+  padding: 1rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.previewHeader div:last-child {
+  border-right: none;
+}
+
+.previewRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 2fr;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.previewRow:last-child {
+  border-bottom: none;
+}
+
+.previewRow:nth-child(even) {
+  background: #f8f9fa;
+}
+
+.previewDay,
+.previewTime,
+.previewNote {
+  padding: 0.75rem;
+  border-right: 1px solid #dee2e6;
+}
+
+.previewNote {
+  border-right: none;
+}
+
+.previewDay {
+  font-weight: 500;
+}
+
+.previewTime {
+  color: #3a7d7b;
+  font-weight: 500;
+}
+
+.previewNote {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.loadingContainer,
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  gap: 1rem;
+}
+
+.spinner {
+  font-size: 2rem;
+  color: #84d3d1;
+  animation: spin 1s linear infinite;
+}
+
+.errorIcon {
+  font-size: 3rem;
+  color: #dc3545;
+}
+
+.retryButton {
+  background: #84d3d1;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.retryButton:hover {
+  background: #3a7d7b;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .headerContent {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .headerActions {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .adminMain {
+    padding: 1rem;
+  }
+  
+  .hoursGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .timeInputs {
+    grid-template-columns: 1fr;
+  }
+  
+  .previewHeader,
+  .previewRow {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  
+  .previewHeader div,
+  .previewDay,
+  .previewTime,
+  .previewNote {
+    border-right: none;
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  .previewRow:last-child .previewNote {
+    border-bottom: none;
+  }
+}
