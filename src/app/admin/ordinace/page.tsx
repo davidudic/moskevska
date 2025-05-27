@@ -41,21 +41,27 @@ export default function AdminOrdinace() {
 
   // Zkontroluj přihlášení při načtení
   useEffect(() => {
+    console.log('Admin page: Starting auth check...');
     const checkAuth = async () => {
       try {
+        console.log('Admin page: Fetching /api/auth/check...');
         const response = await fetch('/api/auth/check', {
           cache: 'no-store' // Disable cache pro debug
         });
+        console.log('Admin page: Auth check response status:', response.status);
         const result = await response.json();
+        console.log('Admin page: Auth check result:', result);
         
         if (!result.authenticated) {
+          console.log('Admin page: Not authenticated, redirecting to login...');
           router.push('/admin/login?returnUrl=/admin/ordinace');
           return;
         }
         
+        console.log('Admin page: Authenticated, setting state...');
         setIsAuthenticated(true);
       } catch (error) {
-        console.error('Chyba při ověřování:', error);
+        console.error('Admin page: Auth check error:', error);
         router.push('/admin/login?returnUrl=/admin/ordinace');
       }
     };
@@ -71,20 +77,27 @@ export default function AdminOrdinace() {
   }, [isAuthenticated]);
 
   const loadData = async () => {
+    console.log('Admin page: Loading ordinace data...');
     try {
       const response = await fetch('/api/ordinace', {
         cache: 'no-store' // Disable cache pro debug
       });
+      console.log('Admin page: Ordinace API response status:', response.status);
       const result = await response.json();
+      console.log('Admin page: Ordinace API result:', result);
       
       if (result.success) {
+        console.log('Admin page: Setting ordinace data...');
         setData(result.data);
       } else {
+        console.error('Admin page: Failed to load ordinace data:', result.error);
         setMessage({ type: 'error', text: 'Nepodařilo se načíst data' });
       }
     } catch (error) {
+      console.error('Admin page: Ordinace API error:', error);
       setMessage({ type: 'error', text: 'Chyba při načítání dat' });
     } finally {
+      console.log('Admin page: Setting loading to false...');
       setLoading(false);
     }
   };
