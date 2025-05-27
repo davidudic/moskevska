@@ -3,21 +3,34 @@ import { verifyAuth } from '@/lib/auth';
 
 // Explicitně nastavit runtime pro Vercel
 export const runtime = 'nodejs';
+export const dynamic = 'force-dynamic';
 
 export async function GET(request: NextRequest) {
   try {
     console.log('Auth check: Starting...');
     
-    // Použij request.cookies místo cookies()
+    // Zkus cookies i headers
     const authCookie = request.cookies.get('admin-auth');
+    const authHeader = request.headers.get('authorization');
     
     console.log('Auth check: Cookie exists:', !!authCookie);
+    console.log('Auth check: Header exists:', !!authHeader);
+    
+    let token = '';
     if (authCookie) {
-      console.log('Auth check: Cookie value length:', authCookie.value.length);
-      console.log('Auth check: Cookie value preview:', authCookie.value.substring(0, 20) + '...');
+      token = authCookie.value;
+      console.log('Auth check: Using cookie token');
+    } else if (authHeader && authHeader.startsWith('Bearer ')) {
+      token = authHeader.substring(7);
+      console.log('Auth check: Using header token');
     }
     
-    const isAuthenticated = authCookie && verifyAuth(authCookie.value);
+    if (token) {
+      console.log('Auth check: Token length:', token.length);
+      console.log('Auth check: Token preview:', token.substring(0, 20) + '...');
+    }
+    
+    const isAuthenticated = token && verifyAuth(token);
     console.log('Auth check: verifyAuth result:', isAuthenticated);
     
     return NextResponse.json({
@@ -25,7 +38,8 @@ export async function GET(request: NextRequest) {
       authenticated: !!isAuthenticated,
       debug: {
         hasCookie: !!authCookie,
-        cookieLength: authCookie?.value.length || 0
+        hasHeader: !!authHeader,
+        tokenLength: token.length || 0
       }
     });
   } catch (error) {

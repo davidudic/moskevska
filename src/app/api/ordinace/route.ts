@@ -3,6 +3,7 @@ import { verifyAuth } from '@/lib/auth';
 
 // Explicitně nastavit runtime pro Vercel
 export const runtime = 'nodejs';
+export const dynamic = 'force-dynamic';
 
 // In-memory storage pro Vercel (resetuje se při restart)
 let inMemoryData = {
@@ -91,10 +92,18 @@ export async function POST(request: NextRequest) {
   try {
     console.log('API: Attempting to save ordinace data');
     
-    // Ověř autentifikaci - použij request.cookies místo cookies()
+    // Ověř autentifikaci - zkus cookies i headers
     const authCookie = request.cookies.get('admin-auth');
+    const authHeader = request.headers.get('authorization');
     
-    if (!authCookie || !verifyAuth(authCookie.value)) {
+    let token = '';
+    if (authCookie) {
+      token = authCookie.value;
+    } else if (authHeader && authHeader.startsWith('Bearer ')) {
+      token = authHeader.substring(7);
+    }
+    
+    if (!token || !verifyAuth(token)) {
       console.log('API: Unauthorized access attempt');
       return NextResponse.json(
         { success: false, error: 'Neautorizovaný přístup' },
