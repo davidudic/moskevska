@@ -30,8 +30,8 @@ export async function POST(request: NextRequest) {
 
     response.cookies.set('admin-auth', authToken, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
-      sameSite: 'strict',
+      secure: true, // Vždy true pro HTTPS
+      sameSite: 'lax', // Místo 'strict' pro lepší kompatibilitu
       maxAge: 24 * 60 * 60, // 24 hodin
       path: '/'
     });

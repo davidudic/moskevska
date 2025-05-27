@@ -18,7 +18,9 @@ export default function AdminLogin() {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const response = await fetch('/api/auth/check');
+        const response = await fetch('/api/auth/check', {
+          cache: 'no-store' // Disable cache pro debug
+        });
         const data = await response.json();
         if (data.authenticated) {
           router.push(returnUrl);
@@ -43,6 +45,7 @@ export default function AdminLogin() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ password }),
+        cache: 'no-store', // Disable cache pro debug
       });
 
       const data = await response.json();
