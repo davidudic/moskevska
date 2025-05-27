@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { cookies } from 'next/headers';
 import { verifyAuth } from '@/lib/auth';
+
+// Explicitně nastavit runtime pro Vercel
+export const runtime = 'nodejs';
 
 // In-memory storage pro Vercel (resetuje se při restart)
 let inMemoryData = {
@@ -89,9 +91,8 @@ export async function POST(request: NextRequest) {
   try {
     console.log('API: Attempting to save ordinace data');
     
-    // Ověř autentifikaci
-    const cookieStore = cookies();
-    const authCookie = cookieStore.get('admin-auth');
+    // Ověř autentifikaci - použij request.cookies místo cookies()
+    const authCookie = request.cookies.get('admin-auth');
     
     if (!authCookie || !verifyAuth(authCookie.value)) {
       console.log('API: Unauthorized access attempt');

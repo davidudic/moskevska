@@ -1,12 +1,15 @@
-import { NextResponse } from 'next/server';
-import { cookies } from 'next/headers';
+import { NextRequest, NextResponse } from 'next/server';
 import { verifyAuth } from '@/lib/auth';
 
-export async function GET() {
+// Explicitně nastavit runtime pro Vercel
+export const runtime = 'nodejs';
+
+export async function GET(request: NextRequest) {
   try {
     console.log('Auth check: Starting...');
-    const cookieStore = cookies();
-    const authCookie = cookieStore.get('admin-auth');
+    
+    // Použij request.cookies místo cookies()
+    const authCookie = request.cookies.get('admin-auth');
     
     console.log('Auth check: Cookie exists:', !!authCookie);
     if (authCookie) {
