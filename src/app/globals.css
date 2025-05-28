@@ -35,6 +35,12 @@ a {
   text-decoration: none;
 }
 
+/* Prevence scrollování při otevřeném modálu */
+body.modal-open {
+  overflow: hidden;
+  height: 100vh;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

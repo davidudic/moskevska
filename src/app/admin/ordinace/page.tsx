@@ -198,6 +198,14 @@ export default function AdminOrdinace() {
               {previewMode ? 'Skrýt náhled' : 'Náhled'}
             </button>
             <button
+              onClick={() => router.push('/admin/alert')}
+              className={styles.previewButton}
+              title="Správa alertu"
+            >
+              <FaExclamationTriangle />
+              Alert
+            </button>
+            <button
               onClick={() => router.push('/')}
               className={styles.homeButton}
               title="Přejít na web"
