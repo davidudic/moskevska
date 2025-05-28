@@ -1,11 +1,12 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import styles from './login.module.css';
 import { FaLock, FaEye, FaEyeSlash, FaSpinner } from 'react-icons/fa';
 
-export default function AdminLogin() {
+// Komponenta s useSearchParams zabalená v Suspense
+function LoginForm() {
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -19,7 +20,7 @@ export default function AdminLogin() {
     const checkAuth = async () => {
       try {
         const response = await fetch('/api/auth/check', {
-          cache: 'no-store' // Disable cache pro debug
+          cache: 'no-store'
         });
         const data = await response.json();
         if (data.authenticated) {
@@ -45,20 +46,19 @@ export default function AdminLogin() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ password }),
-        cache: 'no-store', // Disable cache pro debug
+        cache: 'no-store',
       });
 
       const data = await response.json();
-      console.log('Login response:', data); // DEBUG
+      console.log('Login response:', data);
 
       if (data.success) {
-        console.log('Login successful, redirecting to:', returnUrl); // DEBUG
-        // Malé zpoždění, aby se cookie stihlo nastavit
+        console.log('Login successful, redirecting to:', returnUrl);
         setTimeout(() => {
           window.location.href = returnUrl;
         }, 100);
       } else {
-        console.log('Login failed:', data.error); // DEBUG
+        console.log('Login failed:', data.error);
         setError(data.error || 'Přihlášení se nezdařilo');
       }
     } catch (error) {
@@ -136,5 +136,41 @@ export default function AdminLogin() {
         </div>
       </div>
     </div>
+  );
+}
+
+// Loading fallback pro Suspense
+function LoginLoading() {
+  return (
+    <div style={{ 
+      minHeight: '100vh', 
+      display: 'flex', 
+      alignItems: 'center', 
+      justifyContent: 'center',
+      background: 'linear-gradient(135deg, #84d3d1, #3a7d7b)'
+    }}>
+      <div style={{ 
+        background: 'white', 
+        padding: '2rem', 
+        borderRadius: '8px',
+        textAlign: 'center'
+      }}>
+        <FaSpinner style={{ 
+          fontSize: '2rem', 
+          color: '#84d3d1',
+          animation: 'spin 1s linear infinite'
+        }} />
+        <p style={{ marginTop: '1rem' }}>Načítám...</p>
+      </div>
+    </div>
+  );
+}
+
+// Hlavní komponenta
+export default function AdminLogin() {
+  return (
+    <Suspense fallback={<LoginLoading />}>
+      <LoginForm />
+    </Suspense>
   );
 }
