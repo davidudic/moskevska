@@ -98,7 +98,7 @@
   transform: rotate(180deg);
 }
 
-/* Detail kartička */
+/* Detail kartička - OPRAVENO */
 .serviceDetails {
   background-color: white;
   border: 1px solid rgba(132, 211, 209, 0.2);
@@ -106,22 +106,24 @@
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  animation: slideDown 0.3s ease-out;
   margin-bottom: 0.75rem;
-  max-height: 1000px;
-  overflow: hidden;
+  /* OPRAVENO: Odstraněno max-height omezení */
+  overflow: visible;
+  /* OPRAVENO: Lepší animace */
+  animation: slideDownFixed 0.4s ease-out;
 }
 
-@keyframes slideDown {
+/* NOVÁ ANIMACE - bez max-height problémů */
+@keyframes slideDownFixed {
   from {
     opacity: 0;
-    max-height: 0;
-    transform: translateY(-10px);
+    transform: translateY(-20px) scaleY(0.8);
+    transform-origin: top;
   }
   to {
     opacity: 1;
-    max-height: 1000px;
-    transform: translateY(0);
+    transform: translateY(0) scaleY(1);
+    transform-origin: top;
   }
 }
 
@@ -394,19 +396,25 @@
     padding: 0.4rem 0.8rem;
   }
   
-  /* Zlepšení animace pro mobily */
+  /* OPRAVENO: Odstraněno max-height omezení na mobilech */
   .serviceDetails {
-    animation: slideDownMobile 0.3s ease-out;
+    /* Bez max-height omezení */
+    overflow: visible;
   }
   
+  /* Lepší animace pro mobily */
   @keyframes slideDownMobile {
     from {
       opacity: 0;
-      max-height: 0;
+      transform: translateY(-15px) scaleY(0.9);
     }
     to {
       opacity: 1;
-      max-height: 800px;
+      transform: translateY(0) scaleY(1);
     }
+  }
+  
+  .serviceDetails {
+    animation: slideDownMobile 0.3s ease-out;
   }
 }
