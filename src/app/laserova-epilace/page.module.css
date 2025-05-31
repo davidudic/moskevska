@@ -1,382 +1,726 @@
+/* src/app/laserova-epilace/page.module.css */
+
 /* Základní styly stránky */
 .laserPage {
-    padding-top: 0;
-    background-color: #f9f9fa;
-  }
-  
-  /* Hero sekce */
-  .hero {
-    background-color: #84d3d1;
-    background-image: linear-gradient(135deg, #84d3d1, #3a7d7b);
-    padding: 8rem 0 4rem;
-    color: white;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .heroContent {
-    max-width: 800px;
-    text-align: center;
-    margin: 0 auto;
-    position: relative;
-    z-index: 1;
-  }
-  
-  .heroTitle {
-    font-size: 2.8rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    line-height: 1.2;
-  }
-  
-  .heroSubtitle {
-    font-size: 1.3rem;
-    opacity: 0.9;
-    max-width: 600px;
-    margin: 0 auto;
-    line-height: 1.5;
-  }
-  
-  /* Hlavní informační sekce */
+  padding-top: 0;
+  background-color: #f9f9fa;
+}
+
+/* Hero sekce */
+.hero {
+  background-color: #84d3d1;
+  background-image: linear-gradient(135deg, #84d3d1, #3a7d7b);
+  padding: 8rem 0 4rem;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroContent {
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.heroTitle {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.heroSubtitle {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Hlavní informační sekce */
+.infoSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  padding: 4rem 0;
+}
+
+.infoContent {
+  padding-right: 2rem;
+}
+
+.sectionTitle {
+  color: #3a7d7b;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.giftIcon {
+  color: #ff6b35;
+  font-size: 1.5rem;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: #84d3d1;
+}
+
+.infoContent p {
+  margin-bottom: 1.25rem;
+  color: #444;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.benefitsList {
+  margin-top: 2rem;
+  background-color: rgba(132, 211, 209, 0.1);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #84d3d1;
+}
+
+.benefitsList h3 {
+  font-size: 1.2rem;
+  color: #3a7d7b;
+  margin-bottom: 1rem;
+}
+
+.benefitsList ul {
+  padding-left: 1.5rem;
+}
+
+.benefitsList li {
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 0.5rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+.infoImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sectionImage {
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Proces sekce */
+.processSection {
+  padding: 4rem 0;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  margin: 0 0 4rem;
+  padding: 3rem;
+}
+
+.processSteps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.processStep {
+  position: relative;
+  padding: 1.5rem;
+  background-color: #f9f9fa;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.processStep:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.processNumber {
+  width: 40px;
+  height: 40px;
+  background-color: #84d3d1;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.processStep h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+  color: #3a7d7b;
+}
+
+.processStep p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.noteBox {
+  display: flex;
+  background-color: rgba(132, 211, 209, 0.1);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #84d3d1;
+  margin-top: 2rem;
+}
+
+.noteIcon {
+  color: #3a7d7b;
+  font-size: 1.75rem;
+  margin-right: 1.5rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.noteText h4 {
+  color: #3a7d7b;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.noteText p {
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* NOVÉ: Balíčky sekce */
+.packagesSection {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.05), rgba(132, 211, 209, 0.05));
+  border-radius: 16px;
+  margin: 4rem 0;
+}
+
+.packagesHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.packagesHeader .sectionTitle {
+  justify-content: center;
+}
+
+.packagesSubtitle {
+  color: #666;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.packagesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin: 0 2rem;
+}
+
+.packageCard {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  position: relative;
+  transition: all 0.4s ease;
+  border: 2px solid transparent;
+  overflow: hidden;
+}
+
+.packageCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+  border-color: rgba(132, 211, 209, 0.3);
+}
+
+.packageCard.popular {
+  border-color: #ff6b35;
+  background: linear-gradient(145deg, white, rgba(255, 107, 53, 0.02));
+}
+
+.packageCard.popular:hover {
+  border-color: #ff6b35;
+  box-shadow: 0 15px 40px rgba(255, 107, 53, 0.2);
+}
+
+.popularBadge {
+  position: absolute;
+  top: -8px;
+  right: 1rem;
+  background: linear-gradient(135deg, #ff6b35, #ff8c42);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+  z-index: 2;
+}
+
+.packageIcon {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.packageIcon span {
+  font-size: 3rem;
+  background: linear-gradient(135deg, rgba(132, 211, 209, 0.1), rgba(132, 211, 209, 0.2));
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #84d3d1;
+}
+
+.packageName {
+  color: #3a7d7b;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.packageDescription {
+  color: #666;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.packageAreas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  justify-content: center;
+}
+
+.areaTag {
+  background: rgba(132, 211, 209, 0.15);
+  color: #3a7d7b;
+  padding: 0.3rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid rgba(132, 211, 209, 0.3);
+}
+
+.packagePricing {
+  background: linear-gradient(135deg, rgba(132, 211, 209, 0.08), rgba(132, 211, 209, 0.15));
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.packagePricing::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #84d3d1, #ff6b35, #84d3d1);
+}
+
+.originalPrice {
+  margin-bottom: 0.75rem;
+}
+
+.originalLabel {
+  display: block;
+  color: #666;
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+}
+
+.originalAmount {
+  color: #999;
+  font-size: 1.1rem;
+  text-decoration: line-through;
+  font-weight: 500;
+}
+
+.discountPrice {
+  margin-bottom: 1rem;
+}
+
+.discountLabel {
+  display: block;
+  color: #3a7d7b;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.discountAmount {
+  color: #3a7d7b;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(58, 125, 123, 0.2);
+}
+
+.savings {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #ff6b35, #ff8c42);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0 auto;
+  width: fit-content;
+  box-shadow: 0 3px 10px rgba(255, 107, 53, 0.3);
+}
+
+.savingsIcon {
+  font-size: 0.9rem;
+  animation: flame 2s infinite alternate;
+}
+
+@keyframes flame {
+  from { transform: scale(1) rotate(-2deg); }
+  to { transform: scale(1.1) rotate(2deg); }
+}
+
+.packageButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  width: 100%;
+  background: linear-gradient(135deg, #3a7d7b, #84d3d1);
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(132, 211, 209, 0.3);
+}
+
+.packageButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(132, 211, 209, 0.4);
+  background: linear-gradient(135deg, #2c5f5e, #6bbdbb);
+}
+
+.packagesNote {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255, 193, 7, 0.1);
+  border: 1px solid rgba(255, 193, 7, 0.3);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 2rem 2rem 0;
+  font-size: 0.9rem;
+  color: #856404;
+}
+
+.packagesNote .noteIcon {
+  color: #ffc107;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* Ceník sekce */
+.priceSection {
+  padding: 4rem 0;
+}
+
+.priceSectionSubtitle {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+}
+
+.priceGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.priceItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+  transition: all 0.2s ease;
+}
+
+.priceItem:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  background-color: rgba(132, 211, 209, 0.05);
+}
+
+.areaName {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.areaPrice {
+  font-weight: 600;
+  color: #3a7d7b;
+  white-space: nowrap;
+}
+
+.priceNotes {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.noteItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.noteItem .noteIcon {
+  color: #84d3d1;
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+/* CTA sekce */
+.ctaSection {
+  padding: 2rem 0 5rem;
+}
+
+.ctaCard {
+  background: linear-gradient(135deg, #84d3d1, #3a7d7b);
+  padding: 3rem;
+  border-radius: 12px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(132, 211, 209, 0.3);
+}
+
+.ctaTitle {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.ctaText {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  font-size: 1.1rem;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.primaryButton, .secondaryButton {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.primaryButton {
+  background-color: white;
+  color: #3a7d7b;
+}
+
+.primaryButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.secondaryButton {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.secondaryButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+}
+
+.buttonIcon {
+  font-size: 1rem;
+}
+
+/* Responzivní styly */
+@media (max-width: 992px) {
   .infoSection {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    padding: 4rem 0;
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
   
   .infoContent {
-    padding-right: 2rem;
-  }
-  
-  .sectionTitle {
-    color: #3a7d7b;
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    font-weight: 600;
-    position: relative;
-    padding-bottom: 0.75rem;
-  }
-  
-  .sectionTitle::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 60px;
-    height: 3px;
-    background-color: #84d3d1;
-  }
-  
-  .infoContent p {
-    margin-bottom: 1.25rem;
-    color: #444;
-    line-height: 1.7;
-    font-size: 1.05rem;
-  }
-  
-  .benefitsList {
-    margin-top: 2rem;
-    background-color: rgba(132, 211, 209, 0.1);
-    padding: 1.5rem;
-    border-radius: 8px;
-    border-left: 4px solid #84d3d1;
-  }
-  
-  .benefitsList h3 {
-    font-size: 1.2rem;
-    color: #3a7d7b;
-    margin-bottom: 1rem;
-  }
-  
-  .benefitsList ul {
-    padding-left: 1.5rem;
-  }
-  
-  .benefitsList li {
-    margin-bottom: 0.5rem;
-    position: relative;
-    padding-left: 0.5rem;
-    color: #444;
-    line-height: 1.5;
+    padding-right: 0;
   }
   
   .infoImage {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .sectionImage {
-    border-radius: 8px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    object-fit: cover;
-    max-width: 100%;
-    height: auto;
-  }
-  
-  /* Proces sekce */
-  .processSection {
-    padding: 4rem 0;
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
-    margin: 0 0 4rem;
-    padding: 3rem;
+    order: -1; /* Obrázek přesunout nahoru na mobilech */
   }
   
   .processSteps {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin: 3rem 0;
+    grid-template-columns: 1fr;
+  }
+
+  .packagesGrid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    margin: 0 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 7rem 0 3rem;
   }
   
-  .processStep {
-    position: relative;
-    padding: 1.5rem;
-    background-color: #f9f9fa;
-    border-radius: 8px;
-    transition: all 0.3s ease;
+  .heroTitle {
+    font-size: 2.2rem;
   }
   
-  .processStep:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-  }
-  
-  .processNumber {
-    width: 40px;
-    height: 40px;
-    background-color: #84d3d1;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-  }
-  
-  .processStep h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.75rem;
-    color: #3a7d7b;
-  }
-  
-  .processStep p {
-    color: #555;
-    line-height: 1.6;
-  }
-  
-  .noteBox {
-    display: flex;
-    background-color: rgba(132, 211, 209, 0.1);
-    padding: 1.5rem;
-    border-radius: 8px;
-    border-left: 4px solid #84d3d1;
-    margin-top: 2rem;
-  }
-  
-  .noteIcon {
-    color: #3a7d7b;
-    font-size: 1.75rem;
-    margin-right: 1.5rem;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-  }
-  
-  .noteText h4 {
-    color: #3a7d7b;
-    margin-bottom: 0.5rem;
+  .heroSubtitle {
     font-size: 1.1rem;
   }
   
-  .noteText p {
-    color: #555;
-    line-height: 1.6;
-    margin: 0;
-  }
-  
-  /* Ceník sekce */
-  .priceSection {
-    padding: 4rem 0;
-  }
-  
-  .priceGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1rem;
-    margin: 2rem 0;
-  }
-  
-  .priceItem {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.75rem 1.25rem;
-    border-radius: 8px;
-    background-color: white;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
-    transition: all 0.2s ease;
-  }
-  
-  .priceItem:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-    background-color: rgba(132, 211, 209, 0.05);
-  }
-  
-  .areaName {
-    font-size: 0.95rem;
-    color: #444;
-  }
-  
-  .areaPrice {
-    font-weight: 600;
-    color: #3a7d7b;
-    white-space: nowrap;
-  }
-  
-  .priceNotes {
-    margin-top: 2.5rem;
-    display: flex;
+  .sectionTitle {
+    font-size: 1.75rem;
     flex-direction: column;
-    gap: 1rem;
-  }
-  
-  .noteItem {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    color: #555;
-    font-size: 0.95rem;
-  }
-  
-  .noteItem .noteIcon {
-    color: #84d3d1;
-    font-size: 1.25rem;
-    margin: 0;
-  }
-  
-  /* CTA sekce */
-  .ctaSection {
-    padding: 2rem 0 5rem;
+    align-items: flex-start;
+    gap: 0.5rem;
   }
   
   .ctaCard {
-    background: linear-gradient(135deg, #84d3d1, #3a7d7b);
-    padding: 3rem;
-    border-radius: 12px;
-    color: white;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(132, 211, 209, 0.3);
+    padding: 2rem;
   }
   
   .ctaTitle {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    font-weight: 700;
-  }
-  
-  .ctaText {
-    max-width: 700px;
-    margin: 0 auto 2rem;
-    font-size: 1.1rem;
-    opacity: 0.9;
-    line-height: 1.6;
+    font-size: 1.75rem;
   }
   
   .ctaButtons {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .primaryButton, .secondaryButton {
-    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 0.75rem;
-    padding: 1rem 2rem;
-    border-radius: 50px;
-    font-weight: 600;
-    transition: all 0.3s ease;
   }
-  
-  .primaryButton {
-    background-color: white;
-    color: #3a7d7b;
+
+  .packagesSection {
+    margin: 2rem 0;
+    padding: 2rem 0;
   }
-  
-  .primaryButton:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+
+  .packagesGrid {
+    grid-template-columns: 1fr;
+    margin: 0 0.5rem;
   }
-  
-  .secondaryButton {
-    background-color: transparent;
-    border: 2px solid white;
-    color: white;
+
+  .packageCard {
+    padding: 1.5rem;
   }
-  
-  .secondaryButton:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    transform: translateY(-3px);
+
+  .packageIcon span {
+    font-size: 2.5rem;
+    width: 70px;
+    height: 70px;
   }
-  
-  .buttonIcon {
-    font-size: 1rem;
+
+  .packageName {
+    font-size: 1.2rem;
   }
-  
-  /* Responzivní styly */
-  @media (max-width: 992px) {
-    .infoSection {
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-    
-    .infoContent {
-      padding-right: 0;
-    }
-    
-    .infoImage {
-      order: -1; /* Obrázek přesunout nahoru na mobilech */
-    }
-    
-    .processSteps {
-      grid-template-columns: 1fr;
-    }
+
+  .discountAmount {
+    font-size: 1.5rem;
   }
-  
-  @media (max-width: 768px) {
-    .hero {
-      padding: 7rem 0 3rem;
-    }
-    
-    .heroTitle {
-      font-size: 2.2rem;
-    }
-    
-    .heroSubtitle {
-      font-size: 1.1rem;
-    }
-    
-    .sectionTitle {
-      font-size: 1.75rem;
-    }
-    
-    .ctaCard {
-      padding: 2rem;
-    }
-    
-    .ctaTitle {
-      font-size: 1.75rem;
-    }
-    
-    .ctaButtons {
-      flex-direction: column;
-      align-items: center;
-    }
+
+  .popularBadge {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
   }
+
+  .packagesNote {
+    margin: 1.5rem 0.5rem 0;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .packageAreas {
+    flex-direction: column;
+  }
+
+  .areaTag {
+    text-align: center;
+  }
+
+  .packagePricing {
+    padding: 1rem;
+  }
+
+  .savings {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .priceGrid {
+    grid-template-columns: 1fr;
+  }
+}
