@@ -45,18 +45,19 @@ const servicesDetails = {
   3: {
     title: 'Odstranění exostózy a plastika nehtového lůžka palce nohy',
     category: 'Ortopedie / Chirurgie',
-    description: 'Chirurgické odstranění kostního výrůstku (exostózy) na palci nohy a úprava nehtového lůžka pro zmírnění bolesti a zlepšení funkce.',
-    indications: 'Bolestivé exostózy, deformity nehtového lůžka, chronické záněty nehtu.',
-    preparation: 'Předoperační vyšetření, informace o medikaci, abstinence od jídla/pití dle anestézie.',
-    procedure: 'Zákrok prováděný v lokální nebo celkové anestézii, odstranění kostního výrůstku, úprava nehtu a lůžka.',
-    aftercare: 'Doporučen odpočinek, pravidelná péče o ránu, kontrolní vyšetření.',
-    risks: 'Infekce, bolest, omezená hybnost, recidiva.',
+    description: 'Plastika nehtového lůžka je výkon, ke kterému přistupujeme po vyčerpání všech ostatních možností ovlivnění tkání a kožních valů bránících zdravému růstu nehtu.',
+    indications: 'Růstem exostózy dochází k deformaci nehtového lůžka a tím celého nehtu. Přítomnost exostózy skeletu posledního článku prstu.',
+    preparation: 'Nejprve je nutné zjistit pravou příčinu zarůstání nehtů, dále velmi důkladně vyšetřit anatomické poměry a stav nehtové ploténky. V tuto chvíli bývá vhodné dohodnout případnou spolupráci s podologickým specialistou nebo alespoň s aktivním pedikúristou.',
+    procedure: 'Odstranění exostózy je invazivní výkon založený na odstranění vazivového či chrupavčitého valu na nehtové drsnatině posledního článku prstu vzniklé většinou úrazem, ale také dlouhodobým drážděním. Samotný výkon je prováděn v místní anestezii s použitím turniketu k dokonalejšímu znecitlivění. Řez je veden po obvodu prstu, po odstranění příčiny potíží je provedena sutura jednotlivými stehy a rána sterilně zakryta.',
+    aftercare: 'Doporučujeme v prvních 14 dnech po výkonu zachovávat přísný klid na lůžku s elevací končetiny, v žádném případě na končetinu nedošlapovat, k přesunu na hygienu, jídlo a po bytě používat oporu berlí. Extrakce stehů se provádí nejčastěji 14. - 16. den po výkonu. Za 4-6 týdnů po extrakci stehů doporučujeme zahájení konečné fáze léčení se specialistou podologické poradny.',
+    risks: 'O případné profylaxi antibiotiky rozhodne operatér na základě stavu končetiny a pacienta s přihlédnutím k možné infekční komplikaci. Stejně tak je nutné zvážit ponechání často ne zcela zdravého nehtu, často napadeného mykozou.',
     faq: [
-      { question: 'Jak dlouho budu mimo práci?', answer: 'Obvykle 1-2 týdny, závisí na typu práce a rozsahu zákroku.' },
-      { question: 'Může dojít k návratu problému?', answer: 'Při správném provedení je recidiva vzácná, ale možná.' },
-      { question: 'Jak pečovat o nohu po operaci?', answer: 'Dodržujte pokyny k péči o ránu, noste vhodnou obuv a choditte na kontroly.' }
+      { question: 'Co si mám přinést k výkonu?', answer: 'K samotnému výkonu je vhodné přinést s sebou francouzské hole, extrémně volnou obuv (dopor. Crocs), analgetikum k užití na cestu domů.' },
+      { question: 'Jak dlouho výkon trvá?', answer: 'Výkon trvá průměrně 45 minut.' },
+      { question: 'Jak dlouho trvá hojení?', answer: 'Extrakce stehů se provádí nejčastěji 14. - 16. den po výkonu, vždy po zhodnocení hojení tkání operatérem nebo určeným lékařem se zkušeností v oboru.' },
+      { question: 'Co je cílem léčby?', answer: 'Výsledkem dobré spolupráce je zdravě rostoucí nehet v klidném nehtovém lůžku.' }
     ],
-    notes: 'Rehabilitace a správná obuv jsou klíčové pro úspěšný návrat k běžným aktivitám.',
+    notes: 'Pacient opouští ambulanci v době plně účinné místní anestezie, poučen o užívání analgetik a režimu ošetřování vč. převazů. Další péče o měkké tkáně končetiny se soustředí na obnovení vitality kožního krytu posledního článku operovaného prstu.',
     price: 'od 8000 Kč',
     icon: 'shoe-prints'
   },

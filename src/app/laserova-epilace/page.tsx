@@ -119,7 +119,7 @@ export default function LaserEpilacePage() {
             <div className={styles.heroContent}>
               <h1 className={styles.heroTitle}>Epilační laser DOMINO 755 nm</h1>
               <p className={styles.heroSubtitle}>
-                Moderní a bezpečné odstranění nežádoucích chloupků s dlouhotrvajícím efektem
+                Moderní a bezpečné odstranění nežádoucích chloupků s&nbsp;dlouhotrvajícím efektem
               </p>
             </div>
           </div>

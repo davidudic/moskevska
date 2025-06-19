@@ -14,19 +14,25 @@ export default function ServicesAndPricesPage() {
   return (
     <Layout>
       <div className={styles.pageContainer}>
+        {/* Hero sekce */}
+        <div className={styles.hero}>
+          <div className="container">
+            <div className={styles.heroContent}>
+              <h1 className={styles.heroTitle}>Nabízené služby a ceník</h1>
+              <p className={styles.heroSubtitle}>
+                Jsme smluvním zařízením pro všechny zdravotní pojišťovny!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Obsah */}
         <div className="container">
-          <header className={styles.pageHeader}>
-            <h1 className={styles.pageTitle}>NABÍZENÉ SLUŽBY A CENÍK</h1>
-            <p className={styles.pageSubtitle}>
-              Jsme smluvním zařízením pro všechny zdravotní pojišťovny!
-            </p>
-          </header>
-          
-          <main>
+          <div className={styles.pageContent}>
             <ServicesSection />
             <LaserPriceList />
             <GiftVouchers />
-          </main>
+          </div>
         </div>
       </div>
     </Layout>
