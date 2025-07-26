@@ -13,7 +13,9 @@ interface TeamCardProps {
   withImage: boolean;
 }
 
-const TeamCard: React.FC<TeamCardProps> = ({
+const TeamCard: React.FC<TeamCardProps>
+
+= ({
   name,
   position,
   description,

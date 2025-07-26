@@ -57,6 +57,7 @@ const Navbar = () => {
     { href: '/', label: 'Úvod' },
     { href: '/sluzby-a-cenik', label: 'Služby a ceník' },
     { href: '/ordinacni-doba', label: 'Ordinační doba' },
+    { href: '/stop-poceni', label: 'Stop Pocení!' },
     // Laser dropdown will be added separately
     { href: '/kontakt', label: 'Kontakt' }
   ];
@@ -154,6 +155,15 @@ const Navbar = () => {
             {link.label}
           </Link>
         ))}
+        
+        {/* Stop Pocení odkaz v mobilním menu */}
+        <Link
+          href="/stop-poceni"
+          className={styles.mobileNavLink}
+          onClick={closeMobileMenu}
+        >
+          Stop Pocení!
+        </Link>
         
         {/* Flat laser links in mobile menu */}
         <Link
