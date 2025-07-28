@@ -445,12 +445,51 @@ const ServicesSection = () => {
           )}
 
           {/* Cena */}
-          <div className={styles.priceSection}>
-            <div className={styles.priceTag}>
-              <span className={styles.priceLabel}>Cena:</span>
-              <span className={styles.priceValue}>{details.price}</span>
+          {details.price && (
+            <div className={styles.priceSection}>
+              <div className={styles.priceTag}>
+                <span className={styles.priceLabel}>Cena:</span>
+                <span className={styles.priceValue}>{details.price}</span>
+              </div>
             </div>
-          </div>
+          )}
+
+          {/* Speciální odkaz pro plastiku nehtového lůžka */}
+          {serviceId === 3 && (
+            <div className={styles.detailSection}>
+              <a 
+                href="/prilohy/Plastika_neht._lůžka.odt"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.downloadLink}
+                                 style={{
+                   display: 'inline-block',
+                   padding: '12px 20px',
+                   background: 'linear-gradient(135deg, #84d3d1, #3a7d7b)',
+                   color: 'white',
+                   textDecoration: 'none',
+                   borderRadius: '8px',
+                   marginTop: '15px',
+                   fontSize: '14px',
+                   fontWeight: '500',
+                   transition: 'all 0.3s ease',
+                   boxShadow: '0 4px 12px rgba(132, 211, 209, 0.25)'
+                 }}
+                 onMouseEnter={(e) => {
+                   const target = e.target as HTMLElement;
+                   target.style.transform = 'translateY(-2px)';
+                   target.style.boxShadow = '0 6px 16px rgba(132, 211, 209, 0.35)';
+                 }}
+                 onMouseLeave={(e) => {
+                   const target = e.target as HTMLElement;
+                   target.style.transform = 'translateY(0)';
+                   target.style.boxShadow = '0 4px 12px rgba(132, 211, 209, 0.25)';
+                 }}
+              >
+                📄 Stáhnout detailní informace o plastice nehtového lůžka
+              </a>
+            </div>
+          )}
         </div>
       </div>
     );

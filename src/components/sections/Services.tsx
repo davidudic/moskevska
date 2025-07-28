@@ -17,8 +17,31 @@ import {
 // Data služeb
 const serviceCategories = [
   {
+    id: 'akutni',
+    name: 'Akutní péče',
+    icon: <FaUserInjured />,
+    services: [
+      {
+        id: 5,
+        title: 'Ošetření úrazů',
+        description: 'Ošetření drobných poranění a úrazů s minimální čekací dobou.',
+        detail: 'Poskytujeme rychlé a efektivní ošetření drobných úrazů včetně tržných ran, odřenin a popálenin prvního a druhého stupně s kratší čekací dobou než na pohotovosti.',
+        icon: <FaUserInjured />,
+        price: 'dle rozsahu'
+      },
+      {
+        id: 6,
+        title: 'Převazy ran',
+        description: 'Profesionální péče o rány, včetně chronických a pooperačních.',
+        detail: 'Specializujeme se na profesionální převazy akutních i chronických ran. Používáme moderní materiály, které podporují hojení a snižují riziko infekce.',
+        icon: <FaBandAid />,
+        price: 'od 300 Kč'
+      }
+    ]
+  },
+  {
     id: 'chirurgicke',
-    name: 'Chirurgické zákroky',
+    name: 'Chirurgické výkony',
     icon: <FaCut />,
     services: [
       {
@@ -32,10 +55,10 @@ const serviceCategories = [
       {
         id: 2,
         title: 'Operace nehtového lůžka',
-        description: 'Profesionální řešení zarůstajících nehtů a dalších problémů s nehty.',
+        description: 'Profesionální řešení zarůstajících nehtů a dalších potíží s nehty.',
         detail: 'Trvalé řešení zarůstajících nehtů pomocí plastiky nehtového lůžka. Tento zákrok zabraňuje opakovaným zánětům a eliminuje chronické problémy.',
         icon: <FaClinicMedical />,
-        price: 'od 2000 Kč'
+        price: ''
       }
     ]
   },
@@ -59,29 +82,6 @@ const serviceCategories = [
         detail: 'Naše komplexní předoperační vyšetření zahrnuje fyzické vyšetření, kontrolu zdravotního stavu a případně laboratorní testy pro maximální bezpečnost během zákroku.',
         icon: <FaStethoscope />,
         price: 'od 800 Kč'
-      }
-    ]
-  },
-  {
-    id: 'akutni',
-    name: 'Akutní péče',
-    icon: <FaUserInjured />,
-    services: [
-      {
-        id: 5,
-        title: 'Ošetření úrazů',
-        description: 'Ošetření drobných poranění a úrazů s minimální čekací dobou.',
-        detail: 'Poskytujeme rychlé a efektivní ošetření drobných úrazů včetně tržných ran, odřenin a popálenin prvního a druhého stupně s kratší čekací dobou než na pohotovosti.',
-        icon: <FaUserInjured />,
-        price: 'dle rozsahu'
-      },
-      {
-        id: 6,
-        title: 'Převazy ran',
-        description: 'Profesionální péče o rány, včetně chronických a pooperačních.',
-        detail: 'Specializujeme se na profesionální převazy akutních i chronických ran. Používáme moderní materiály, které podporují hojení a snižují riziko infekce.',
-        icon: <FaBandAid />,
-        price: 'od 300 Kč'
       }
     ]
   },
@@ -111,7 +111,7 @@ const serviceCategories = [
 ];
 
 const Services = () => {
-  const [activeCategory, setActiveCategory] = useState('chirurgicke');
+  const [activeCategory, setActiveCategory] = useState('akutni');
   const [activeService, setActiveService] = useState<number | null>(null);
 
   const handleCategoryChange = (categoryId: string) => {
@@ -164,9 +164,11 @@ const Services = () => {
                   <h3 className={styles.serviceTitle}>{service.title}</h3>
                 </div>
                 <p className={styles.serviceDescription}>{service.description}</p>
-                <div className={styles.servicePrice}>
-                  <span>{service.price}</span>
-                </div>
+                {service.price && (
+                  <div className={styles.servicePrice}>
+                    <span>{service.price}</span>
+                  </div>
+                )}
                 <div className={styles.serviceArrow}>
                   <FaArrowRight />
                 </div>
@@ -183,7 +185,12 @@ const Services = () => {
                   >
                     Objednat se
                   </Link>
-                  <Link href={`/sluzby-a-cenik`} className={styles.serviceLink}>
+                  <Link 
+                    href={service.id === 2 ? `/prilohy/Plastika_neht._lůžka.odt` : `/sluzby-a-cenik`} 
+                    className={styles.serviceLink}
+                    target={service.id === 2 ? "_blank" : "_self"}
+                    rel={service.id === 2 ? "noopener noreferrer" : undefined}
+                  >
                     Více informací
                   </Link>
                 </div>
