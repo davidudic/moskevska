@@ -12,17 +12,7 @@ const AboutUs = () => {
             <h2 className={styles.sectionTitle}>O nás</h2>
             
             <p className={styles.paragraph}>
-              Jsme tým zkušených chirurgů a zdravotníků s mnohaletou
-              praxí v oboru. Naše moderní chirurgická ambulance
-              poskytuje široké spektrum služeb od konzultací, přes
-              kosmetické zákroky, až po drobné operační výkony.
-            </p>
-            
-            <p className={styles.paragraph}>
-              Klademe důraz na individuální přístup ke každému
-              pacientovi, používáme nejmodernější vybavení a postupy,
-              které zajišťují bezpečnost a vysokou kvalitu poskytované
-              péče.
+              Od svého založení v roce 2021 se náš tým snaží poskytovat tu nejlepší péči všem našim pacientům. Nabízíme široké spektrum služeb od konzultací přes malé chirurgické výkony až po finální péči estetického zaměření. Ve spolupráci s blízkými ambulancemi kožních specialistů se zaměřujeme na odstraňování všech nebezpečných kožních útvarů a dbáme vždy na dobrý estetický výsledek.
             </p>
             
             <div className={styles.doctorSection}>
@@ -40,16 +30,6 @@ const AboutUs = () => {
                   <h3 className={styles.doctorName}>MUDr. Jaroslav Chaluš</h3>
                   <p className={styles.doctorPosition}>Hlavní lékař, chirurg</p>
                 </div>
-              </div>
-              
-              <div className={styles.signatureContainer}>
-                <Image 
-                  src="/images/podpis.png"
-                  alt="Podpis MUDr. Chaluše"
-                  width={100}
-                  height={60}
-                  style={{objectFit: 'contain'}}
-                />
               </div>
             </div>
             

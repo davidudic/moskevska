@@ -535,7 +535,10 @@ const ServicesSection = () => {
         
         <div className={styles.priceListContainer}>
           <div className={styles.priceTable}>
-            <h3 className={styles.tableTitle}>Základní ceník</h3>
+            <h3 className={styles.tableTitle}>
+              Základní ceník<br/>
+              <span className={styles.tableTitleSubtext}>výkonů nehrazených z veřejného zdravotního pojištění</span>
+            </h3>
             <table className={styles.table}>
               <tbody>
                 {basicPrices.map((item, index) => (

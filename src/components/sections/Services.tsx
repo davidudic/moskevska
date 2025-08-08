@@ -35,7 +35,7 @@ const serviceCategories = [
         description: 'Profesionální péče o rány, včetně chronických a pooperačních.',
         detail: 'Specializujeme se na profesionální převazy akutních i chronických ran. Používáme moderní materiály, které podporují hojení a snižují riziko infekce.',
         icon: <FaBandAid />,
-        price: 'od 300 Kč'
+        price: 'dle rozsahu'
       }
     ]
   },
@@ -50,13 +50,13 @@ const serviceCategories = [
         description: 'Bezpečné odstranění bradavic, mateřských znamének a jiných kožních útvarů.',
         detail: 'Specializujeme se na šetrné odstranění různých typů kožních útvarů včetně mateřských znamének, bradavic a lipomů. Používáme moderní techniky minimalizující jizvy.',
         icon: <FaCut />,
-        price: 'od 1500 Kč'
+        price: 'od 900 Kč'
       },
       {
         id: 2,
         title: 'Operace nehtového lůžka',
         description: 'Profesionální řešení zarůstajících nehtů a dalších potíží s nehty.',
-        detail: 'Trvalé řešení zarůstajících nehtů pomocí plastiky nehtového lůžka. Tento zákrok zabraňuje opakovaným zánětům a eliminuje chronické problémy.',
+        detail: 'Trvalé řešení zarůstajících nehtů pomocí plastiky nehtového lůžka. Tento výkon zabraňuje opakovaným zánětům a eliminuje chronické problémy.',
         icon: <FaClinicMedical />,
         price: ''
       }
@@ -73,15 +73,15 @@ const serviceCategories = [
         description: 'Konzultace s našimi specialisty pro všechny vaše zdravotní potřeby.',
         detail: 'Během osobní konzultace s našimi zkušenými lékaři probereme vaše zdravotní problémy, vysvětlíme všechny možnosti léčby a vytvoříme individuální plán péče.',
         icon: <FaUserMd />,
-        price: 'od 500 Kč'
+        price: 'dle rozsahu'
       },
       {
         id: 4,
         title: 'Předoperační vyšetření',
-        description: 'Komplexní vyšetření pro zajištění bezpečnosti a úspěchu zákroků.',
-        detail: 'Naše komplexní předoperační vyšetření zahrnuje fyzické vyšetření, kontrolu zdravotního stavu a případně laboratorní testy pro maximální bezpečnost během zákroku.',
+        description: 'Komplexní vyšetření pro zajištění bezpečnosti a úspěchu výkonů.',
+        detail: 'Naše komplexní předoperační vyšetření zahrnuje fyzikální vyšetření, kontrolu zdravotního stavu a případně laboratorní testy pro maximální bezpečnost během výkonu.',
         icon: <FaStethoscope />,
-        price: 'od 800 Kč'
+        price: 'dle rozsahu'
       }
     ]
   },
@@ -94,17 +94,17 @@ const serviceCategories = [
         id: 7,
         title: 'Laserové ošetření',
         description: 'Moderní laserové procedury s minimální invazivitou.',
-        detail: 'Nabízíme nejmodernější laserové ošetření pro širokou škálu indikací. Tyto procedury jsou minimálně invazivní, mají krátkou rekonvalescenci a poskytují vynikající výsledky.',
+        detail: 'Nabízíme laserové ošetření nejmodernějšími přístroji pro širokou škálu indikací. Tato postupy jsou minimálně invazivní, mají krátkou rekonvalescenci a poskytují vynikající výsledky.',
         icon: <FaStethoscope />,
-        price: 'od 2500 Kč'
+        price: 'od 900 Kč'
       },
       {
         id: 8,
         title: 'Kosmetické výkony',
-        description: 'Estetické zákroky pro vylepšení vzhledu a zvýšení sebevědomí.',
-        detail: 'Provádíme různé kosmetické zákroky zaměřené na zlepšení vzhledu a odstranění estetických nedokonalostí. Vždy s důrazem na přirozený výsledek a bezpečnost.',
+        description: 'Estetické výkony pro vylepšení vzhledu a zvýšení sebevědomí.',
+        detail: 'Provádíme různé kosmetické výkony zaměřené na zlepšení vzhledu a odstranění estetických nedokonalostí. Vždy s důrazem na přirozený výsledek a bezpečnost.',
         icon: <FaClinicMedical />,
-        price: 'dle typu zákroku'
+        price: 'Dle rozsahu výkonu'
       }
     ]
   }

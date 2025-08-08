@@ -41,7 +41,10 @@ const Contact = () => {
               </div>
               <div className={styles.contactText}>
                 <h4>Email</h4>
-                <p>kontakt@example.com</p>
+                <p>
+                  lekar@chirurgie-moskevska.cz<br/>
+                  <span className={styles.emailNote}>(Jen pro individuální kontakt s konkrétním lékařem!)</span>
+                </p>
               </div>
             </div>
             
