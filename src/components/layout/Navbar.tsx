@@ -65,7 +65,7 @@ const Navbar = () => {
   // Dropdown odkazy
   const laserLinks = [
     { href: '/laserova-epilace', label: 'Epilační laser' },
-    { href: '/operacni-laser', label: 'Operační laser' }
+    { href: '/operacni-laser', label: 'Youlaser MT' }
   ];
 
   return (

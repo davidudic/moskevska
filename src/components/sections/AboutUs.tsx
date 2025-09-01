@@ -33,7 +33,7 @@ const AboutUs = () => {
               </div>
             </div>
             
-            <Link href="/o-nas" className={styles.moreButton}>
+            <Link href="/kontakt" className={styles.moreButton}>
               Více o nás
             </Link>
           </div>

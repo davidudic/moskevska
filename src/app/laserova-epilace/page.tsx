@@ -155,7 +155,7 @@ export default function LaserEpilacePage() {
             </div>
             <div className={styles.infoImage}>
               <Image 
-                src="/images/laser.jpg" 
+                src="/images/domino.webp" 
                 alt="Epilační laser" 
                 width={500} 
                 height={400} 

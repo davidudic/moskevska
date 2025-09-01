@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <section className={`hero-section ${styles.hero}`}>
       <Image 
-        src="/images/hero-background.jpeg" 
+        src="/images/hero-background.webp" 
         alt="Chirurgická ambulance" 
         fill
         className={styles.backgroundImage}

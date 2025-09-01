@@ -6,32 +6,22 @@ import Link from 'next/link';
 import { FaExclamationCircle, FaChevronRight, FaCalendarAlt, FaHeartbeat, FaHospital, FaEye, FaStethoscope } from 'react-icons/fa';
 
 export const metadata = {
-  title: 'Operační laser | Chirurgická ambulance',
-  description: 'Operační laserové zákroky s použitím nejmodernějších technologií. Bezpečné a efektivní řešení různých chirurgických zákroků s minimální invazivitou.',
+  title: 'Youlaser MT | Chirurgická ambulance',
+  description: 'Youlaser MT laserové výkony s použitím nejmodernějších technologií. Bezpečné a efektivní řešení různých chirurgických výkonů s minimální invazivitou.',
 };
 
 export default function OperacniLaserPage() {
-  // Případy použití operačního laseru
+  // Případy použití Youlaser MT
   const useCases = [
     { 
-      title: "Dermatologické zákroky", 
+      title: "Dermatologické výkony", 
       description: "Odstranění kožních lézí, jizev, vrásek a pigmentových skvrn pomocí přesného laserového paprsku.",
       icon: <FaStethoscope />
-    },
-    { 
-      title: "Oční chirurgie", 
-      description: "Korekce zraku, léčba glaukomu a další oční zákroky prováděné s vysokou přesností.",
-      icon: <FaEye /> 
     },
     { 
       title: "Cévní problémy", 
       description: "Léčba křečových žil, rozšířených žilek a dalších cévních onemocnění s minimálním poškozením okolní tkáně.",
       icon: <FaHeartbeat /> 
-    },
-    { 
-      title: "Dýchací cesty", 
-      description: "Odstranění polypu, léčba chronické rýmy a další zákroky v oblasti dýchacích cest s minimální invazivitou.",
-      icon: <FaHospital />
     }
   ];
 
@@ -42,7 +32,7 @@ export default function OperacniLaserPage() {
         <div className={styles.hero}>
           <div className="container">
             <div className={styles.heroContent}>
-              <h1 className={styles.heroTitle}>Operační laser</h1>
+              <h1 className={styles.heroTitle}>Youlaser MT</h1>
               <p className={styles.heroSubtitle}>
                 Moderní a přesná chirurgická léčba s využitím pokročilých laserových technologií
               </p>
@@ -55,22 +45,22 @@ export default function OperacniLaserPage() {
           {/* Hlavní popis */}
           <section className={styles.infoSection}>
             <div className={styles.infoContent}>
-              <h2 className={styles.sectionTitle}>O operačním laseru</h2>
+              <h2 className={styles.sectionTitle}>O Youlaser MT</h2>
               <p>
-                Operační laser představuje revoluci v moderní chirurgii. Díky své přesnosti, minimální invazivitě a rychlé
+                Youlaser MT představuje revoluci v moderní chirurgii. Díky své přesnosti, minimální invazivitě a rychlé
                 rekonvalescenci přináší pacientům řadu výhod oproti tradičním chirurgickým metodám.
               </p>
               <p>
                 V naší chirurgické ambulanci využíváme nejmodernější laserové technologie, které umožňují provádět
-                širokou škálu zákroků s maximální přesností a minimálním poškozením okolních tkání.
+                širokou škálu výkonů s maximální přesností a minimálním poškozením okolních tkání.
               </p>
 
               <div className={styles.benefitsList}>
-                <h3>Výhody operačního laseru:</h3>
+                <h3>Výhody Youlaser MT:</h3>
                 <ul>
-                  <li>Vyšší přesnost zákroku</li>
+                  <li>Vyšší přesnost výkonu</li>
                   <li>Minimální krvácení</li>
-                  <li>Méně bolesti během i po zákroku</li>
+                  <li>Méně bolesti během i po výkonu</li>
                   <li>Rychlejší hojení</li>
                   <li>Nižší riziko infekce</li>
                   <li>Minimální jizvy a rychlá rekonvalescence</li>
@@ -79,8 +69,8 @@ export default function OperacniLaserPage() {
             </div>
             <div className={styles.infoImage}>
               <Image 
-                src="/images/laser.jpg" 
-                alt="Operační laser" 
+                src="/images/youlasermt.webp" 
+                alt="Youlaser MT" 
                 width={500} 
                 height={400} 
                 className={styles.sectionImage}
@@ -90,25 +80,25 @@ export default function OperacniLaserPage() {
 
           {/* Proces ošetření */}
           <section className={styles.processSection}>
-            <h2 className={styles.sectionTitle}>Průběh laserového zákroku</h2>
+            <h2 className={styles.sectionTitle}>Průběh laserového výkonu</h2>
             
             <div className={styles.processSteps}>
               <div className={styles.processStep}>
                 <div className={styles.processNumber}>1</div>
                 <h3>Konzultace</h3>
-                <p>Před zákrokem proběhne důkladná konzultace, během které lékař posoudí váš zdravotní stav a navrhne nejvhodnější postup.</p>
+                <p>Před výkonem proběhne důkladná konzultace, během které lékař posoudí váš zdravotní stav a navrhne nejvhodnější postup.</p>
               </div>
               
               <div className={styles.processStep}>
                 <div className={styles.processNumber}>2</div>
                 <h3>Příprava</h3>
-                <p>V závislosti na typu zákroku můžete obdržet specifické instrukce ohledně přípravy. Některé zákroky vyžadují pouze lokální anestezii.</p>
+                <p>V závislosti na typu výkonu můžete obdržet specifické instrukce ohledně přípravy. Některé výkony vyžadují pouze lokální anestezii.</p>
               </div>
               
               <div className={styles.processStep}>
                 <div className={styles.processNumber}>3</div>
-                <h3>Zákrok</h3>
-                <p>Samotný laserový zákrok je obvykle rychlý a přesný. Laser cíleně působí pouze na požadovanou oblast bez poškození okolních tkání.</p>
+                <h3>Výkon</h3>
+                <p>Samotný laserový výkon je obvykle rychlý a přesný. Laser cíleně působí pouze na požadovanou oblast bez poškození okolních tkání.</p>
               </div>
               
               <div className={styles.processStep}>
@@ -124,15 +114,15 @@ export default function OperacniLaserPage() {
               </div>
               <div className={styles.noteText}>
                 <h4>Důležité informace</h4>
-                <p>Konkrétní průběh a délka rekonvalescence se liší podle typu zákroku. Všechny detaily vám sdělí lékař během úvodní konzultace. Pro dosažení optimálních výsledků je důležité dodržovat všechna doporučení ohledně předoperační přípravy a pooperační péče.</p>
+                <p>Konkrétní průběh a délka rekonvalescence se liší podle typu výkonu. Všechny detaily vám sdělí lékař během úvodní konzultace. Pro dosažení optimálních výsledků je důležité dodržovat všechna doporučení ohledně předoperační přípravy a pooperační péče.</p>
               </div>
             </div>
           </section>
 
           {/* Případy použití */}
           <section className={styles.useCasesSection}>
-            <h2 className={styles.sectionTitle}>Využití operačního laseru</h2>
-            <p>Operační laser má široké využití v různých oblastech medicíny. Mezi nejčastější zákroky, které v naší ambulanci provádíme, patří:</p>
+            <h2 className={styles.sectionTitle}>Využití Youlaser MT</h2>
+            <p>Youlaser MT má široké využití v různých oblastech medicíny. Mezi nejčastější výkony, které v naší ambulanci provádíme, patří:</p>
             
             <div className={styles.useCasesList}>
               {useCases.map((useCase, index) => (
@@ -150,7 +140,7 @@ export default function OperacniLaserPage() {
           {/* CTA sekce */}
           <section className={styles.ctaSection}>
             <div className={styles.ctaCard}>
-              <h2 className={styles.ctaTitle}>Máte zájem o laserový zákrok?</h2>
+              <h2 className={styles.ctaTitle}>Máte zájem o laserový výkon?</h2>
               <p className={styles.ctaText}>
                 Kontaktujte nás pro více informací nebo si sjednejte konzultaci s našimi specialisty. Rádi vám odpovíme na všechny dotazy a doporučíme nejvhodnější řešení pro váš specifický případ.
               </p>

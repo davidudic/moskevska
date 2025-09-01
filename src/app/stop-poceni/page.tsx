@@ -49,7 +49,7 @@ export default function StopPoceniPage() {
                   <li>Výrazné snížení pocení až o 90%</li>
                   <li>Účinek trvá 6-12 měsíců</li>
                   <li>Bezpečná a prověřená metoda</li>
-                  <li>Rychlé ošetření (15-20 minut)</li>
+                  <li>Rychlé ošetření (30-60 minut)</li>
                   <li>Minimální diskomfort</li>
                   <li>Návrat k běžným aktivitám ihned</li>
                   <li>Výrazné zlepšení kvality života</li>
@@ -80,7 +80,7 @@ export default function StopPoceniPage() {
               <div className={styles.processStep}>
                 <div className={styles.processNumber}>2</div>
                 <h3>Příprava</h3>
-                <p>Označení ošetřované oblasti a aplikace lokální anestezie pro maximální komfort během zákroku.</p>
+                <p>Označení ošetřované oblasti a aplikace lokální anestezie pro maximální komfort během výkonu.</p>
               </div>
               
               <div className={styles.processStep}>
@@ -124,9 +124,6 @@ export default function StopPoceniPage() {
                     <li><FaCheckCircle /> Plánovník ošetření</li>
                     <li><FaCheckCircle /> Zodpovězení všech otázek</li>
                   </ul>
-                  <p className={styles.priceNote}>
-                    Cena konzultace bude odečtena od ceny následného výkonu.
-                  </p>
                 </div>
               </div>
 
@@ -134,7 +131,7 @@ export default function StopPoceniPage() {
                 <div className={styles.featuredBadge}>Kompletní ošetření</div>
                 <div className={styles.priceHeader}>
                   <h3>Aplikace botulotoxinu</h3>
-                  <div className={styles.priceAmount}>13 000 Kč</div>
+                  <div className={styles.priceAmount}>12 000 Kč</div>
                 </div>
                 <div className={styles.priceContent}>
                   <ul className={styles.priceFeatures}>
@@ -144,8 +141,7 @@ export default function StopPoceniPage() {
                     <li><FaCheckCircle /> Účinek 6-12 měsíců</li>
                   </ul>
                   <p className={styles.totalPrice}>
-                    <strong>Celková cena: 12 000 Kč</strong><br />
-                    <small>(cena výkonu po odečtení konzultace)</small>
+                    <strong>Celková cena: 13 000 Kč</strong>
                   </p>
                 </div>
               </div>
@@ -154,11 +150,7 @@ export default function StopPoceniPage() {
             <div className={styles.priceNotes}>
               <div className={styles.noteItem}>
                 <FaClock className={styles.noteIcon} />
-                <p>Konzultace trvá 15-20 minut, samotné ošetření 15-20 minut.</p>
-              </div>
-              <div className={styles.noteItem}>
-                <FaExclamationCircle className={styles.noteIcon} />
-                <p>Cena konzultace je odečtena od ceny výkonu při realizaci ošetření.</p>
+                <p>Konzultace trvá 15-20 minut, samotné ošetření 30-60 minut.</p>
               </div>
               <div className={styles.noteItem}>
                 <FaShieldAlt className={styles.noteIcon} />
@@ -199,7 +191,7 @@ export default function StopPoceniPage() {
             <div className={styles.ctaCard}>
               <h2 className={styles.ctaTitle}>Zbavte se nadměrného pocení</h2>
               <p className={styles.ctaText}>
-                Nevtrpět již zbytečně nadměrným pocením. Objednejte se na konzultaci a zjistěte, jak vám můžeme pomoci.
+                Netrpěte již zbytečně nadměrným pocením. Objednejte se na konzultaci a zjistěte, jak vám můžeme pomoci.
               </p>
               <div className={styles.ctaButtons}>
                 <Link 

@@ -34,7 +34,7 @@ const serviceCategories = [
         id: 6,
         title: 'Převazy ran',
         description: 'Profesionální péče o rány, včetně chronických a pooperačních.',
-        detail: 'Specializujeme se na profesionální převazy akutních i chronických ran. Používáme moderní materiály, které podporují hojení a snižují riziko infekce.',
+        detail: 'Specializujeme se na profesionální převazy akutních i chronických ran.',
         icon: <FaBandAid />,
         price: ''
       }

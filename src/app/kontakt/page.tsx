@@ -17,9 +17,9 @@ const doctors = [
     name: 'MUDr. Jaroslav Chaluš',
     position: 'Chirurg, hlavní lékař',
     image: '/images/chalus.webp',
-    description: 'MUDr. Jaroslav Chaluš je zkušený chirurg s dlouholetou praxí. Specializuje se na komplexní chirurgické zákroky a osobní přístup k pacientům.',
+    description: 'MUDr. Jaroslav Chaluš je zkušený chirurg s dlouholetou praxí. Specializuje se na komplexní chirurgické zákroky.',
     education: 'Lékařská fakulta UK v Praze',
-    experience: '25+ let praxe'
+    experience: '35+ let praxe'
   },
   {
     id: 2,
@@ -27,44 +27,44 @@ const doctors = [
     position: 'Chirurg',
     image: '/images/doctor2.jpg',
     description: 'MUDr. Kristýna Žďárská je specialistka v oblasti chirurgie s fokusem na moderní minimálně invazivní postupy.',
-    education: 'Lékařská fakulta MU v Brně',
-    experience: '15+ let praxe'
+    education: 'Lékařská fakulta',
+    experience: '10+ let praxe'
   },
   {
     id: 3,
     name: 'MUDr. Valentýna Nowá',
-    position: 'Chirurg',
+    position: 'Kožní lékař',
     image: '/images/doctor3.jpg',
-    description: 'MUDr. Valentýna Nowá se specializuje na chirurgii a léčbu kožních defektů. Ve své praxi klade důraz na šetrné postupy a minimalizaci jizev.',
-    education: 'Lékařská fakulta UK v Praze',
-    experience: '12+ let praxe'
+    description: 'MUDr. Valentýna Nowá se specializuje na dermatologii a léčbu kožních defektů. Ve své praxi klade důraz na šetrné postupy a minimalizaci jizev.',
+    education: 'Lékařská fakulta',
+    experience: '5+ let praxe'
   },
   {
     id: 4,
     name: 'MUDr. Tomáš Procházka',
     position: 'Chirurg',
     image: '/images/doctor4.jpg',
-    description: 'MUDr. Tomáš Procházka je odborníkem na všeobecnou chirurgii se specializací na laserové zákroky a kosmetické výkony.',
-    education: 'Lékařská fakulta UP v Olomouci',
-    experience: '10+ let praxe'
+    description: 'MUDr. Tomáš Procházka je odborníkem na všeobecnou chirurgii.',
+    education: 'Lékařská fakulta',
+    experience: '5+ let praxe'
   },
   {
     id: 5,
     name: 'MUDr. Vojtěch Hrubý',
     position: 'Chirurg',
     image: '/images/doctor5.jpg',
-    description: 'MUDr. Vojtěch Hrubý se zaměřuje na chirurgické ošetření úrazů a následnou péči. Jeho přístup je založen na důkladné konzultaci a přípravě.',
-    education: 'Lékařská fakulta UK v Hradci Králové',
-    experience: '8+ let praxe'
+    description: 'MUDr. Vojtěch Hrubý je odborníkem na všeobecnou chirurgii.',
+    education: 'Lékařská fakulta',
+    experience: '5 let praxe'
   },
   {
     id: 6,
     name: 'MUDr. David Švrček',
     position: 'Chirurg',
     image: '/images/doctor6.jpg',
-    description: 'MUDr. David Švrček je specialistou v oboru traumatologie a chirurgie. Věnuje se ošetření akutních stavů a léčbě sportovních úrazů.',
-    education: 'Lékařská fakulta MU v Brně',
-    experience: '7+ let praxe'
+    description: 'MUDr. David Švrček je odborníkem na všeobecnou chirurgii.',
+    education: 'Lékařská fakulta',
+    experience: '5 let praxe'
   }
 ];
 
@@ -73,8 +73,8 @@ const nurses = [
   {
     id: 1,
     name: 'Leona Gharazi',
-    position: 'Zdravotní sestra',
-    description: 'Zkušená zdravotní sestra s pečlivým přístupem k pacientům. Specializuje se na asistenci při chirurgických zákrocích a pooperační péči.'
+    position: 'Hlavní sestra',
+    description: 'Zkušená zdravotní sestra s pečlivým přístupem k pacientům. Specializuje se na asistenci při chirurgických výkonech a pooperační péči.'
   },
   {
     id: 2,
@@ -84,9 +84,9 @@ const nurses = [
   },
   {
     id: 3,
-    name: 'Jitka Pospíchalová',
+    name: 'Kateřina Šigutová',
     position: 'Zdravotní sestra',
-    description: 'Specializovaná zdravotní sestra v oboru chirurgie. Má rozsáhlé zkušenosti s péčí o chirurgické pacienty a asistencí při různých typech zákroků.'
+    description: 'Zkušená zdravotní sestra s rozsáhlými zkušenostmi s laserovým ošetřením. Má bohaté zkušenosti s péčí o chirurgické pacienty a asistencí při různých typech výkonů.'
   }
 ];
 

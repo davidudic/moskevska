@@ -334,7 +334,7 @@ const basicPrices = [
   { service: 'Preventivní prohlídky', price: '400 Kč' },
   { service: 'Konzultace zdravotního stavu dle dohody', price: 'od 500 Kč' },
   { service: 'Hygienické příslušenství k výkonu a místní anestezie', price: '130 Kč' },
-  { service: 'Posudek - Hodnocení bolestného / trvalých následků', price: '800/1600 Kč' },
+      { service: 'Posudek - Hodnocení bolestného / trvalých následků', price: '800/1500 Kč' },
 ];
 
 const ServicesSection = () => {
