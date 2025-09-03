@@ -6,8 +6,25 @@ import GiftVouchers from '@/components/services/GiftVouchers';
 import styles from './page.module.css';
 
 export const metadata = {
-  title: 'Nabízené služby a ceník | Chirurgická ambulance',
-  description: 'Kompletní nabídka našich služeb a aktuální ceník chirurgických zákroků, konzultací a laserových ošetření.',
+  title: 'Služby a ceník | Chirurgická ambulance Moskevská - Liberec',
+  description: 'Komplexní ceník chirurgických služeb v Liberci. Laserová epilace, operace, konzultace, estetické zákroky. Transparentní ceny na Moskevské.',
+  keywords: 'ceník chirurg Liberec, ceny laserová epilace, chirurgické služby ceník, Moskevská ambulance ceny',
+  alternates: {
+    canonical: 'https://chirurgie-moskevska.cz/sluzby-a-cenik',
+  },
+  openGraph: {
+    title: 'Služby a ceník | Chirurgická ambulance Moskevská - Liberec',
+    description: 'Transparentní ceník všech chirurgických služeb. Laserová epilace, operace, konzultace v Liberci.',
+    url: 'https://chirurgie-moskevska.cz/sluzby-a-cenik',
+    images: [
+      {
+        url: '/images/hero-background.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Služby a ceník chirurgické ambulance',
+      },
+    ],
+  },
 };
 
 export default function ServicesAndPricesPage() {

@@ -74,7 +74,7 @@ const Navbar = () => {
         <Link href="/" className={styles.logo} onClick={closeMobileMenu}>
           <Image 
             src="/images/logo.webp" 
-            alt="Chirurgická ambulance" 
+            alt="Chirurgická ambulance Moskevská - logo" 
             width={160}
             height={50}
             className={styles.logoImage}

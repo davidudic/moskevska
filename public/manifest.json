@@ -1,0 +1,30 @@
+{
+  "name": "Chirurgická ambulance Moskevská",
+  "short_name": "Ambulance Moskevská",
+  "description": "Moderní chirurgická ambulance v Liberci na ulici Moskevská",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#ffffff",
+  "theme_color": "#84d3d1",
+  "orientation": "portrait",
+  "scope": "/",
+  "lang": "cs",
+  "icons": [
+    {
+      "src": "/images/logo.webp",
+      "sizes": "160x50",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["medical", "health"],
+  "screenshots": [
+    {
+      "src": "/images/hero-background.webp",
+      "sizes": "1200x630",
+      "type": "image/webp",
+      "platform": "wide",
+      "label": "Hlavní stránka ambulance"
+    }
+  ]
+} 

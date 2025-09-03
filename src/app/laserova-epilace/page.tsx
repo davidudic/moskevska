@@ -6,8 +6,25 @@ import Link from 'next/link';
 import { FaClock, FaExclamationCircle, FaChevronRight, FaCalendarAlt, FaFire, FaStar, FaGift } from 'react-icons/fa';
 
 export const metadata = {
-  title: 'Epilační laser | Chirurgická ambulance',
-  description: 'Epilační laserové ošetření s použitím nejmodernějších technologií. Bezpečné a efektivní odstranění nežádoucích chloupků ve všech oblastech těla.',
+  title: 'Laserová epilace DOMINO 755nm | Chirurgická ambulance Moskevská',
+  description: 'Laserová epilace DOMINO 755nm v Liberci. Trvalé odstranění chloupků, výhodné balíčky s 30% slevou. Profesionální péče v chirurgické ambulanci na Moskevské.',
+  keywords: 'laserová epilace Liberec, DOMINO 755nm, epilační laser, odstranění chloupků, Moskevská ambulance, epilace Liberec',
+  alternates: {
+    canonical: 'https://chirurgie-moskevska.cz/laserova-epilace',
+  },
+  openGraph: {
+    title: 'Laserová epilace DOMINO 755nm | Chirurgická ambulance Moskevská',
+    description: 'Profesionální laserová epilace v Liberci. Výhodné balíčky, moderní technologie DOMINO 755nm, zkušený tým.',
+    url: 'https://chirurgie-moskevska.cz/laserova-epilace',
+    images: [
+      {
+        url: '/images/domino.webp',
+        width: 1200,
+        height: 630,
+        alt: 'DOMINO 755nm epilační laser - nejmodernější technologie',
+      },
+    ],
+  },
 };
 
 export default function LaserEpilacePage() {

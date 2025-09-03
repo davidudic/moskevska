@@ -6,8 +6,25 @@ import Link from 'next/link';
 import { FaExclamationCircle, FaChevronRight, FaCalendarAlt, FaHeartbeat, FaHospital, FaEye, FaStethoscope } from 'react-icons/fa';
 
 export const metadata = {
-  title: 'Youlaser MT | Chirurgická ambulance',
-  description: 'Youlaser MT laserové výkony s použitím nejmodernějších technologií. Bezpečné a efektivní řešení různých chirurgických výkonů s minimální invazivitou.',
+  title: 'Youlaser MT - Operační laser | Chirurgická ambulance Moskevská',
+  description: 'Youlaser MT operační laser v Liberci. Minimálně invazivní chirurgické výkony, odstranění kožních útvarů, znamének. Moderní laserová chirurgie na Moskevské.',
+  keywords: 'Youlaser MT, operační laser Liberec, laserová chirurgie, odstranění znamének, kožní útvary, Moskevská ambulance',
+  alternates: {
+    canonical: 'https://chirurgie-moskevska.cz/operacni-laser',
+  },
+  openGraph: {
+    title: 'Youlaser MT - Operační laser | Chirurgická ambulance Moskevská',
+    description: 'Moderní laserová chirurgie s Youlaser MT. Bezpečné odstranění kožních útvarů a minimálně invazivní zákroky v Liberci.',
+    url: 'https://chirurgie-moskevska.cz/operacni-laser',
+    images: [
+      {
+        url: '/images/youlasermt.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Youlaser MT - nejmodernější operační laser',
+      },
+    ],
+  },
 };
 
 export default function OperacniLaserPage() {

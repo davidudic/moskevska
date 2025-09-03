@@ -6,8 +6,25 @@ import Link from 'next/link';
 import { FaExclamationCircle, FaChevronRight, FaCalendarAlt, FaCheckCircle, FaClock, FaShieldAlt } from 'react-icons/fa';
 
 export const metadata = {
-  title: 'Stop Pocení! | Chirurgická ambulance',
-  description: 'Aplikace botulotoxinu do oblasti podpaží pro řešení nadměrného pocení. Efektivní a dlouhodobé řešení hyperhidrózy.',
+  title: 'Stop pocení botoxem | Chirurgická ambulance Moskevská',
+  description: 'Stop pocení v Liberci - aplikace botulotoxinu do podpaží. Efektivní řešení nadměrného pocení (hyperhidrózy) v ambulanci na Moskevské. Dlouhodobé výsledky.',
+  keywords: 'stop pocení Liberec, botox pocení, hyperhidróza, nadměrné pocení, botulotoxin, Moskevská ambulance',
+  alternates: {
+    canonical: 'https://chirurgie-moskevska.cz/stop-poceni',
+  },
+  openGraph: {
+    title: 'Stop pocení botoxem | Chirurgická ambulance Moskevská',
+    description: 'Řešení nadměrného pocení v Liberci. Aplikace botulotoxinu do podpaží pro dlouhodobé výsledky.',
+    url: 'https://chirurgie-moskevska.cz/stop-poceni',
+    images: [
+      {
+        url: '/images/hero-background.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Stop pocení botoxem - efektivní řešení hyperhidrózy',
+      },
+    ],
+  },
 };
 
 export default function StopPoceniPage() {

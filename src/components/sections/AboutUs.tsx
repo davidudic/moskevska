@@ -20,7 +20,7 @@ const AboutUs = () => {
                 <div className={styles.doctorImageContainer}>
                   <Image 
                     src="/images/chalus.webp" 
-                    alt="MUDr. Jaroslav Chaluš" 
+                    alt="MUDr. Jaroslav Chaluš - hlavní lékař a chirurg ambulance na Moskevské" 
                     fill
                     style={{objectFit: 'cover'}}
                   />
@@ -41,7 +41,7 @@ const AboutUs = () => {
           <div className={styles.imageContent}>
             <Image 
               src="/images/budova.webp" 
-              alt="Budova chirurgické ambulance" 
+              alt="Budova chirurgické ambulance Moskevská v Liberci - moderní zdravotnické zařízení" 
               fill
               style={{objectFit: 'cover'}}
             />

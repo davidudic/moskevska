@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# Blokovat admin sekce
+Disallow: /admin/
+Disallow: /api/
+
+# Blokovat soubory
+Disallow: /*.json$
+Disallow: /*.xml$
+
+# Povolit důležité crawlování
+Allow: /sitemap.xml
+Allow: /robots.txt
+
+# Crawl delay pro příliš agresivní boty
+Crawl-delay: 1
+
+# Sitemap
+Sitemap: https://chirurgie-moskevska.cz/sitemap.xml 
