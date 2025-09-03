@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: 'your-google-verification-code', // TODO: Přidat skutečný Google Search Console kód
+    google: 'wPmfIdN2Qo_4Uk_b0_CdYbDbsq182xxMZimep_vKpac',
   },
 };
 
