@@ -168,6 +168,7 @@ export default function RootLayout({
             })
           }}
         />
+        <meta name="seznam-wmt" content="hzXbpu3bEHLMrUanKHs8TztyHyAkfeFh" />
       </head>
       <body className={inter.className}>
         {children}
