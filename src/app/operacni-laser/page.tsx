@@ -3,6 +3,7 @@ import Layout from '@/components/layout/Layout';
 import styles from './page.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
+import TechnicalSpecifications from '@/components/TechnicalSpecifications';
 import { FaExclamationCircle, FaChevronRight, FaCalendarAlt, FaHeartbeat, FaHospital, FaEye, FaStethoscope } from 'react-icons/fa';
 
 export const metadata = {
@@ -153,6 +154,9 @@ export default function OperacniLaserPage() {
               ))}
             </div>
           </section>
+
+          {/* Technické specifikace */}
+          <TechnicalSpecifications />
 
           {/* CTA sekce */}
           <section className={styles.ctaSection}>

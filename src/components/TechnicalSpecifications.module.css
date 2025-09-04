@@ -1,0 +1,238 @@
+/* Technické specifikace */
+.specificationsSection {
+  padding: 4rem 0;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  margin: 4rem 0;
+}
+
+.specificationsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3rem 2rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.sectionTitle {
+  color: #3a7d7b;
+  font-size: 2rem;
+  margin: 0;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: #84d3d1;
+}
+
+.toggleButton {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  background-color: #3a7d7b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(58, 125, 123, 0.2);
+}
+
+.toggleButton:hover {
+  background-color: #84d3d1;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(58, 125, 123, 0.3);
+}
+
+.buttonIcon {
+  font-size: 1.1rem;
+}
+
+.chevronIcon {
+  font-size: 0.9rem;
+  transition: transform 0.3s ease;
+}
+
+.specificationsContent {
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+  max-height: 0;
+}
+
+.specificationsContent.expanded {
+  max-height: 2000px;
+}
+
+.specificationsTable {
+  padding: 3rem;
+  padding-top: 2rem;
+}
+
+.specCategory {
+  margin-bottom: 0;
+}
+
+.categoryTitle {
+  background-color: #3a7d7b;
+  color: white;
+  padding: 1rem 1.5rem;
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 8px 8px 0 0;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.specTable {
+  border: 2px solid #3a7d7b;
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.specRow {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  border-bottom: 1px solid #3a7d7b;
+  transition: background-color 0.2s ease;
+  min-height: 50px;
+}
+
+.specRow:last-child {
+  border-bottom: 2px solid #3a7d7b;
+}
+
+.specRow:hover {
+  background-color: rgba(132, 211, 209, 0.05);
+}
+
+.specLabel {
+  padding: 1rem 1.5rem;
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #3a7d7b;
+  border-right: 2px solid #3a7d7b;
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+.specValue {
+  padding: 1rem 1.5rem;
+  background-color: white;
+  color: #444;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.specLine {
+  margin-bottom: 0.25rem;
+  line-height: 1.5;
+}
+
+.specLine:last-child {
+  margin-bottom: 0;
+}
+
+/* Responzivní styly */
+@media (max-width: 992px) {
+  .specificationsHeader {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+    padding: 0 2rem 2rem;
+  }
+
+  .specificationsTable {
+    padding: 2rem;
+  }
+
+  .specRow {
+    grid-template-columns: 1fr;
+  }
+
+  .specLabel {
+    border-right: none;
+    border-bottom: 1px solid #3a7d7b;
+    font-size: 0.95rem;
+  }
+
+  .specValue {
+    padding-top: 0.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .specificationsSection {
+    margin: 2rem 0;
+  }
+
+  .specificationsHeader {
+    padding: 0 1.5rem 1.5rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.7rem;
+  }
+
+  .toggleButton {
+    padding: 0.875rem 1.25rem;
+    font-size: 0.9rem;
+    gap: 0.5rem;
+  }
+
+  .specificationsTable {
+    padding: 1.5rem;
+  }
+
+  .categoryTitle {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.1rem;
+  }
+
+  .specLabel,
+  .specValue {
+    padding: 0.875rem 1.25rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .specificationsHeader {
+    padding: 0 1rem 1rem;
+  }
+
+  .specificationsTable {
+    padding: 1rem;
+  }
+
+  .categoryTitle {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+  }
+
+  .specLabel,
+  .specValue {
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .toggleButton {
+    width: 100%;
+    justify-content: center;
+  }
+} 
