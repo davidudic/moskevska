@@ -322,7 +322,7 @@ const Services = () => {
             <h3 className={styles.modalTitle}>Odstranění kožních útvarů</h3>
             <div className={styles.modalBody}>
               <p>
-                Odstranění každého kožního útvaru věnujeme tu nejvyšší pozornost. Vždy nejprve biologickou povahu a závažnost procesu. Vycházíme pokud možno ze závěrů vyšetření kožního specialisty. Následná konzultace vyjádří předpokládaný rozsah ošetření a očekávaný kosmetický výsledek. Naším cílem je kromě léčebného efektu také dosažení vysoké estetické hodnoty finálního stavu, tedy stavu po dokončení léčení. K tomu dochází po zhojení rány, vytvoření pevné jizvy a prohojení a vyzrání měkkých tkání v oblasti jizvy. Celý proces trvá vždy několik měsíců.
+                Odstranění každého kožního útvaru věnujeme tu nejvyšší pozornost. Vždy nejprve hodnotíme biologickou povahu a závažnost procesu. Vycházíme pokud možno ze závěrů vyšetření kožního specialisty. Následná konzultace vyjádří předpokládaný rozsah ošetření a očekávaný kosmetický výsledek. Naším cílem je kromě léčebného efektu také dosažení vysoké estetické hodnoty finálního stavu, tedy stavu po dokončení léčení. K tomu dochází po zhojení rány, vytvoření pevné jizvy a prohojení a vyzrání měkkých tkání v oblasti jizvy. Celý proces trvá vždy několik měsíců.
               </p>
               <h4>Co je třeba vědět:</h4>
               <p>
