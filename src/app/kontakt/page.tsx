@@ -1,31 +1,26 @@
-import React from 'react';
+'use client';
+
+import React, { useState, useEffect } from 'react';
 import Layout from '@/components/layout/Layout';
 import Link from 'next/link';
 import TeamCard from '@/components/contact/TeamCard';
 import styles from './page.module.css';
 import { FaPhone, FaMapMarkerAlt, FaClock, FaArrowRight, FaCalendarAlt } from 'react-icons/fa';
 
-export const metadata = {
-  title: 'Kontakt a tým | Chirurgická ambulance Moskevská - Liberec',
-  description: 'Kontakt na chirurgickou ambulanci v Liberci na ulici Moskevská. MUDr. Jaroslav Chaluš a zkušený lékařský tým. Ordinační hodiny, telefonní čísla.',
-  keywords: 'kontakt chirurg Liberec, Moskevská ambulance, MUDr. Chaluš, ordinační hodiny Liberec, chirurgická ambulance adresa',
-  alternates: {
-    canonical: 'https://chirurgie-moskevska.cz/kontakt',
-  },
-  openGraph: {
-    title: 'Kontakt a tým | Chirurgická ambulance Moskevská - Liberec',
-    description: 'Kontaktní informace a představení lékařského týmu chirurgické ambulance v Liberci.',
-    url: 'https://chirurgie-moskevska.cz/kontakt',
-    images: [
-      {
-        url: '/images/budova.webp',
-        width: 1200,
-        height: 630,
-        alt: 'Budova chirurgické ambulance na Moskevské v Liberci',
-      },
-    ],
-  },
-};
+interface OrdinaceHour {
+  id: number;
+  day: string;
+  morning: string;
+  afternoon: string;
+  note: string;
+  active: boolean;
+}
+
+interface OrdinaceData {
+  ordinacniHodiny: OrdinaceHour[];
+  lastUpdated: string;
+  updatedBy: string;
+}
 
 // Data lékařů
 const doctors = [
@@ -108,6 +103,35 @@ const nurses = [
 ];
 
 export default function ContactPage() {
+  const [ordinaceData, setOrdinaceData] = useState<OrdinaceData | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchOrdinaceData = async () => {
+      try {
+        const response = await fetch('/api/ordinace');
+        const result = await response.json();
+        
+        if (result.success) {
+          setOrdinaceData(result.data);
+        }
+      } catch (err) {
+        console.error('Chyba při načítání ordinační doby:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchOrdinaceData();
+  }, []);
+
+  // Funkce pro formátování času pro zobrazení
+  const formatTime = (day: OrdinaceHour) => {
+    if (day.morning === 'Zavřeno') return 'Zavřeno';
+    if (day.afternoon === 'Zavřeno') return day.morning;
+    return `${day.morning}, ${day.afternoon}`;
+  };
+
   return (
     <Layout>
       <div className={styles.contactPage}>
@@ -148,10 +172,27 @@ export default function ContactPage() {
                     </div>
                     <div className={styles.infoContent}>
                       <h3>Ordinační hodiny</h3>
-                      <p>Po+Čt: 8:00 - 18:00</p>
-                      <p>Út: 8:00 - 17:00</p>
-                      <p>St: 8:00 - 18:00</p>
-                      <p>Pá: 8:00 - 12:00</p>
+                      {loading ? (
+                        <p>Načítám...</p>
+                      ) : ordinaceData ? (
+                        <>
+                          {ordinaceData.ordinacniHodiny
+                            .filter(day => day.active && day.morning !== 'Zavřeno')
+                            .map(day => (
+                              <p key={day.id}>
+                                {day.day.substring(0, 2)}: {formatTime(day)}
+                              </p>
+                            ))}
+                        </>
+                      ) : (
+                        <>
+                          <p>Po: 8:00 - 12:00, 13:00 - 18:00</p>
+                          <p>Út: 8:00 - 12:00, 13:00 - 17:00</p>
+                          <p>St: 8:00 - 12:00, 13:00 - 18:00</p>
+                          <p>Čt: 8:00 - 12:00, 13:00 - 18:00</p>
+                          <p>Pá: 8:00 - 12:00</p>
+                        </>
+                      )}
                       <Link href="/ordinacni-doba" className={styles.moreLink}>
                         Podrobnosti <FaArrowRight />
                       </Link>
