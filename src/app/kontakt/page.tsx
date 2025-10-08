@@ -91,19 +91,19 @@ const nurses = [
     id: 1,
     name: 'Leona Gharazi',
     position: 'Hlavní sestra',
-    description: 'Zkušená zdravotní sestra s pečlivým přístupem k pacientům. Specializuje se na asistenci při chirurgických výkonech a pooperační péči.'
+    description: 'Zkušená hlavní sestra s pečlivým přístupem k pacientům. Zajišťuje kompletní chod ambulance, objednávání pacientů, provádí převazy a asistuje při výkonech.'
   },
   {
     id: 2,
     name: 'Šárka Jindrová',
     position: 'Zdravotní sestra',
-    description: 'Zdravotní sestra s bohatou praxí v chirurgické ambulanci. Zaměřuje se na komunikaci s pacienty a zajištění jejich maximálního komfortu během ošetření.'
+    description: 'Zkušená zdravotní sestra s bohatou praxí v chirurgické ambulanci. Věnuje se asistenci při výkonech, pooperační péči a zajištění bezpečného průběhu ošetření.'
   },
   {
     id: 3,
     name: 'Kateřina Šigutová',
     position: 'Zdravotní sestra',
-    description: 'Zkušená zdravotní sestra s rozsáhlými zkušenostmi s laserovým ošetřením. Má bohaté zkušenosti s péčí o chirurgické pacienty a asistencí při různých typech výkonů.'
+    description: 'Zdravotní sestra s rozsáhlými zkušenostmi v oblasti laserového ošetření. Specializuje se na laserovou epilaci a poskytuje odborné poradenství pacientům.'
   }
 ];
 
