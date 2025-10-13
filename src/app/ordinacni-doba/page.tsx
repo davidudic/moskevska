@@ -27,7 +27,7 @@ const fallbackHours: OrdinaceHour[] = [
   { id: 2, day: 'Úterý', morning: '8:00 - 12:00', afternoon: '13:00 - 17:00', note: 'Odpoledne stomická poradna (nutné objednání)', active: true },
   { id: 3, day: 'Středa', morning: '8:00 - 12:00', afternoon: '13:00 - 18:00', note: 'Odpoledne pouze pro objednané pacienty', active: true },
   { id: 4, day: 'Čtvrtek', morning: '8:00 - 12:00', afternoon: '13:00 - 18:00', note: 'Odpoledne pouze pro objednané pacienty', active: true },
-  { id: 5, day: 'Pátek', morning: '8:00 - 12:00', afternoon: 'Zavřeno', note: 'Odpoledne není ordinační doba', active: true },
+  { id: 5, day: 'Pátek', morning: '8:00 - 12:00', afternoon: 'Zavřeno', note: '', active: true },
   { id: 6, day: 'Sobota', morning: 'Zavřeno', afternoon: 'Zavřeno', note: '', active: false },
   { id: 7, day: 'Neděle', morning: 'Zavřeno', afternoon: 'Zavřeno', note: '', active: false },
 ];
@@ -171,10 +171,10 @@ export default function OfficeHoursPage() {
                   <h3>Důležité informace</h3>
                   <ul>
                     <li>
-                      Na odpolední ordinace je nutné se předem objednat telefonicky nebo online.
+                      Pro akutní případy - bez objednání - je vyhrazena dopolední doba, odpoledne pouze po telefonické dohodě.
                     </li>
                     <li>
-                      Pro akutní případy je vyhrazena dopolední doba, kdy přijímáme pacienty bez objednání.
+                      Na odpolední ordinace je nutné se předem objednat telefonicky.
                     </li>
                     <li>
                       Stomická poradna probíhá každé úterý odpoledne a je nutné se předem objednat.
@@ -216,8 +216,7 @@ export default function OfficeHoursPage() {
                   </div>
                   <h3>Online rezervace</h3>
                   <p>
-                    Nejpohodlnější způsob, jak se objednat. Vyberte si volný termín, 
-                    lékaře a důvod návštěvy. Rezervaci lze provést 24 hodin denně.
+                    Vyberte si volný termín, lékaře a důvod návštěvy. Operační výkon objednávejte vždy po předchozí konzultaci.
                   </p>
                   <Link 
                     href="https://v3.smartmedix.net/?reg=28530801" 
