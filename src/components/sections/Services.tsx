@@ -302,7 +302,7 @@ const Services = () => {
             <h3 className={styles.modalTitle}>Převazy ran</h3>
             <div className={styles.modalBody}>
               <p>
-                Pokud převaz v naší chirurgické ambulanci doporučí lékař již při prvním ošetření úrazu, převážeme vám ráno a event. odstraníme stehy. Jestli váš stav dovolí převaz v domácích podmínkách, dostavte se k nám jen při podezření na komplikace nebo k odstranění stehů.
+                Pokud převaz v naší chirurgické ambulanci doporučí lékař již při prvním ošetření úrazu, převážeme vám rány a event. odstraníme stehy. Jestli váš stav dovolí převaz v domácích podmínkách, dostavte se k nám jen při podezření na komplikace nebo k odstranění stehů.
               </p>
               <p>
                 Dbejte vždy doporučení lékaře, který ošetřuje ránu jako první.
