@@ -2,7 +2,26 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: [],
+    domains: [
+      'upload.wikimedia.org',
+      'images.unsplash.com',
+      'picsum.photos',
+      'via.placeholder.com',
+      'placehold.co',
+      'source.unsplash.com',
+      'cdn.pixabay.com',
+      'images.pexels.com',
+      'www.pexels.com',
+      // Google static content
+      't0.gstatic.com',
+      't1.gstatic.com',
+      't2.gstatic.com',
+      't3.gstatic.com',
+      'lh3.googleusercontent.com',
+      'lh4.googleusercontent.com',
+      'lh5.googleusercontent.com',
+      'lh6.googleusercontent.com',
+    ],
     formats: ['image/webp', 'image/avif'],
     minimumCacheTTL: 60 * 60 * 24 * 365, // 1 rok cache pro obrázky
   },

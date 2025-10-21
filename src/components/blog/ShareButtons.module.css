@@ -1,0 +1,64 @@
+.shareSection {
+  padding: 2rem;
+  border-top: 1px solid #e9ecef;
+  background: #f8f9fa;
+}
+
+.shareSection h3 {
+  color: #3a7d7b;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.shareButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.shareButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: white;
+  color: #3a7d7b;
+  border: 1px solid #84d3d1;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.shareButton:hover {
+  background: #84d3d1;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(132, 211, 209, 0.3);
+}
+
+/* Responzivní design */
+@media (max-width: 768px) {
+  .shareSection {
+    padding: 1.5rem;
+  }
+  
+  .shareButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .shareButton {
+    width: 100%;
+    max-width: 200px;
+    justify-content: center;
+  }
+}
+
+
+
+

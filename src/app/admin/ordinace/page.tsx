@@ -12,7 +12,8 @@ import {
   FaExclamationTriangle,
   FaEye,
   FaEyeSlash,
-  FaHome
+  FaHome,
+  FaNewspaper
 } from 'react-icons/fa';
 
 interface OrdinaceHour {
@@ -204,6 +205,14 @@ export default function AdminOrdinace() {
             >
               <FaExclamationTriangle />
               Alert
+            </button>
+            <button
+              onClick={() => router.push('/admin/blog')}
+              className={styles.previewButton}
+              title="Správa blogu"
+            >
+              <FaNewspaper />
+              Blog
             </button>
             <button
               onClick={() => router.push('/')}

@@ -1,0 +1,409 @@
+.adminContainer {
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+.adminHeader {
+  background: linear-gradient(135deg, #84d3d1, #3a7d7b);
+  color: white;
+  padding: 1.5rem 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.headerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.headerIcon {
+  font-size: 2.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.75rem;
+  border-radius: 12px;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.subtitle {
+  opacity: 0.9;
+  font-size: 0.9rem;
+}
+
+.headerActions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.newButton,
+.backButton,
+.homeButton,
+.logoutButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.newButton:hover,
+.backButton:hover,
+.homeButton:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.logoutButton:hover {
+  background: rgba(255, 0, 0, 0.3);
+}
+
+.adminMain {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.message.success {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.message.error {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.postsContainer {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.emptyState {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #666;
+}
+
+.emptyIcon {
+  font-size: 4rem;
+  color: #84d3d1;
+  margin-bottom: 1.5rem;
+}
+
+.emptyState h3 {
+  color: #3a7d7b;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.emptyState p {
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.emptyButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #84d3d1, #3a7d7b);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.emptyButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(132, 211, 209, 0.4);
+}
+
+.postsGrid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.postCard {
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  transition: all 0.2s ease;
+}
+
+.postCard:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.postHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.postTitle h3 {
+  color: #3a7d7b;
+  font-size: 1.2rem;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.4;
+}
+
+.postMeta {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.status.published {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status.draft {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: #666;
+  font-size: 0.8rem;
+}
+
+.postActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.editButton,
+.deleteButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.editButton {
+  background: #84d3d1;
+  color: white;
+}
+
+.editButton:hover {
+  background: #3a7d7b;
+}
+
+.deleteButton {
+  background: #dc3545;
+  color: white;
+}
+
+.deleteButton:hover:not(:disabled) {
+  background: #c82333;
+}
+
+.deleteButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.postContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.postInfo {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.postInfoItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.postInfoItem svg {
+  color: #84d3d1;
+}
+
+.postImage {
+  max-width: 200px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.postImage img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.postExcerpt {
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+.postSeo {
+  background: #e9ecef;
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  color: #495057;
+  border-left: 3px solid #84d3d1;
+}
+
+.loadingContainer,
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  gap: 1rem;
+}
+
+.spinner {
+  font-size: 2rem;
+  color: #84d3d1;
+  animation: spin 1s linear infinite;
+}
+
+.errorIcon {
+  font-size: 3rem;
+  color: #dc3545;
+}
+
+.retryButton {
+  background: #84d3d1;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.retryButton:hover {
+  background: #3a7d7b;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .headerContent {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .headerActions {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .adminMain {
+    padding: 1rem;
+  }
+  
+  .postsContainer {
+    padding: 1.5rem;
+  }
+  
+  .postHeader {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+  
+  .postActions {
+    align-self: flex-end;
+  }
+  
+  .postInfo {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .postMeta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+
+
+

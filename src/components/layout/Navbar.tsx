@@ -58,6 +58,7 @@ const Navbar = () => {
     { href: '/sluzby-a-cenik', label: 'Služby a ceník' },
     { href: '/ordinacni-doba', label: 'Ordinační doba' },
     { href: '/stop-poceni', label: 'Stop Pocení!' },
+    { href: '/blog', label: 'Blog' },
     // Laser dropdown will be added separately
     { href: '/kontakt', label: 'Kontakt' }
   ];
