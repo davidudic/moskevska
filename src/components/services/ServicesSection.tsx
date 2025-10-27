@@ -45,7 +45,7 @@ const servicesDetails = {
   3: {
     title: 'Odstranění exostózy a plastika nehtového lůžka palce nohy',
     category: 'Ortopedie / Chirurgie',
-    description: 'Plastika nehtového lůžka je výkon, ke kterému přistupujeme po vyčerpání všech ostatních možností ovlivnění tkání a kožních valů bránících zdravému růstu nehtu.',
+    description: 'Specializujeme se na plastiku nehtového lůžka při zarůstání nehtů a deformacích způsobených exostózou. Výkon řeší problém přímo v jeho původu - odstraněním kostního výrůstku a rekonstrukcí nehtového lůžka pro zdravý růst nehtu.',
     indications: 'Růstem exostózy dochází k deformaci nehtového lůžka a tím celého nehtu. Přítomnost exostózy skeletu posledního článku prstu.',
     preparation: 'Nejprve je nutné zjistit pravou příčinu zarůstání nehtů, dále velmi důkladně vyšetřit anatomické poměry a stav nehtové ploténky. V tuto chvíli bývá vhodné dohodnout případnou spolupráci s podologickým specialistou nebo alespoň s aktivním pedikúristou.',
     procedure: 'Odstranění exostózy je invazivní výkon založený na odstranění vazivového či chrupavčitého valu na nehtové drsnatině posledního článku prstu vzniklé většinou úrazem, ale také dlouhodobým drážděním. Samotný výkon je prováděn v místní anestezii s použitím turniketu k dokonalejšímu znecitlivění. Řez je veden po obvodu prstu, po odstranění příčiny potíží je provedena sutura jednotlivými stehy a rána sterilně zakryta.',
