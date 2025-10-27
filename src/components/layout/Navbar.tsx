@@ -11,7 +11,9 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isKontaktDropdownOpen, setIsKontaktDropdownOpen] = useState(false);
   const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const kontaktDropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -47,10 +49,27 @@ const Navbar = () => {
     }, 2000); // 2 second delay
   };
 
+  const handleKontaktDropdownMouseEnter = () => {
+    if (kontaktDropdownTimeoutRef.current) {
+      clearTimeout(kontaktDropdownTimeoutRef.current);
+      kontaktDropdownTimeoutRef.current = null;
+    }
+    setIsKontaktDropdownOpen(true);
+  };
+
+  const handleKontaktDropdownMouseLeave = () => {
+    kontaktDropdownTimeoutRef.current = setTimeout(() => {
+      setIsKontaktDropdownOpen(false);
+    }, 2000); // 2 second delay
+  };
+
   const isActive = (path: string) => pathname === path;
   const isDropdownActive = () => 
     pathname === '/laserova-epilace' || 
     pathname === '/operacni-laser';
+  const isKontaktDropdownActive = () => 
+    pathname === '/kontakt' || 
+    pathname.startsWith('/kontakt/');
 
   // Navbarové odkazy
   const navLinks = [
@@ -58,15 +77,23 @@ const Navbar = () => {
     { href: '/sluzby-a-cenik', label: 'Služby a ceník' },
     { href: '/ordinacni-doba', label: 'Ordinační doba' },
     { href: '/stop-poceni', label: 'Stop Pocení!' },
-    { href: '/blog', label: 'Blog' },
-    // Laser dropdown will be added separately
-    { href: '/kontakt', label: 'Kontakt' }
+    { href: '/blog', label: 'Blog' }
+    // Laser dropdown and Kontakt dropdown will be added separately
   ];
 
   // Dropdown odkazy
   const laserLinks = [
     { href: '/laserova-epilace', label: 'Epilační laser' },
     { href: '/operacni-laser', label: 'Youlaser MT' }
+  ];
+
+  // Kontakt dropdown odkazy
+  const kontaktLinks = [
+    { href: '/kontakt', label: 'Kontakt' },
+    { href: '/kontakt/o-nas', label: 'O nás' },
+    { href: '/kontakt/darkove-vouchery', label: 'Dárkové vouchery' },
+    { href: '/kontakt/gdpr', label: 'GDPR' },
+    { href: '/kontakt/formulare', label: 'Formuláře' }
   ];
 
   return (
@@ -116,6 +143,29 @@ const Navbar = () => {
               ))}
             </div>
           </div>
+
+          {/* Kontakt dropdown */}
+          <div 
+            className={`${styles.dropdown} ${isKontaktDropdownActive() ? styles.active : ''}`}
+            onMouseEnter={handleKontaktDropdownMouseEnter}
+            onMouseLeave={handleKontaktDropdownMouseLeave}
+          >
+            <Link href="/kontakt" className={styles.dropdownButton}>
+              Kontakt <FaChevronDown className={styles.dropdownIcon} />
+            </Link>
+            <div className={`${styles.dropdownContent} ${isKontaktDropdownOpen ? styles.dropdownOpen : ''}`}>
+              {kontaktLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`${styles.dropdownLink} ${isActive(link.href) ? styles.active : ''}`}
+                  onClick={() => setIsKontaktDropdownOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
         </nav>
 
         <div className={styles.contactInfo}>
@@ -157,15 +207,6 @@ const Navbar = () => {
           </Link>
         ))}
         
-        {/* Stop Pocení odkaz v mobilním menu */}
-        <Link
-          href="/stop-poceni"
-          className={styles.mobileNavLink}
-          onClick={closeMobileMenu}
-        >
-          Stop Pocení!
-        </Link>
-        
         {/* Flat laser links in mobile menu */}
         <Link
           href="#"
@@ -174,6 +215,24 @@ const Navbar = () => {
           Laser
         </Link>
         {laserLinks.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href}
+            className={`${styles.mobileNavLink} ${styles.mobileLaserLink}`}
+            onClick={closeMobileMenu}
+          >
+            {link.label}
+          </Link>
+        ))}
+
+        {/* Flat kontakt links in mobile menu */}
+        <Link
+          href="#"
+          className={`${styles.mobileNavLink} ${styles.mobileLaserHeader}`}
+        >
+          Kontakt
+        </Link>
+        {kontaktLinks.map((link) => (
           <Link
             key={link.href}
             href={link.href}

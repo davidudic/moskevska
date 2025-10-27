@@ -20,7 +20,7 @@ const Hero = () => {
             Chirurgická ambulance Moskevská Liberec
           </h1>
           <p className={styles.subtitle}>
-            Moderní chirurgické služby • Laserová epilace • Estetická medicína
+            Chirurgické služby  .  Laser  .  Estetické výkony
           </p>
           <div className={styles.cta}>
             <Link 

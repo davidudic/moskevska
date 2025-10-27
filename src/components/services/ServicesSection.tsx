@@ -9,19 +9,19 @@ const servicesDetails = {
   1: {
     title: 'Konzultace a diagnostika vašich zdravotních potíží',
     category: 'Konzultace a diagnostika',
-    description: 'Lékařská konzultace zaměřená na zhodnocení aktuálního zdravotního stavu, určení diagnózy a návrh dalšího léčebného postupu.',
-    indications: 'Pacienti s nejasnými příznaky, chronickými potížemi, nutností stanovení diagnózy nebo potřeba odborného vyšetření.',
-    preparation: 'Pacient přijde s dostupnou zdravotní dokumentací, přehledem užívaných léků a případně s vyplněným dotazníkem o zdravotním stavu.',
-    procedure: 'Lékař provede rozhovor, fyzikální vyšetření a podle potřeby doporučí další vyšetření (laboratorní, zobrazovací).',
-    aftercare: 'Záleží na povaze zjištěných potíží; může být nutná další léčba nebo sledování.',
-    risks: 'Konzultace a diagnostika jsou bezpečné, rizika se mohou týkat pouze dalších doporučených výkonů.',
+    description: 'Konzultace lékařem zaměřená na, aktuální, chronické nebo nejisté potíže.\nNutné je zhodnocení dosavadní léčby vč. užívaných léků, nejlépe s dokumentací všech odborných pracovišť.',
+    indications: '',
+    preparation: '',
+    procedure: '',
+    aftercare: '',
+    risks: '',
     faq: [
       { question: 'Jak dlouho trvá konzultace?', answer: 'Konzultace obvykle trvá 20-30 minut, v závislosti na složitosti případu.' },
       { question: 'Potřebuji něco speciálního předem?', answer: 'Přineste si všechny dostupné lékařské zprávy a seznam užívaných léků.' },
       { question: 'Co když mám více zdravotních problémů?', answer: 'Můžeme projednat všechny vaše zdravotní problémy během jediné konzultace.' }
     ],
     notes: 'Doporučujeme mít připraveny všechny dosavadní lékařské zprávy.',
-    price: 'od 500 Kč',
+    price: '',
     icon: 'user-md'
   },
   2: {
@@ -39,7 +39,7 @@ const servicesDetails = {
       { question: 'Zůstane jizva?', answer: 'Snažíme se minimalizovat vznik jizev, jejich velikost závisí na typu a velikosti útvaru.' }
     ],
     notes: 'Vždy je nutné histologické vyšetření odstraněného materiálu.',
-    price: 'od 1500 Kč',
+    price: '',
     icon: 'cut'
   },
   3: {
@@ -58,7 +58,7 @@ const servicesDetails = {
       { question: 'Co je cílem léčby?', answer: 'Výsledkem dobré spolupráce je zdravě rostoucí nehet v klidném nehtovém lůžku.' }
     ],
     notes: 'Pacient opouští ambulanci v době plně účinné místní anestezie, poučen o užívání analgetik a režimu ošetřování vč. převazů. Další péče o měkké tkáně končetiny se soustředí na obnovení vitality kožního krytu posledního článku operovaného prstu.',
-    price: 'od 8000 Kč',
+    price: '',
     icon: 'shoe-prints'
   },
   4: {
@@ -75,7 +75,7 @@ const servicesDetails = {
       { question: 'Musím na kontrolu?', answer: 'Ano, kontrola je důležitá pro sledování hojení a předcházení komplikacím.' }
     ],
     notes: 'Vhodné přijít co nejdříve po úrazu.',
-    price: 'dle rozsahu',
+    price: '',
     icon: 'first-aid'
   },
   5: {
@@ -92,7 +92,7 @@ const servicesDetails = {
       { question: 'Dá se to úplně vyléčit?', answer: 'Při správné léčbě a spolupráci pacienta ano, ale může to trvat dlouho.' }
     ],
     notes: 'Důležitá spolupráce pacienta na celkové terapii.',
-    price: 'od 300 Kč',
+    price: '',
     icon: 'bandage'
   },
   6: {
@@ -109,7 +109,7 @@ const servicesDetails = {
       { question: 'Kolik ošetření je potřeba?', answer: 'Obvykle 1-3 ošetření podle typu problému.' }
     ],
     notes: 'Některé výkony nejsou hrazeny pojišťovnou.',
-    price: 'od 2500 Kč',
+    price: '',
     icon: 'bolt'
   },
   7: {
@@ -126,7 +126,7 @@ const servicesDetails = {
       { question: 'Co když to bude vážné?', answer: 'Zajistíme vám odpovídající péči a předáme do specializovaného centra.' }
     ],
     notes: 'Možnost mezioborové konzultace.',
-    price: 'od 800 Kč',
+    price: '',
     icon: 'stethoscope'
   },
   8: {
@@ -143,7 +143,7 @@ const servicesDetails = {
       { question: 'Co když mám horečku?', answer: 'Operace se obvykle odkládá do vyléčení akutního onemocnění.' }
     ],
     notes: 'Nutné absolvovat nejpozději 7 dní před výkonem.',
-    price: 'od 800 Kč',
+    price: '',
     icon: 'clipboard-check'
   },
   9: {
@@ -160,7 +160,7 @@ const servicesDetails = {
       { question: 'Musím na další zákrok?', answer: 'Závisí na typu komplikace, některé se řeší konzervativně.' }
     ],
     notes: 'Kontroly neodkládejte.',
-    price: 'od 500 Kč',
+    price: '',
     icon: 'comments'
   },
   10: {
@@ -177,7 +177,7 @@ const servicesDetails = {
       { question: 'Kdy mi vytáhnete stehy?', answer: 'Obvykle za 7-14 dní, závisí na místě a typu operace.' }
     ],
     notes: 'Důslednost v kontrole je klíčová.',
-    price: 'od 350 Kč',
+    price: '',
     icon: 'band-aid'
   },
   11: {
@@ -194,7 +194,7 @@ const servicesDetails = {
       { question: 'Co dělat při podráždění?', answer: 'Kontaktujte nás okamžitě, poradíme s řešením.' }
     ],
     notes: 'Poradna pomáhá zvýšit kvalitu života se stomií.',
-    price: 'dle dohody',
+    price: '',
     icon: 'chart-pie'
   },
   12: {
@@ -211,7 +211,7 @@ const servicesDetails = {
       { question: 'Bolí to?', answer: 'Cítíte lehké štípání, ale výkon je dobře snášen.' }
     ],
     notes: 'Nejlepší efekt při světlé kůži a tmavých chloupcích.',
-    price: 'od 700 Kč',
+    price: '',
     icon: 'bolt'
   },
   13: {
@@ -228,7 +228,7 @@ const servicesDetails = {
       { question: 'Musím něco dodržovat po výkonu?', answer: 'Ano, dostanete přesné pokyny pro domácí péči.' }
     ],
     notes: 'Výkony nejsou hrazeny pojišťovnou.',
-    price: 'od 600 Kč',
+    price: '',
     icon: 'magic'
   }
 };
@@ -348,90 +348,36 @@ const ServicesSection = () => {
     const details = servicesDetails[serviceId as keyof typeof servicesDetails];
     if (!details) return null;
 
+    // Jednotné jednoduché zobrazení pro všechny služby
     return (
       <div className={styles.serviceDetails}>
         <div className={styles.detailsContent}>
-          {/* Kategorie */}
+          {/* Pouze text bez nadpisu */}
           <div className={styles.detailSection}>
-            <div className={styles.categoryBadge}>
-              <FaInfoCircle className={styles.categoryIcon} />
-              <span>{details.category}</span>
-            </div>
-          </div>
-
-          {/* Základní informace */}
-          <div className={styles.detailSection}>
-            <h4 className={styles.detailTitle}>
-              <FaInfoCircle className={styles.detailIcon} />
-              Popis výkonu
-            </h4>
-            <p className={styles.detailText}>{details.description}</p>
-          </div>
-
-          {/* Indikace */}
-          <div className={styles.detailSection}>
-            <h4 className={styles.detailTitle}>
-              <FaCheckCircle className={styles.detailIcon} />
-              Indikace
-            </h4>
-            <p className={styles.detailText}>{details.indications}</p>
-          </div>
-
-          {/* Příprava */}
-          <div className={styles.detailSection}>
-            <h4 className={styles.detailTitle}>
-              <FaClock className={styles.detailIcon} />
-              Příprava před výkonem
-            </h4>
-            <p className={styles.detailText}>{details.preparation}</p>
-          </div>
-
-          {/* Průběh */}
-          <div className={styles.detailSection}>
-            <h4 className={styles.detailTitle}>
-              <FaInfoCircle className={styles.detailIcon} />
-              Průběh výkonu
-            </h4>
-            <p className={styles.detailText}>{details.procedure}</p>
-          </div>
-
-          {/* Po výkonu */}
-          <div className={styles.detailSection}>
-            <h4 className={styles.detailTitle}>
-              <FaCheckCircle className={styles.detailIcon} />
-              Po výkonu / rekonvalescence
-            </h4>
-            <p className={styles.detailText}>{details.aftercare}</p>
-          </div>
-
-          {/* Rizika */}
-          <div className={styles.detailSection}>
-            <h4 className={styles.detailTitle}>
-              <FaExclamationTriangle className={styles.detailIcon} />
-              Možné komplikace / rizika
-            </h4>
-            <p className={styles.detailText}>{details.risks}</p>
+            <p className={styles.detailText} style={{ whiteSpace: 'pre-line' }}>{details.description}</p>
           </div>
 
           {/* FAQ */}
-          <div className={styles.detailSection}>
-            <h4 className={styles.detailTitle}>
-              <FaInfoCircle className={styles.detailIcon} />
-              Časté otázky pacientů
-            </h4>
-            <div className={styles.faqList}>
-              {details.faq.map((faq, index) => (
-                <div key={index} className={styles.faqItem}>
-                  <div className={styles.faqQuestion}>
-                    <strong>Q: {faq.question}</strong>
+          {details.faq && details.faq.length > 0 && (
+            <div className={styles.detailSection}>
+              <h4 className={styles.detailTitle}>
+                <FaInfoCircle className={styles.detailIcon} />
+                Časté otázky pacientů
+              </h4>
+              <div className={styles.faqList}>
+                {details.faq.map((faq, index) => (
+                  <div key={index} className={styles.faqItem}>
+                    <div className={styles.faqQuestion}>
+                      <strong>Q: {faq.question}</strong>
+                    </div>
+                    <div className={styles.faqAnswer}>
+                      A: {faq.answer}
+                    </div>
                   </div>
-                  <div className={styles.faqAnswer}>
-                    A: {faq.answer}
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
+          )}
 
           {/* Poznámky */}
           {details.notes && (
@@ -444,16 +390,6 @@ const ServicesSection = () => {
             </div>
           )}
 
-          {/* Cena */}
-          {details.price && (
-            <div className={styles.priceSection}>
-              <div className={styles.priceTag}>
-                <span className={styles.priceLabel}>Cena:</span>
-                <span className={styles.priceValue}>{details.price}</span>
-              </div>
-            </div>
-          )}
-
           {/* Speciální odkaz pro plastiku nehtového lůžka */}
           {serviceId === 3 && (
             <div className={styles.detailSection}>
@@ -462,29 +398,29 @@ const ServicesSection = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.downloadLink}
-                                 style={{
-                   display: 'inline-block',
-                   padding: '12px 20px',
-                   background: 'linear-gradient(135deg, #84d3d1, #3a7d7b)',
-                   color: 'white',
-                   textDecoration: 'none',
-                   borderRadius: '8px',
-                   marginTop: '15px',
-                   fontSize: '14px',
-                   fontWeight: '500',
-                   transition: 'all 0.3s ease',
-                   boxShadow: '0 4px 12px rgba(132, 211, 209, 0.25)'
-                 }}
-                 onMouseEnter={(e) => {
-                   const target = e.target as HTMLElement;
-                   target.style.transform = 'translateY(-2px)';
-                   target.style.boxShadow = '0 6px 16px rgba(132, 211, 209, 0.35)';
-                 }}
-                 onMouseLeave={(e) => {
-                   const target = e.target as HTMLElement;
-                   target.style.transform = 'translateY(0)';
-                   target.style.boxShadow = '0 4px 12px rgba(132, 211, 209, 0.25)';
-                 }}
+                style={{
+                  display: 'inline-block',
+                  padding: '12px 20px',
+                  background: 'linear-gradient(135deg, #84d3d1, #3a7d7b)',
+                  color: 'white',
+                  textDecoration: 'none',
+                  borderRadius: '8px',
+                  marginTop: '15px',
+                  fontSize: '14px',
+                  fontWeight: '500',
+                  transition: 'all 0.3s ease',
+                  boxShadow: '0 4px 12px rgba(132, 211, 209, 0.25)'
+                }}
+                onMouseEnter={(e) => {
+                  const target = e.target as HTMLElement;
+                  target.style.transform = 'translateY(-2px)';
+                  target.style.boxShadow = '0 6px 16px rgba(132, 211, 209, 0.35)';
+                }}
+                onMouseLeave={(e) => {
+                  const target = e.target as HTMLElement;
+                  target.style.transform = 'translateY(0)';
+                  target.style.boxShadow = '0 4px 12px rgba(132, 211, 209, 0.25)';
+                }}
               >
                 📄 Stáhnout detailní informace o plastice nehtového lůžka
               </a>

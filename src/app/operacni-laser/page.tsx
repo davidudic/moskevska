@@ -52,7 +52,7 @@ export default function OperacniLaserPage() {
             <div className={styles.heroContent}>
               <h1 className={styles.heroTitle}>Youlaser MT</h1>
               <p className={styles.heroSubtitle}>
-                Moderní a přesná chirurgická léčba s využitím pokročilých laserových technologií
+                Odstranění skvrn, redukce jizev, strií a vrásek
               </p>
             </div>
           </div>
