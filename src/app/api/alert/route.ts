@@ -1,12 +1,16 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { verifyAuth } from '@/lib/auth';
+import { getDatabase } from '@/lib/mongodb';
 
 // Explicitně nastavit runtime pro Vercel
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
-// In-memory storage pro alert (resetuje se při restart)
-let inMemoryAlertData = {
+const COLLECTION_NAME = 'alerts';
+
+// Výchozí data pro první inicializaci
+const DEFAULT_ALERT_DATA = {
+  type: 'main-alert',
   enabled: false,
   title: "POZOR - ZMĚNA ORDINAČNÍ DOBY",
   message: "V pátek 31.5. bude ordinace zavřená z důvodu školení.",
@@ -17,11 +21,26 @@ let inMemoryAlertData = {
 // GET - veřejné čtení dat
 export async function GET() {
   try {
-    console.log('API: Loading alert data from memory');
+    console.log('API: Loading alert data from MongoDB');
+    const db = await getDatabase();
+    const collection = db.collection(COLLECTION_NAME);
+    
+    // Načti data z databáze
+    let data = await collection.findOne({ type: 'main-alert' });
+    
+    // Pokud neexistují žádná data, vytvoř výchozí
+    if (!data) {
+      console.log('API: No alert data found, initializing with defaults');
+      await collection.insertOne(DEFAULT_ALERT_DATA);
+      data = DEFAULT_ALERT_DATA;
+    }
+    
+    // Odstraň MongoDB _id před odesláním
+    const { _id, ...responseData } = data as any;
     
     return NextResponse.json({
       success: true,
-      data: inMemoryAlertData
+      data: responseData
     });
   } catch (error) {
     console.error('Chyba při načítání alert dat:', error);
@@ -74,8 +93,12 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Ulož do paměti (resetuje se při restart serveru)
-    inMemoryAlertData = {
+    // Ulož do MongoDB databáze
+    const db = await getDatabase();
+    const collection = db.collection(COLLECTION_NAME);
+    
+    const dataToSave = {
+      type: 'main-alert',
       enabled: requestData.enabled,
       title: requestData.title.trim(),
       message: requestData.message.trim(),
@@ -83,11 +106,17 @@ export async function POST(request: NextRequest) {
       updatedBy: 'admin'
     };
 
-    console.log('API: Alert data saved to memory successfully');
+    await collection.updateOne(
+      { type: 'main-alert' },
+      { $set: dataToSave },
+      { upsert: true } // vytvoř dokument, pokud neexistuje
+    );
+
+    console.log('API: Alert data saved to MongoDB successfully');
 
     return NextResponse.json({
       success: true,
-      message: 'Alert byl úspěšně aktualizován (v paměti - resetuje se při restartu)'
+      message: 'Alert byl úspěšně aktualizován v databázi'
     });
 
   } catch (error) {
