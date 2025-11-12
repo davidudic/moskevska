@@ -81,17 +81,17 @@ export async function GET() {
     const collection = db.collection(COLLECTION_NAME);
     
     // Načti data z databáze
-    let data = await collection.findOne({ type: 'ordinace' });
+    let data: any = await collection.findOne({ type: 'ordinace' });
     
     // Pokud neexistují žádná data, vytvoř výchozí
     if (!data) {
       console.log('API: No data found, initializing with defaults');
-      await collection.insertOne(DEFAULT_DATA);
-      data = DEFAULT_DATA;
+      const result = await collection.insertOne(DEFAULT_DATA as any);
+      data = { ...DEFAULT_DATA, _id: result.insertedId };
     }
     
-    // Odstraň MongoDB _id před odesláním
-    const { _id, ...responseData } = data as any;
+    // Odstraň MongoDB _id a type před odesláním
+    const { _id, type, ...responseData } = data;
     
     return NextResponse.json({
       success: true,

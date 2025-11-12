@@ -26,17 +26,17 @@ export async function GET() {
     const collection = db.collection(COLLECTION_NAME);
     
     // Načti data z databáze
-    let data = await collection.findOne({ type: 'main-alert' });
+    let data: any = await collection.findOne({ type: 'main-alert' });
     
     // Pokud neexistují žádná data, vytvoř výchozí
     if (!data) {
       console.log('API: No alert data found, initializing with defaults');
-      await collection.insertOne(DEFAULT_ALERT_DATA);
-      data = DEFAULT_ALERT_DATA;
+      const result = await collection.insertOne(DEFAULT_ALERT_DATA as any);
+      data = { ...DEFAULT_ALERT_DATA, _id: result.insertedId };
     }
     
     // Odstraň MongoDB _id před odesláním
-    const { _id, ...responseData } = data as any;
+    const { _id, type, ...responseData } = data;
     
     return NextResponse.json({
       success: true,
