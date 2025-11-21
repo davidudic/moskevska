@@ -1,0 +1,361 @@
+.onasPage {
+  padding-top: 0;
+  background-color: #f9f9fa;
+}
+
+.hero {
+  background: linear-gradient(135deg, #84d3d1, #3a7d7b);
+  padding: 8rem 0 4rem;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroContent {
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.heroTitle {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.heroSubtitle {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Hlavní informační sekce */
+.infoSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  padding: 4rem 0;
+}
+
+.infoContent {
+  padding-right: 2rem;
+}
+
+.sectionTitle {
+  color: #3a7d7b;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: #84d3d1;
+}
+
+.infoContent p {
+  margin-bottom: 1.25rem;
+  color: #444;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.valuesList {
+  margin-top: 2rem;
+  background-color: rgba(132, 211, 209, 0.1);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #84d3d1;
+}
+
+.valuesList h3 {
+  font-size: 1.2rem;
+  color: #3a7d7b;
+  margin-bottom: 1rem;
+}
+
+.valueItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  color: #444;
+  font-size: 1.05rem;
+}
+
+.valueIcon {
+  color: #4caf50;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.infoImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sectionImage {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Hlavní lékař sekce */
+.mainDoctorSection {
+  padding: 3rem 0;
+}
+
+.mainDoctorCard {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 3rem;
+  background: white;
+  padding: 3rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.doctorImageWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.doctorImage {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #84d3d1;
+}
+
+.doctorInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.doctorName {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.doctorPosition {
+  font-size: 1.1rem;
+  color: #3a7d7b;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.doctorDescription {
+  color: #444;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+}
+
+.doctorDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.detailItem {
+  color: #444;
+  font-size: 1rem;
+}
+
+.detailItem strong {
+  color: #3a7d7b;
+  margin-right: 0.5rem;
+}
+
+/* Tým info sekce */
+.teamInfoSection {
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.teamText {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  color: #444;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.teamCta {
+  margin-top: 2rem;
+}
+
+.teamButton {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #84d3d1, #3a7d7b);
+  color: white;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.teamButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(132, 211, 209, 0.3);
+}
+
+/* CTA Sekce */
+.ctaSection {
+  padding: 0 0 4rem 0;
+}
+
+.ctaCard {
+  background: linear-gradient(135deg, #84d3d1, #3a7d7b);
+  padding: 3rem;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 20px rgba(132, 211, 209, 0.3);
+}
+
+.ctaTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.ctaText {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.95;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.primaryButton {
+  background: white;
+  color: #3a7d7b;
+}
+
+.primaryButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.secondaryButton {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+}
+
+.secondaryButton:hover {
+  background: white;
+  color: #3a7d7b;
+  transform: translateY(-2px);
+}
+
+/* Responzivita */
+@media (max-width: 768px) {
+  .hero {
+    padding: 6rem 0 3rem;
+  }
+
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.1rem;
+  }
+
+  .infoSection {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 3rem 0;
+  }
+
+  .infoContent {
+    padding-right: 0;
+  }
+
+  .mainDoctorCard {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .doctorImageWrapper {
+    justify-content: center;
+  }
+
+  .doctorName {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .doctorPosition {
+    text-align: center;
+  }
+
+  .ctaCard {
+    padding: 2rem 1.5rem;
+  }
+
+  .ctaTitle {
+    font-size: 1.5rem;
+  }
+
+  .ctaText {
+    font-size: 1rem;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+    justify-content: center;
+  }
+}
+

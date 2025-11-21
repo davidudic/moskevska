@@ -78,6 +78,20 @@ const Footer = () => {
         <div className={styles.copyright}>
           &copy; {currentYear} Chirurgická ambulance Moskevská. Všechna práva vyhrazena.
         </div>
+        <div className={styles.footerLinks}>
+          <a href="/kontakt/o-nas" className={styles.footerLink}>
+            O nás
+          </a>
+          <a href="/kontakt/darkove-vouchery" className={styles.footerLink}>
+            Dárkové vouchery
+          </a>
+          <a href="/kontakt/formulare" className={styles.footerLink}>
+            Formuláře
+          </a>
+          <a href="/kontakt/gdpr" className={styles.footerLink}>
+            GDPR
+          </a>
+        </div>
       </div>
     </footer>
   );

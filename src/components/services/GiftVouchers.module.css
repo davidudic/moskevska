@@ -1,13 +1,56 @@
 .vouchersSection {
-  margin-bottom: 2rem;
+  background-color: #f9f9fa;
+  padding-bottom: 4rem;
+}
+
+/* Akční banner */
+.promoBanner {
+  background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+  padding: 2rem;
+  margin-bottom: 4rem;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.2);
+}
+
+.promoContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  color: white;
+}
+
+.promoIcon {
+  font-size: 3rem;
+  flex-shrink: 0;
+}
+
+.promoTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.promoSubtitle {
+  font-size: 1.1rem;
+  margin: 0;
+  opacity: 0.95;
+}
+
+/* Hlavní obsah */
+.mainContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .sectionTitle {
   color: #3a7d7b;
-  font-size: 1.8rem;
-  margin-bottom: 2rem;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
   position: relative;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.75rem;
 }
 
 .sectionTitle::after {
@@ -20,68 +63,308 @@
   background-color: #84d3d1;
 }
 
-.voucherCard {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
-  padding: 2rem;
-  border-left: 5px solid #84d3d1;
+.leadText {
+  font-size: 1.15rem;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 3rem;
+  max-width: 900px;
 }
 
-.voucherIcon {
-  font-size: 3rem;
+/* Výhody - grid */
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.benefitCard {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.benefitCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(132, 211, 209, 0.15);
+}
+
+.benefitIcon {
+  font-size: 2.5rem;
   color: #84d3d1;
-  background-color: rgba(132, 211, 209, 0.1);
-  width: 80px;
-  height: 80px;
+  margin-bottom: 1rem;
+}
+
+.benefitCard h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.75rem;
+}
+
+.benefitCard p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Sekce - komu darovat */
+.recipientsSection {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 8px;
+  margin-bottom: 3rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.subsectionTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #3a7d7b;
+  margin-bottom: 1.5rem;
+}
+
+.recipientsList {
+  display: grid;
+  gap: 1rem;
+}
+
+.recipientItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.05rem;
+  color: #444;
+  padding: 0.75rem 0;
+}
+
+.recipientItem svg {
+  color: #4caf50;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+/* Služby sekce */
+.servicesSection {
+  background: rgba(132, 211, 209, 0.1);
+  padding: 2.5rem;
+  border-radius: 8px;
+  margin-bottom: 3rem;
+  border-left: 4px solid #84d3d1;
+}
+
+.servicesList {
+  display: grid;
+  gap: 1rem;
+}
+
+.serviceItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  font-size: 1.05rem;
+  color: #444;
+  padding: 0.5rem 0;
+}
+
+.serviceItem svg {
+  color: #4caf50;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+/* Jak to funguje */
+.howItWorksSection {
+  margin-bottom: 4rem;
+}
+
+.stepsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.stepCard {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.stepNumber {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #84d3d1, #3a7d7b);
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
+  margin: 0 auto 1.5rem;
 }
 
-.voucherInfo {
-  flex: 1;
+.stepCard h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.75rem;
 }
 
-.voucherInfo p {
-  margin-bottom: 1rem;
-  color: #555;
+.stepCard p {
+  color: #666;
   line-height: 1.6;
+  font-size: 1rem;
 }
 
-.voucherCTA {
-  margin-top: 1.5rem;
+/* CTA Sekce */
+.ctaSection {
+  padding: 0 2rem;
 }
 
-.voucherButton {
-  display: inline-block;
-  background-color: #84d3d1;
+.ctaCard {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #84d3d1, #3a7d7b);
+  padding: 3rem;
+  border-radius: 12px;
+  text-align: center;
   color: white;
-  font-weight: 500;
-  padding: 0.75rem 1.5rem;
-  border-radius: 30px;
-  transition: all 0.2s ease;
+  box-shadow: 0 4px 20px rgba(132, 211, 209, 0.3);
 }
 
-.voucherButton:hover {
-  background-color: #3a7d7b;
+.ctaTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.ctaText {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.95;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.primaryButton {
+  background: white;
+  color: #3a7d7b;
+}
+
+.primaryButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.secondaryButton {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+}
+
+.secondaryButton:hover {
+  background: white;
+  color: #3a7d7b;
   transform: translateY(-2px);
 }
 
+/* Responzivita */
 @media (max-width: 768px) {
-  .voucherCard {
-    flex-direction: column;
-    text-align: center;
-    gap: 1.5rem;
+  .promoBanner {
     padding: 1.5rem;
   }
-  
-  .voucherIcon {
-    margin: 0 auto;
+
+  .promoContent {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .promoIcon {
+    font-size: 2.5rem;
+  }
+
+  .promoTitle {
+    font-size: 1.4rem;
+  }
+
+  .promoSubtitle {
+    font-size: 1rem;
+  }
+
+  .mainContent {
+    padding: 0 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.6rem;
+  }
+
+  .leadText {
+    font-size: 1rem;
+  }
+
+  .benefitsGrid,
+  .stepsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .recipientsSection,
+  .servicesSection {
+    padding: 1.5rem;
+  }
+
+  .ctaCard {
+    padding: 2rem 1.5rem;
+  }
+
+  .ctaTitle {
+    font-size: 1.5rem;
+  }
+
+  .ctaText {
+    font-size: 1rem;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+    justify-content: center;
   }
 }
