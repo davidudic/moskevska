@@ -144,36 +144,106 @@ export default function LaserEpilacePage() {
 
         {/* Obsah */}
         <div className="container">
-          {/* Hlavní popis */}
+          {/* Výhody - CO ZÍSKÁTE */}
+          <section className={styles.benefitsSection}>
+            <h2 className={styles.sectionTitle}>Co vám laserová epilace přinese?</h2>
+            <p className={styles.benefitsIntro}>
+              Laserová epilace není jen o odstranění chloupků - je to investice do vaší pohody, 
+              sebevědomí a kvality života. Objevte, jak vám může změnit každodenní rutinu.
+            </p>
+            <div className={styles.benefitsGrid}>
+              <div className={styles.benefitCard}>
+                <div className={styles.benefitIcon}>💆</div>
+                <h3>Komfort bez bolesti</h3>
+                <p>Šetrné a příjemné ošetření s minimálním diskomfortem</p>
+              </div>
+              <div className={styles.benefitCard}>
+                <div className={styles.benefitIcon}>⏰</div>
+                <h3>Úspora času</h3>
+                <p>Zapomeňte na každodenní holení, získáte více volného času</p>
+              </div>
+              <div className={styles.benefitCard}>
+                <div className={styles.benefitIcon}>✨</div>
+                <h3>Krásná pokožka</h3>
+                <p>Dokonale hladká a upravená pokožka bez kompromisů</p>
+              </div>
+              <div className={styles.benefitCard}>
+                <div className={styles.benefitIcon}>🛡️</div>
+                <h3>Bez podráždění</h3>
+                <p>Žádné zarudnutí, svědění ani pupínky po ošetření</p>
+              </div>
+              <div className={styles.benefitCard}>
+                <div className={styles.benefitIcon}>📊</div>
+                <h3>Rovnoměrný výsledek</h3>
+                <p>Ucelený a harmonický vzhled celé pokožky</p>
+              </div>
+              <div className={styles.benefitCard}>
+                <div className={styles.benefitIcon}>💪</div>
+                <h3>Větší sebevědomí</h3>
+                <p>Pocit svobody a sebejistoty v každé situaci</p>
+              </div>
+            </div>
+          </section>
+
+          {/* Video sekce - JAK TO FUNGUJE */}
+          <section className={styles.videoSection}>
+            <h2 className={styles.sectionTitle}>Jak funguje laserová epilace?</h2>
+            <p className={styles.videoDescription}>
+              Podívejte se na krátké video, které jednoduše vysvětluje princip fungování laserové epilace 
+              a jak dochází k trvalému odstranění chloupků.
+            </p>
+            <div className={styles.videoWrapper}>
+              <iframe 
+                width="100%" 
+                height="100%" 
+                src="https://www.youtube.com/embed/ug9me3cAR1E?si=v_TC1W3B7ohmIe6S" 
+                title="Jak funguje laserová epilace" 
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerPolicy="strict-origin-when-cross-origin" 
+                allowFullScreen
+                className={styles.videoFrame}
+              ></iframe>
+            </div>
+          </section>
+
+          {/* O technologii - TECHNICKÉ INFO */}
           <section className={styles.infoSection}>
             <div className={styles.infoContent}>
-              <h2 className={styles.sectionTitle}>O epilačním laseru</h2>
+              <h2 className={styles.sectionTitle}>Technologie DOMINO 755 nm</h2>
               <p>
-                Epilační laser je moderní, bezpečná a efektivní metoda dlouhodobého odstranění nežádoucího ochlupení. 
-                Využíváme špičkový laser DOMINO 755 nm, který je vhodný pro všechny typy pleti a poskytuje vynikající 
-                výsledky s minimálním rizikem vedlejších účinků.
+                Využíváme špičkový epilační laser DOMINO 755 nm - moderní a bezpečnou metodu dlouhodobého 
+                odstranění nežádoucího ochlupení. Tento laser je vhodný pro všechny typy pleti a poskytuje 
+                vynikající výsledky s minimálním rizikem vedlejších účinků.
               </p>
               <p>
-                Náš laser cílí přímo na pigment (melanin) v chloupku, aniž by poškodil okolní tkáň. Energie laseru 
-                je absorbována chloupkem a přeměněna na teplo, které poškodí folikul a zabrání dalšímu růstu chloupků.
+                Laser cílí přímo na pigment (melanin) v chloupku, aniž by poškodil okolní tkáň. 
+                Energie laseru je absorbována chloupkem a přeměněna na teplo, které poškodí folikul 
+                a zabrání dalšímu růstu chloupků.
               </p>
-
-              <div className={styles.benefitsList}>
-                <h3>Výhody epilačního laseru:</h3>
-                <ul>
-                  <li>Dlouhodobé až trvalé odstranění chloupků</li>
-                  <li>Rychlé a bezbolestné ošetření</li>
-                  <li>Vhodné pro všechny části těla</li>
-                  <li>Zabraňuje zarůstání chloupků</li>
-                  <li>Minimální vedlejší účinky</li>
-                  <li>Šetrné k pokožce</li>
-                </ul>
+              <div className={styles.techFeatures}>
+                <div className={styles.techFeature}>
+                  <span className={styles.techIcon}>✓</span>
+                  <span>Vhodný pro všechny typy pleti</span>
+                </div>
+                <div className={styles.techFeature}>
+                  <span className={styles.techIcon}>✓</span>
+                  <span>Minimální vedlejší účinky</span>
+                </div>
+                <div className={styles.techFeature}>
+                  <span className={styles.techIcon}>✓</span>
+                  <span>Certifikovaná bezpečná technologie</span>
+                </div>
+                <div className={styles.techFeature}>
+                  <span className={styles.techIcon}>✓</span>
+                  <span>Rychlé a efektivní ošetření</span>
+                </div>
               </div>
             </div>
             <div className={styles.infoImage}>
               <Image 
                 src="/images/domino.webp" 
-                alt="Epilační laser" 
+                alt="Epilační laser DOMINO 755 nm" 
                 width={500} 
                 height={400} 
                 className={styles.sectionImage}

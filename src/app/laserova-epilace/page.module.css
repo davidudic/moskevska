@@ -85,30 +85,112 @@
   font-size: 1.05rem;
 }
 
-.benefitsList {
+.techFeatures {
   margin-top: 2rem;
-  background-color: rgba(132, 211, 209, 0.1);
-  padding: 1.5rem;
-  border-radius: 8px;
-  border-left: 4px solid #84d3d1;
+  display: grid;
+  gap: 1rem;
 }
 
-.benefitsList h3 {
-  font-size: 1.2rem;
-  color: #3a7d7b;
+.techFeature {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #444;
+  font-size: 1.05rem;
+}
+
+.techIcon {
+  color: #4caf50;
+  font-weight: 700;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+/* Video sekce */
+.videoSection {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.videoDescription {
+  max-width: 800px;
+  margin: 0 auto 2.5rem;
+  color: #444;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.videoWrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.videoFrame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+/* Výhody sekce */
+.benefitsSection {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.benefitsIntro {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  color: #444;
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.benefitCard {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.benefitCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(132, 211, 209, 0.2);
+}
+
+.benefitIcon {
+  font-size: 3rem;
   margin-bottom: 1rem;
 }
 
-.benefitsList ul {
-  padding-left: 1.5rem;
+.benefitCard h3 {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
 }
 
-.benefitsList li {
-  margin-bottom: 0.5rem;
-  position: relative;
-  padding-left: 0.5rem;
-  color: #444;
-  line-height: 1.5;
+.benefitCard p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 1rem;
 }
 
 .infoImage {
@@ -271,12 +353,12 @@
 
 .popularBadge {
   position: absolute;
-  top: -8px;
-  right: 1rem;
+  top: -1px;
+  right: -1px;
   background: linear-gradient(135deg, #ff6b35, #ff8c42);
   color: white;
   padding: 0.5rem 1rem;
-  border-radius: 20px;
+  border-radius: 0 16px 0 20px;
   font-size: 0.85rem;
   font-weight: 600;
   display: flex;
@@ -622,6 +704,11 @@
     grid-template-columns: 1fr;
   }
 
+  .benefitsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
   .packagesGrid {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     margin: 0 1rem;
@@ -647,6 +734,37 @@
     align-items: flex-start;
     gap: 0.5rem;
   }
+
+  .videoSection {
+    padding: 3rem 0;
+  }
+
+  .videoDescription {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .benefitsSection {
+    padding: 3rem 0;
+  }
+
+  .benefitsIntro {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .benefitsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .benefitCard {
+    padding: 1.5rem;
+  }
+
+  .benefitIcon {
+    font-size: 2.5rem;
+  }
   
   .ctaCard {
     padding: 2rem;
@@ -668,37 +786,89 @@
 
   .packagesGrid {
     grid-template-columns: 1fr;
-    margin: 0 0.5rem;
+    margin: 0;
+    gap: 1.5rem;
   }
 
   .packageCard {
-    padding: 1.5rem;
+    padding: 2rem 1.5rem;
+    margin: 0 1rem;
+  }
+
+  .packageIcon {
+    margin-bottom: 1.5rem;
   }
 
   .packageIcon span {
-    font-size: 2.5rem;
-    width: 70px;
-    height: 70px;
+    font-size: 3rem;
+    width: 80px;
+    height: 80px;
   }
 
   .packageName {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .packageDescription {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .packageAreas {
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .areaTag {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .packagePricing {
+    padding: 1.5rem;
+  }
+
+  .originalPrice {
+    margin-bottom: 0.75rem;
+  }
+
+  .originalLabel,
+  .discountLabel {
+    font-size: 0.9rem;
+  }
+
+  .originalAmount {
+    font-size: 1.1rem;
   }
 
   .discountAmount {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+  }
+
+  .savings {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    margin-top: 0.75rem;
+  }
+
+  .packageButton {
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    margin-top: 1.5rem;
   }
 
   .popularBadge {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     padding: 0.4rem 0.8rem;
   }
 
   .packagesNote {
-    margin: 1.5rem 0.5rem 0;
+    margin: 1.5rem 1rem 0;
     flex-direction: column;
     text-align: center;
     gap: 0.5rem;
+    font-size: 0.9rem;
   }
 }
 

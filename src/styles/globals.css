@@ -78,7 +78,6 @@ h1, h2, h3, h4, h5, h6 {
 main {
   padding-top: 75px; /* Výška navbaru + nějaký prostor navíc */
 }
-
 .hero-section {
   margin-top: -75px; /* Kompenzace padding-top pro hero sekci */
 }
