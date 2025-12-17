@@ -37,7 +37,7 @@ const doctors = [
     id: 2,
     name: 'MUDr. Kristýna Žďárská',
     position: 'Chirurg',
-    image: '/images/doctor2.jpg',
+    image: '/images/zenafotka.webp',
     description: 'MUDr. Kristýna Žďárská je specialistka v oblasti chirurgie s fokusem na moderní minimálně invazivní postupy.',
     education: 'Lékařská fakulta',
     experience: '10+ let praxe'
@@ -46,7 +46,7 @@ const doctors = [
     id: 3,
     name: 'MUDr. Valentýna Nowá',
     position: 'Kožní lékař',
-    image: '/images/doctor3.jpg',
+    image: '/images/zenafotka.webp',
     description: 'MUDr. Valentýna Nowá se specializuje na dermatologii a léčbu kožních defektů. Ve své praxi klade důraz na šetrné postupy a minimalizaci jizev.',
     education: 'Lékařská fakulta',
     experience: '5+ let praxe'
@@ -55,7 +55,7 @@ const doctors = [
     id: 4,
     name: 'MUDr. Tomáš Procházka',
     position: 'Chirurg',
-    image: '/images/doctor4.jpg',
+    image: '/images/muzfotka.webp',
     description: 'MUDr. Tomáš Procházka je odborníkem na všeobecnou chirurgii.',
     education: 'Lékařská fakulta',
     experience: '5+ let praxe'
@@ -64,7 +64,7 @@ const doctors = [
     id: 5,
     name: 'MUDr. Vojtěch Hrubý',
     position: 'Chirurg',
-    image: '/images/doctor5.jpg',
+    image: '/images/muzfotka.webp',
     description: 'MUDr. Vojtěch Hrubý je odborníkem na všeobecnou chirurgii.',
     education: 'Lékařská fakulta',
     experience: '5 let praxe'
@@ -73,7 +73,7 @@ const doctors = [
     id: 6,
     name: 'MUDr. David Švrček',
     position: 'Chirurg',
-    image: '/images/doctor6.jpg',
+    image: '/images/muzfotka.webp',
     description: 'MUDr. David Švrček je odborníkem na všeobecnou chirurgii.',
     education: 'Lékařská fakulta',
     experience: '5 let praxe'

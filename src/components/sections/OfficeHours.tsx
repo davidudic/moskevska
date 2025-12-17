@@ -20,14 +20,14 @@ interface OrdinaceData {
   updatedBy: string;
 }
 
-// Lékaři - statická data (nezměněno)
+// Lékaři - statická data
 const doctors = [
   { id: 1, name: 'MUDr. Jaroslav Chaluš', position: 'Chirurg', image: '/images/chalus.webp' },
-  { id: 2, name: 'MUDr. Kristýna Žďárská', position: 'Chirurg', image: '/images/doctor2.jpg' },
-  { id: 3, name: 'MUDr. Valentýna Nowá', position: 'Chirurg', image: '/images/doctor3.jpg' },
-  { id: 4, name: 'MUDr. Tomáš Procházka', position: 'Chirurg', image: '/images/doctor4.jpg' },
-  { id: 5, name: 'MUDr. Vojtěch Hrubý', position: 'Chirurg', image: '/images/doctor5.jpg' },
-  { id: 6, name: 'MUDr. David Švrček', position: 'Chirurg', image: '/images/doctor6.jpg' },
+  { id: 2, name: 'MUDr. Kristýna Žďárská', position: 'Chirurg', image: '/images/zenafotka.webp' },
+  { id: 3, name: 'MUDr. Valentýna Nowá', position: 'Chirurg', image: '/images/zenafotka.webp' },
+  { id: 4, name: 'MUDr. Tomáš Procházka', position: 'Chirurg', image: '/images/muzfotka.webp' },
+  { id: 5, name: 'MUDr. Vojtěch Hrubý', position: 'Chirurg', image: '/images/muzfotka.webp' },
+  { id: 6, name: 'MUDr. David Švrček', position: 'Chirurg', image: '/images/muzfotka.webp' },
 ];
 
 const OfficeHours = () => {
