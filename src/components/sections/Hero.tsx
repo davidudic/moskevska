@@ -57,7 +57,7 @@ const Hero = () => {
             </div>
 
             <h1 className={styles.title}>
-              <span className={styles.titleLine}>Chirurgická ambulance</span>
+              <span className={styles.titleLine}>Chirurgická ambulance </span>
               <span className={styles.titleLine}>
                 Moskevská <span className={styles.titleAccent}>Liberec</span>
               </span>
