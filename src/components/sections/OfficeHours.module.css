@@ -1,129 +1,243 @@
+/* ===== OFFICE HOURS SECTION ===== */
 .officeHours {
-    background-color: var(--primary-transparent);
-  }
-  
-  .title {
-    text-align: center;
-    margin-bottom: var(--spacing-xl);
-  }
-  
+  padding: 6rem 0;
+  background: #ffffff;
+  position: relative;
+}
+
+.title {
+  text-align: center;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1a2e2d;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  text-align: center;
+  color: #5a6b6a;
+  max-width: 500px;
+  margin: 0 auto 3rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* ===== HOURS TABLE ===== */
+.hoursCard {
+  background: #f8fafa;
+  border-radius: 20px;
+  padding: 2rem;
+  border: 1px solid #e8eeed;
+}
+
+.hoursTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a2e2d;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid rgba(132, 211, 209, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.hoursTitle svg {
+  color: var(--primary);
+}
+
+.dayRow {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 1rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid #eef1f1;
+  align-items: start;
+}
+
+.dayRow:last-child {
+  border-bottom: none;
+}
+
+.dayName {
+  font-weight: 700;
+  color: #1a2e2d;
+  font-size: 1rem;
+}
+
+.dayTimes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.timeText {
+  font-weight: 600;
+  color: #2d4a48;
+  font-size: 0.95rem;
+}
+
+.dayNote {
+  font-size: 0.85rem;
+  color: #7a8a89;
+  font-style: italic;
+}
+
+/* ===== DOCTORS SECTION ===== */
+.doctorsCard {
+  background: linear-gradient(135deg, #f0f7f6 0%, #e8f4f3 100%);
+  border-radius: 20px;
+  padding: 2rem;
+  border: 1px solid rgba(132, 211, 209, 0.15);
+}
+
+.doctorsTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a2e2d;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.doctorsTitle svg {
+  color: var(--primary);
+}
+
+.doctorsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.doctorItem {
+  background: white;
+  border-radius: 16px;
+  padding: 1.25rem 1rem;
+  text-align: center;
+  border: 1px solid rgba(132, 211, 209, 0.1);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.doctorItem:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(132, 211, 209, 0.15);
+  border-color: rgba(132, 211, 209, 0.3);
+}
+
+.doctorImage {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto 0.85rem;
+  border: 3px solid white;
+  box-shadow: 0 4px 15px rgba(132, 211, 209, 0.25);
+}
+
+.doctorItem:hover .doctorImage {
+  transform: scale(1.05);
+}
+
+.doctorName {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #1a2e2d;
+  margin-bottom: 0.25rem;
+  line-height: 1.3;
+}
+
+.doctorPosition {
+  font-size: 0.82rem;
+  color: var(--primary-dark);
+  font-weight: 500;
+}
+
+/* ===== BUTTON ===== */
+.button {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.buttonLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(132, 211, 209, 0.35);
+  text-decoration: none;
+}
+
+.buttonLink:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(132, 211, 209, 0.45);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
   .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-xl);
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
-  
-  .hours {
-    background-color: white;
-    border-radius: var(--radius-md);
-    padding: var(--spacing-lg);
-    box-shadow: var(--shadow-sm);
+
+  .doctorsGrid {
+    grid-template-columns: repeat(3, 1fr);
   }
-  
-  .day {
-    display: flex;
-    flex-direction: column;
-    padding: var(--spacing-md) 0;
-    border-bottom: 1px solid var(--background-light);
+}
+
+@media (max-width: 768px) {
+  .officeHours {
+    padding: 4rem 0;
   }
-  
-  .day:last-child {
-    border-bottom: none;
+
+  .doctorsGrid {
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  .dayInfo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+}
+
+@media (max-width: 480px) {
+  .hoursCard,
+  .doctorsCard {
+    padding: 1.5rem;
   }
-  
-  .dayName {
-    font-weight: 600;
-    color: var(--text);
+
+  .dayRow {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
   }
-  
-  .dayHours {
-    font-weight: 500;
-    color: var(--text);
+
+  .doctorsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
   }
-  
-  .dayNote {
-    margin-top: 0.2rem;
-    color: var(--text-light);
-    font-size: 0.85rem;
-    text-align: right;
+
+  .doctorItem {
+    padding: 1rem 0.75rem;
   }
-  
-  .doctors {
-    background-color: white;
-    border-radius: var(--radius-md);
-    padding: var(--spacing-lg);
-    box-shadow: var(--shadow-sm);
-    max-height: 400px;
-    overflow-y: auto;
-  }
-  
-  .doctor {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-md);
-    padding: var(--spacing-md) 0;
-    border-bottom: 1px solid var(--background-light);
-  }
-  
-  .doctor:last-child {
-    border-bottom: none;
-  }
-  
+
   .doctorImage {
     width: 60px;
     height: 60px;
-    border-radius: 50%;
-    overflow: hidden;
-    position: relative;
-    border: 2px solid var(--primary);
-    flex-shrink: 0;
   }
-  
-  .doctorInfo h3 {
-    margin-bottom: var(--spacing-xs);
-    font-size: 1rem;
+
+  .doctorName {
+    font-size: 0.85rem;
   }
-  
-  .doctorInfo p {
-    margin-bottom: 0;
-    color: var(--text-light);
-    font-size: 0.9rem;
-  }
-  
-  .button {
-    text-align: center;
-    margin-top: var(--spacing-xl);
-  }
-  
-  @media (max-width: 768px) {
-    .grid {
-      grid-template-columns: 1fr;
-    }
-    
-    .doctors {
-      max-height: none;
-      overflow-y: visible;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .day {
-      padding: var(--spacing-sm) 0;
-    }
-    
-    .dayInfo {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0.2rem;
-    }
-    
-    .dayNote {
-      text-align: left;
-    }
-  }
+}

@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './OfficeHours.module.css';
+import { FaClock, FaUserMd } from 'react-icons/fa';
 
 interface OrdinaceHour {
   id: number;
@@ -22,7 +23,7 @@ interface OrdinaceData {
 
 // Lékaři - statická data
 const doctors = [
-  { id: 1, name: 'MUDr. Jaroslav Chaluš', position: 'Chirurg', image: '/images/chalus.webp' },
+  { id: 1, name: 'MUDr. Jaroslav Chaluš', position: 'Hlavní lékař', image: '/images/chalus.webp' },
   { id: 2, name: 'MUDr. Kristýna Žďárská', position: 'Chirurg', image: '/images/zenafotka.webp' },
   { id: 3, name: 'MUDr. Valentýna Nowá', position: 'Chirurg', image: '/images/zenafotka.webp' },
   { id: 4, name: 'MUDr. Tomáš Procházka', position: 'Chirurg', image: '/images/muzfotka.webp' },
@@ -33,7 +34,6 @@ const doctors = [
 const OfficeHours = () => {
   const [ordinaceData, setOrdinaceData] = useState<OrdinaceData | null>(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchOrdinaceData = async () => {
@@ -48,7 +48,6 @@ const OfficeHours = () => {
         }
       } catch (err) {
         console.error('Chyba při načítání ordinační doby:', err);
-        setError('Nepodařilo se načíst ordinační dobu');
         
         // Fallback na výchozí data
         setOrdinaceData({
@@ -72,11 +71,11 @@ const OfficeHours = () => {
 
   if (loading) {
     return (
-      <section className={`section ${styles.officeHours}`}>
+      <section className={styles.officeHours}>
         <div className="container">
           <h2 className={styles.title}>Ordinační hodiny</h2>
-          <div style={{ textAlign: 'center', padding: '2rem' }}>
-            <p>Načítám ordinační dobu...</p>
+          <div style={{ textAlign: 'center', padding: '3rem' }}>
+            <p style={{ color: '#5a6b6a' }}>Načítám ordinační dobu...</p>
           </div>
         </div>
       </section>
@@ -85,11 +84,11 @@ const OfficeHours = () => {
 
   if (!ordinaceData) {
     return (
-      <section className={`section ${styles.officeHours}`}>
+      <section className={styles.officeHours}>
         <div className="container">
           <h2 className={styles.title}>Ordinační hodiny</h2>
-          <div style={{ textAlign: 'center', padding: '2rem' }}>
-            <p>Nepodařilo se načíst ordinační dobu</p>
+          <div style={{ textAlign: 'center', padding: '3rem' }}>
+            <p style={{ color: '#5a6b6a' }}>Nepodařilo se načíst ordinační dobu</p>
           </div>
         </div>
       </section>
@@ -99,69 +98,74 @@ const OfficeHours = () => {
   // Filtruj pouze aktivní dny
   const activeDays = ordinaceData.ordinacniHodiny.filter(day => day.active);
 
+  // Funkce pro formátování hodin
+  const formatHours = (day: OrdinaceHour) => {
+    if (day.afternoon === 'Zavřeno' || !day.afternoon) {
+      return day.morning;
+    }
+    return `${day.morning}, ${day.afternoon}`;
+  };
+
   return (
-    <section className={`section ${styles.officeHours}`}>
+    <section className={styles.officeHours}>
       <div className="container">
         <h2 className={styles.title}>Ordinační hodiny</h2>
+        <p className={styles.subtitle}>
+          Jsme tu pro vás od pondělí do pátku
+        </p>
         
         <div className={styles.grid}>
-          <div className={styles.hours}>
+          {/* Ordinační hodiny */}
+          <div className={styles.hoursCard}>
+            <h3 className={styles.hoursTitle}>
+              <FaClock />
+              Kdy nás navštívit
+            </h3>
+            
             {activeDays.map((day) => (
-              <div key={day.id} className={styles.day}>
-                <div className={styles.dayInfo}>
-                  <div className={styles.dayName}>{day.day}</div>
-                  <div className={styles.dayHours}>
-                    {day.morning}
-                    {day.afternoon && day.afternoon !== 'Zavřeno' && (
-                      <>, {day.afternoon}</>
-                    )}
-                  </div>
+              <div key={day.id} className={styles.dayRow}>
+                <div className={styles.dayName}>{day.day}</div>
+                <div className={styles.dayTimes}>
+                  <span className={styles.timeText}>{formatHours(day)}</span>
+                  {day.note && (
+                    <span className={styles.dayNote}>{day.note}</span>
+                  )}
                 </div>
-                {day.note && (
-                  <div className={styles.dayNote}>
-                    ({day.note})
-                  </div>
-                )}
               </div>
             ))}
           </div>
           
-          <div className={styles.doctors}>
-            {doctors.map((doctor) => (
-              <div key={doctor.id} className={styles.doctor}>
-                <div className={styles.doctorImage}>
-                  <Image 
-                    src={doctor.image} 
-                    alt={doctor.name} 
-                    fill
-                    style={{objectFit: 'cover'}}
-                  />
+          {/* Lékaři */}
+          <div className={styles.doctorsCard}>
+            <h3 className={styles.doctorsTitle}>
+              <FaUserMd />
+              Náš tým lékařů
+            </h3>
+            
+            <div className={styles.doctorsGrid}>
+              {doctors.map((doctor) => (
+                <div key={doctor.id} className={styles.doctorItem}>
+                  <div className={styles.doctorImage}>
+                    <Image 
+                      src={doctor.image} 
+                      alt={doctor.name} 
+                      fill
+                      style={{objectFit: 'cover'}}
+                    />
+                  </div>
+                  <div className={styles.doctorName}>{doctor.name}</div>
+                  <div className={styles.doctorPosition}>{doctor.position}</div>
                 </div>
-                <div className={styles.doctorInfo}>
-                  <h3>{doctor.name}</h3>
-                  <p>{doctor.position}</p>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
         
         <div className={styles.button}>
-          <Link href="/ordinacni-doba" className="btn btn-primary">
+          <Link href="/ordinacni-doba" className={styles.buttonLink}>
             Ordinační doba podrobně
           </Link>
         </div>
-        
-        {error && (
-          <div style={{ 
-            fontSize: '0.8rem', 
-            color: '#666', 
-            textAlign: 'center', 
-            marginTop: '1rem' 
-          }}>
-            <small>Zobrazeny jsou záložní údaje</small>
-          </div>
-        )}
       </div>
     </section>
   );

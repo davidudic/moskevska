@@ -12,7 +12,7 @@ const AboutUs = () => {
             <h2 className={styles.sectionTitle}>O nás</h2>
             
             <p className={styles.paragraph}>
-              Od svého založení v roce 2021 se náš tým snaží poskytovat tu nejlepší péči všem našim pacientům. Nabízíme široké spektrum služeb od konzultací přes malé chirurgické výkony až po finální péči estetického zaměření. Ve spolupráci s blízkými ambulancemi kožních specialistů se zaměřujeme na odstraňování všech nebezpečných kožních útvarů a dbáme vždy na dobrý estetický výsledek.
+              Od svého založení v roce 2021 se náš tým snaží poskytovat tu nejlepší péči všem našim pacientům. Nabízíme široké spektrum služeb od konzultací přes malé chirurgické výkony až po finální péči estetického zaměření.
             </p>
             
             <div className={styles.doctorSection}>
@@ -20,20 +20,20 @@ const AboutUs = () => {
                 <div className={styles.doctorImageContainer}>
                   <Image 
                     src="/images/chalus.webp" 
-                    alt="MUDr. Jaroslav Chaluš - hlavní lékař a chirurg ambulance na Moskevské" 
+                    alt="MUDr. Jaroslav Chaluš" 
                     fill
                     style={{objectFit: 'cover'}}
                   />
                 </div>
                 
                 <div className={styles.doctorDetails}>
-                  <h3 className={styles.doctorName}>MUDr. Jaroslav Chaluš</h3>
-                  <p className={styles.doctorPosition}>Hlavní lékař, chirurg</p>
+                  <span className={styles.doctorName}>MUDr. Jaroslav Chaluš</span>
+                  <span className={styles.doctorPosition}>Hlavní lékař, chirurg</span>
                 </div>
               </div>
             </div>
             
-            <Link href="/kontakt" className={styles.moreButton}>
+            <Link href="/kontakt/o-nas" className={styles.moreButton}>
               Více o nás
             </Link>
           </div>
@@ -41,7 +41,7 @@ const AboutUs = () => {
           <div className={styles.imageContent}>
             <Image 
               src="/images/budova.webp" 
-              alt="Budova chirurgické ambulance Moskevská v Liberci - moderní zdravotnické zařízení" 
+              alt="Budova chirurgické ambulance Moskevská v Liberci" 
               fill
               style={{objectFit: 'cover'}}
             />

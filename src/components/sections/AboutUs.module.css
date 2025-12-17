@@ -1,133 +1,152 @@
-/* src/components/sections/AboutUs.module.css */
+/* ===== ABOUT US SECTION ===== */
 .aboutSection {
-    padding: 3rem 0;
-    background-color: #f5f5f5;
-  }
-  
+  padding: 6rem 0;
+  background: #f9fafa;
+}
+
+.aboutContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* ===== TEXT CONTENT ===== */
+.textContent {
+  padding: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  color: #1a2e2d;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+}
+
+.paragraph {
+  margin-bottom: 2.5rem;
+  line-height: 1.85;
+  color: #5a6b6a;
+  font-size: 1.02rem;
+}
+
+/* ===== DOCTOR PROFILE ===== */
+.doctorSection {
+  margin-bottom: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eef1f1;
+}
+
+.doctorProfile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.doctorImageContainer {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.doctorDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.doctorName {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #1a2e2d;
+}
+
+.doctorPosition {
+  font-size: 0.92rem;
+  color: #5a6b6a;
+  font-weight: 500;
+}
+
+/* ===== BUTTON ===== */
+.moreButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.75rem;
+  background: transparent;
+  color: var(--primary-dark);
+  border: 2px solid var(--primary);
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.moreButton:hover {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-color: transparent;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(132, 211, 209, 0.35);
+}
+
+/* ===== IMAGE ===== */
+.imageContent {
+  position: relative;
+  min-height: 420px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
   .aboutContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    background-color: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    padding: 0;
+    grid-template-columns: 1fr;
   }
-  
+
   .textContent {
-    padding: 3rem;
-    display: flex;
-    flex-direction: column;
+    padding: 2.5rem;
+    order: 1;
   }
-  
-  .sectionTitle {
-    font-size: 1.75rem;
-    color: var(--primary);
-    margin-bottom: 1.5rem;
-    font-weight: 500;
-  }
-  
-  .paragraph {
-    margin-bottom: 1.25rem;
-    line-height: 1.6;
-    color: var(--text);
-  }
-  
-  .doctorSection {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .doctorProfile {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-  
-  .doctorImageContainer {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    overflow: hidden;
-    position: relative;
-    border: 2px solid var(--primary);
-    flex-shrink: 0;
-  }
-  
-  .doctorDetails {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .doctorName {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 0.1rem;
-    color: var(--text);
-  }
-  
-  .doctorPosition {
-    font-size: 0.9rem;
-    color: var(--text-light);
-  }
-  
-  .signatureContainer {
-    width: 100px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-  }
-  
-  .moreButton {
-    display: inline-block;
-    padding: 0.7rem 1.5rem;
-    background-color: transparent;
-    color: var(--primary);
-    border: 1px solid var(--primary);
-    border-radius: 4px;
-    font-weight: 500;
-    transition: all 0.2s ease;
-    margin-top: auto;
-    align-self: flex-start;
-  }
-  
-  .moreButton:hover {
-    background-color: var(--primary-transparent);
-  }
-  
+
   .imageContent {
-    position: relative;
-    height: auto;
-    min-height: 100%;
+    min-height: 320px;
+    order: 0;
   }
-  
-  @media (max-width: 768px) {
-    .aboutContainer {
-      grid-template-columns: 1fr;
-    }
-    
-    .textContent {
-      padding: 2rem;
-    }
-    
-    .imageContent {
-      height: 300px;
-      order: -1;
-    }
-    
-    .doctorSection {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 1rem;
-    }
-    
-    .signatureContainer {
-      justify-content: flex-start;
-      width: 100%;
-    }
+}
+
+@media (max-width: 576px) {
+  .aboutSection {
+    padding: 4rem 0;
   }
+
+  .textContent {
+    padding: 2rem;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .paragraph {
+    font-size: 0.98rem;
+  }
+
+  .imageContent {
+    min-height: 260px;
+  }
+
+  .moreButton {
+    width: 100%;
+    justify-content: center;
+  }
+}

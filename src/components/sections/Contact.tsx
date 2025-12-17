@@ -1,5 +1,4 @@
 import React from 'react';
-// Odstraníme nepoužívaný import Image
 import styles from './Contact.module.css';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
 
@@ -13,7 +12,12 @@ const Contact = () => {
           <div className={styles.info}>
             <h3>Kontaktní informace</h3>
             
-            <div className={styles.contactItem}>
+            <a 
+              href="https://maps.google.com/?q=Moskevská+658/41+Liberec" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className={styles.contactItem}
+            >
               <div className={styles.contactIcon}>
                 <FaMapMarkerAlt size={20} />
               </div>
@@ -23,9 +27,9 @@ const Contact = () => {
                 <p>Moskevská 658/41, Liberec</p>
                 <p>Patro 2A</p>
               </div>
-            </div>
+            </a>
             
-            <div className={styles.contactItem}>
+            <a href="tel:+420703611411" className={styles.contactItem}>
               <div className={styles.contactIcon}>
                 <FaPhone size={20} />
               </div>
@@ -33,9 +37,9 @@ const Contact = () => {
                 <h4>Telefon</h4>
                 <p>+420 703 611 411</p>
               </div>
-            </div>
+            </a>
             
-            <div className={styles.contactItem}>
+            <a href="mailto:lekar@chirurgie-moskevska.cz" className={styles.contactItem}>
               <div className={styles.contactIcon}>
                 <FaEnvelope size={20} />
               </div>
@@ -46,7 +50,7 @@ const Contact = () => {
                   <span className={styles.emailNote}>(Jen pro individuální kontakt s konkrétním lékařem!)</span>
                 </p>
               </div>
-            </div>
+            </a>
             
             <div className={styles.contactItem}>
               <div className={styles.contactIcon}>

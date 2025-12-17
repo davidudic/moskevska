@@ -34,8 +34,8 @@ export default function Home() {
   return (
     <Layout>
       <Hero />
-      <Services />
       <AboutUs />
+      <Services />
       <OfficeHours />
       <Reviews />
       <Contact />
