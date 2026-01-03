@@ -3,7 +3,20 @@ import Layout from '@/components/layout/Layout';
 import styles from './page.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaClock, FaExclamationCircle, FaChevronRight, FaCalendarAlt, FaFire, FaStar, FaGift } from 'react-icons/fa';
+import { 
+  FaClock, 
+  FaExclamationCircle, 
+  FaChevronRight, 
+  FaCalendarAlt, 
+  FaFire, 
+  FaStar, 
+  FaGift,
+  FaCheckCircle,
+  FaShieldAlt,
+  FaGem,
+  FaChartBar,
+  FaHeart
+} from 'react-icons/fa';
 
 export const metadata = {
   title: 'Laserová epilace DOMINO 755nm | Chirurgická ambulance Moskevská',
@@ -151,36 +164,60 @@ export default function LaserEpilacePage() {
               Laserová epilace není jen o odstranění chloupků - je to investice do vaší pohody, 
               sebevědomí a kvality života. Objevte, jak vám může změnit každodenní rutinu.
             </p>
-            <div className={styles.benefitsGrid}>
-              <div className={styles.benefitCard}>
-                <div className={styles.benefitIcon}>💆</div>
-                <h3>Komfort bez bolesti</h3>
-                <p>Šetrné a příjemné ošetření s minimálním diskomfortem</p>
+            <div className={styles.benefitsList}>
+              <div className={styles.benefitItem}>
+                <div className={styles.benefitIconWrapper}>
+                  <FaCheckCircle className={styles.benefitIcon} />
+                </div>
+                <div className={styles.benefitContent}>
+                  <h3>Komfort bez bolesti</h3>
+                  <p>Šetrné a příjemné ošetření s minimálním diskomfortem</p>
+                </div>
               </div>
-              <div className={styles.benefitCard}>
-                <div className={styles.benefitIcon}>⏰</div>
-                <h3>Úspora času</h3>
-                <p>Zapomeňte na každodenní holení, získáte více volného času</p>
+              <div className={styles.benefitItem}>
+                <div className={styles.benefitIconWrapper}>
+                  <FaClock className={styles.benefitIcon} />
+                </div>
+                <div className={styles.benefitContent}>
+                  <h3>Úspora času</h3>
+                  <p>Zapomeňte na každodenní holení, získáte více volného času</p>
+                </div>
               </div>
-              <div className={styles.benefitCard}>
-                <div className={styles.benefitIcon}>✨</div>
-                <h3>Krásná pokožka</h3>
-                <p>Dokonale hladká a upravená pokožka bez kompromisů</p>
+              <div className={styles.benefitItem}>
+                <div className={styles.benefitIconWrapper}>
+                  <FaGem className={styles.benefitIcon} />
+                </div>
+                <div className={styles.benefitContent}>
+                  <h3>Krásná pokožka</h3>
+                  <p>Dokonale hladká a upravená pokožka bez kompromisů</p>
+                </div>
               </div>
-              <div className={styles.benefitCard}>
-                <div className={styles.benefitIcon}>🛡️</div>
-                <h3>Bez podráždění</h3>
-                <p>Žádné zarudnutí, svědění ani pupínky po ošetření</p>
+              <div className={styles.benefitItem}>
+                <div className={styles.benefitIconWrapper}>
+                  <FaShieldAlt className={styles.benefitIcon} />
+                </div>
+                <div className={styles.benefitContent}>
+                  <h3>Bez podráždění</h3>
+                  <p>Žádné zarudnutí, svědění ani pupínky po ošetření</p>
+                </div>
               </div>
-              <div className={styles.benefitCard}>
-                <div className={styles.benefitIcon}>📊</div>
-                <h3>Rovnoměrný výsledek</h3>
-                <p>Ucelený a harmonický vzhled celé pokožky</p>
+              <div className={styles.benefitItem}>
+                <div className={styles.benefitIconWrapper}>
+                  <FaChartBar className={styles.benefitIcon} />
+                </div>
+                <div className={styles.benefitContent}>
+                  <h3>Rovnoměrný výsledek</h3>
+                  <p>Ucelený a harmonický vzhled celé pokožky</p>
+                </div>
               </div>
-              <div className={styles.benefitCard}>
-                <div className={styles.benefitIcon}>💪</div>
-                <h3>Větší sebevědomí</h3>
-                <p>Pocit svobody a sebejistoty v každé situaci</p>
+              <div className={styles.benefitItem}>
+                <div className={styles.benefitIconWrapper}>
+                  <FaHeart className={styles.benefitIcon} />
+                </div>
+                <div className={styles.benefitContent}>
+                  <h3>Větší sebevědomí</h3>
+                  <p>Pocit svobody a sebejistoty v každé situaci</p>
+                </div>
               </div>
             </div>
           </section>
