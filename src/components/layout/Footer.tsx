@@ -16,11 +16,23 @@ const Footer = () => {
               <span>+420 703 611 411</span>
             </a>
             <div className={styles.socialLinks}>
-              <a href="https://www.facebook.com/p/Chirurgie-Moskevsk%C3%A1-61554879399726/" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
-                <FaFacebook />
+              <a 
+                href="https://www.facebook.com/p/Chirurgie-Moskevsk%C3%A1-61554879399726/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className={styles.socialIcon}
+                aria-label="Facebook - Chirurgická ambulance Moskevská"
+              >
+                <FaFacebook aria-hidden="true" />
               </a>
-              <a href="https://www.instagram.com/chirurgie.moskevska/" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
-                <FaInstagram />
+              <a 
+                href="https://www.instagram.com/chirurgie.moskevska/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className={styles.socialIcon}
+                aria-label="Instagram - Chirurgická ambulance Moskevská"
+              >
+                <FaInstagram aria-hidden="true" />
               </a>
             </div>
           </div>

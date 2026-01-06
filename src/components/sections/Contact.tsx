@@ -76,6 +76,7 @@ const Contact = () => {
               allowFullScreen={false} 
               loading="lazy" 
               referrerPolicy="no-referrer-when-downgrade"
+              title="Mapa - Chirurgická ambulance Moskevská, Liberec"
             ></iframe>
           </div>
         </div>
