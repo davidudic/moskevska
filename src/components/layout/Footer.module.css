@@ -23,7 +23,7 @@
     margin-bottom: 1.5rem;
     position: relative;
     display: inline-block;
-    color: var(--primary-dark);
+    color: var(--primary-darker, #3a7d7b);
   }
   
   .footerColumn h3::after {
@@ -116,7 +116,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.5rem;
-  color: var(--text-light);
+  color: var(--text-muted, #4a5a59);
   margin-bottom: 0.8rem;
 }
 

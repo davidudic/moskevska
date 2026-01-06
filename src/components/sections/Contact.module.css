@@ -113,7 +113,7 @@ a.contactItem:hover .contactText h4 {
 
 .emailNote {
   display: block;
-  color: #8a9a99 !important;
+  color: var(--text-muted, #4a5a59) !important;
   font-size: 0.85rem !important;
   font-style: italic;
   margin-top: 0.25rem;

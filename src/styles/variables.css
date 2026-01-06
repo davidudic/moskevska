@@ -3,11 +3,13 @@
     --primary: #84d3d1;
     --primary-light: #a9e1df;
     --primary-dark: #5fb9b7;
+    --primary-darker: #3a7d7b; /* Pro text - lepší kontrast */
     --primary-transparent: rgba(132, 211, 209, 0.1);
     
     /* Doplňkové barvy */
     --text: #333333;
-    --text-light: #666666;
+    --text-light: #555555; /* Ztmaveno z #666666 pro lepší kontrast */
+    --text-muted: #4a5a59; /* Pro poznámky - dostatečný kontrast */
     --background: #ffffff;
     --background-light: #f5f5f5;
     --accent: #ff9f1c;

@@ -87,7 +87,7 @@
 
 .dayNote {
   font-size: 0.85rem;
-  color: #7a8a89;
+  color: var(--text-muted, #4a5a59);
   font-style: italic;
 }
 
@@ -160,7 +160,7 @@
 
 .doctorPosition {
   font-size: 0.82rem;
-  color: var(--primary-dark);
+  color: var(--primary-darker, #3a7d7b);
   font-weight: 500;
 }
 

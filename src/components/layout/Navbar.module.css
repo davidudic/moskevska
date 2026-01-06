@@ -413,7 +413,7 @@
 
   /* Nové mobilní laser menu styly */
   .mobileLaserHeader {
-    color: var(--primary);
+    color: var(--primary-darker, #3a7d7b);
     font-weight: 600;
     margin-top: 0.5rem;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
